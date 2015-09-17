@@ -1,0 +1,15 @@
+<?php
+
+if (arg(0) == 'boom'){
+  $nodes = entity_load('node', FALSE, array('type' => 'task'), FALSE);
+  $todayDate = ( date("Y-m-d",time())." 06:00:00");
+  foreach($nodes as $task){
+    if($task->field_task_duedate[$task->language][0]["value"] < $todayDate && ($task->field_task_todo[$task->language][0]["value"] == 'To Do' || $task->field_task_todo[$task->language][0]["value"] == 'On hold' )){
+      $task->field_task_duedate[$task->language][0]["value"] = $todayDate;
+      node_save($task);
+    }
+  }
+  drupal_flush_all_caches();
+  echo "all tasks moved";
+  exit();
+}

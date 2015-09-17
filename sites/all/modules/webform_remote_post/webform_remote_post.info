@@ -1,0 +1,12 @@
+name = Webform Remote Post
+description = Post webform data (form submissions) to any arbitrary URL, presumably, an application or script that will use the form data and perform further processing with it.
+core = 7.x
+dependencies[] = webform
+package = Webform
+
+; Information added by drupal.org packaging script on 2013-07-28
+version = "7.x-1.1"
+core = "7.x"
+project = "webform_remote_post"
+datestamp = "1375055481"
+

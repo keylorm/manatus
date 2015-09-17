@@ -1,0 +1,191 @@
+/* 
+    Document   : responsive para computadoras
+	
+    Created on : 05-feb-2014, 13:04:09
+    Author     : Keylor Mora
+    Description:
+        This CSS is used to apply the Responsive Appereance to the website.
+*/
+
+
+@media only screen and (min-width: 1000px){
+@charset "UTF-8";
+    #block-block-1,
+	#block-block-69{
+        float: right;
+        display: block;
+    }
+    #block-block-1--2,
+	#block-block-69--2{
+        display: none;
+    }
+	
+	.i18n-en #block-block-69{
+		display: none;
+	}
+	
+	.i18n-es #block-block-1{
+		display: none;
+	}
+    #block-menu-menu-top-menu .menu{
+
+        float: right;
+        display: block;
+    }
+
+    #block-menu-menu-top-menu--2 .menu{
+        display: none;
+    }
+	
+	#block-locale-language .language-switcher-locale-url {
+		float: right;
+		display: block;
+	}
+	#block-locale-language--2 .language-switcher-locale-url {
+		display: none;
+	}
+	.zopim{
+		display: block;
+	}
+	
+	#block-menu-menu-footer-menu{
+		display: block;
+	}
+	
+	#block-block-8{
+        display: block;
+		
+    }
+	.tinynav { display: none }
+	.region-header #block-system-main-menu .menu{ display: marker; }
+	.region-header #block-menu-menu-men-principal-responsivo .menu,
+	#footer #block-menu-menu-men-principal-responsivo--2 .menu	{display: none;}
+	
+	#block-system-main-menu {
+		border-top: 10px solid #F2E3DA;
+	}
+	
+	.region-header {
+		border-top: none;
+		margin: auto;
+		width: 100%;
+		background: transparent;
+	}
+	
+	#header #header-region {
+		width: 980px !important;
+	}
+	
+	#footer .region-footer{
+		width: 980px !important;
+	}
+
+	#logo {
+			margin-left: 2.55em;
+			margin-right: 0;
+			margin-top: 0;
+			position: absolute;
+			z-index: 100;
+		}
+		
+	
+	#footer {
+		background: none repeat scroll 0 0 #FFFCF1;
+		border-top: 3px solid #F2E3DA;
+		border-bottom: none;
+		margin: 2em auto 0;
+		min-height: 260px;
+		padding: 1.7em 0;
+		width: 100%;
+	}
+	#page{
+		background: none repeat scroll 0 0 #fff;
+	}
+	
+	/*Index*/
+	
+	#block-views-main-slider-block .view .views-slideshow-cycle-main-frame-row-item .views-field-title {
+		bottom: 5px;
+		font-size: 32px;
+		padding: 25px 0;
+		position: absolute;
+		text-align: center;
+		text-transform: uppercase;
+		width: 100%;
+	}
+	
+	#block-views-main-slider-block .views-slideshow-controls-bottom #views_slideshow_controls_text_previous_main_slider-block {
+		height: 53px;
+		left: 12px;
+		position: absolute;
+		top: 333px;
+		width: 26px;
+	}
+	
+	
+	#block-views-main-slider-block .views-slideshow-controls-bottom #views_slideshow_controls_text_next_main_slider-block {
+		height: 53px;
+		position: absolute;
+		right: 12px;
+		top: 333px;
+		width: 26px;
+	}
+	
+	
+	/*Keylor*/
+	#block-block-6, #block-block-30{
+		float: left;
+		width: 47%;
+		height: auto;
+		margin: 0;
+		max-height: 157px;
+		clear: none;
+	}
+	
+	#block-block-7, #block-webform-client-block-48, #block-webform-client-block-64, #block-block-24{
+		background-image:  url("../img/shadow-bg.jpg");
+		width: 53%;
+		padding: 1.2em 0 5em 3.5em;
+		clear: none;
+		float: left;
+		height: auto;
+		margin: 0;
+		max-height: 157px;
+	}
+	
+	#highlighted .region-highlighted{
+		width: 980px !important;
+	}
+	
+	#block-carousel-manatus-carousel-main,
+	#block-carousel-manatus-carousel-principal	{display: none;}
+	
+	#block-menu-menu-men-sidebar-responsivo{
+		display: none;
+	
+	}
+	
+	
+	
+	#main{
+		width: 980px !important;
+		
+	}
+	#book-today-link, .block-carousel-manatus, #block-views-paquetes-regulares-block-2, #block-views-paquetes-regulares-block-3, #block-views-slider-block-21, #block-views-gallery-page-block-1, #movil, #block-views-slider-block-22 {display: none;}
+	
+	.front #footer #block-menu-menu-men-principal-responsivo--2{
+		display: none;
+	}
+	
+	#block-views-video-gallery-view-block-1{
+		display: block;
+	}
+	
+	#block-views-video-gallery-view-block-2{
+		display: none;
+	}
+
+	
+}
+
+	

@@ -1,0 +1,4 @@
+name = Carousel block Main
+description = This is a block that make a query (images and videos) to the database and show that content to block
+package = Blocks
+core = 7.x 

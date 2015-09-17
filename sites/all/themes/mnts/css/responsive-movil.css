@@ -1,0 +1,949 @@
+/* 
+    Document   : responsive para moviles
+    Created on : 05-feb-2014, 13:04:09
+    Author     : Keylor Mora
+    Description:
+        This CSS is used to apply the Responsive Appereance to the website.
+*/
+
+
+@media only screen and (max-width : 690px) {
+@charset "UTF-8";
+.witges-trip {
+width: 150px;
+margin: 0 auto;
+}
+#TA_excellent625{
+float:left;
+margin-right: 0px;
+margin-bottom: 15px;
+}
+#TA_certificateOfExcellence600{
+float:left;
+margin-right: 0px;
+margin-bottom: 15px;
+}
+    #block-block-1,
+	#block-block-69{
+        float: right;
+        display: none;
+    }
+    #block-block-1--2,
+	#block-block-69--2{
+        display: block;
+		width: 96%;
+		margin: 0px auto 10px;
+		text-align: center;
+    }
+    #block-menu-menu-top-menu .menu{
+        float: right;
+        display: none;
+    }
+
+    #block-menu-menu-top-menu--2 .menu{
+        display: block;
+		margin: 0 auto;
+		width: 255px;
+    }
+	 #block-menu-menu-top-menu--2{
+        width: 96%;
+		margin: 10px auto;
+		text-align: center;
+    }
+	
+	#block-locale-language .language-switcher-locale-url {
+		float: right;
+		display: none;
+	}
+	#block-locale-language--2 .language-switcher-locale-url {
+		display: block;
+		width: 96%;
+		margin: 0px auto 10px;
+		text-align: center;
+		padding: 0;
+	}
+	.zopim{
+		display: none;
+	}
+	
+	#block-menu-menu-footer-menu{
+		display: none;
+	}
+	
+	#block-block-8{
+        display: none;
+    }
+	
+	.tinynav { display: block }
+    .region-header #block-system-main-menu .menu{ display: none }
+	.region-header #block-menu-menu-men-principal-responsivo .menu ,
+	#footer #block-menu-menu-men-principal-responsivo--2 .menu{display: none;}
+	.region-header #block-system-main-menu{
+		margin-top: 20px;
+	}
+	
+	.front #footer #block-menu-menu-men-principal-responsivo--2{
+	
+	}
+	
+	#block-system-main-menu {
+		border-top: none;
+	}
+	
+	.region-header {
+		border-top: 10px solid #F2E3DA;
+		margin: -90px auto 0;
+		padding-bottom: 20px;
+		width: 96%;
+		background: #fff;
+	}
+	
+	
+	#header #header-region {
+		width: 100% !important;
+	}
+	
+	#footer .region-footer{
+		width: 100% !important;
+	}
+
+	#logo {
+		display: block;
+		height: 128px;
+		margin: 10px auto 0;
+		position: relative;
+		width: 244px;
+		z-index: 100;
+	}
+	
+	
+	#block-menu-menu-men-principal-responsivo{
+		margin-top: 100px;
+		margin-bottom: 30px;
+	}
+	
+	#block-menu-menu-men-principal-responsivo--2{
+		margin-top: 20px;
+		margin-bottom: 30px;
+		width: 294px;
+		float: none;
+		margin-left: auto;
+		margin-right: auto;
+	}
+	
+	#block-menu-menu-men-principal-responsivo .content,
+	#block-menu-menu-men-principal-responsivo--2 .content{
+		width: 100%;
+		overflow: hidden;
+		
+		border: 1px solid #F5ECE5;
+		height: 40px;
+	}
+	
+	#block-menu-menu-men-principal-responsivo .content select,
+	#block-menu-menu-men-principal-responsivo--2 .content select{
+		width: 120%;
+		border: none;
+		height: 38px;
+		border-radius: 0;
+		font-size: 15px;
+		line-height: 40px;
+		font-family: "Raleway", sans-serif;
+		font-weight: 400;
+		
+		
+		
+		text-transform: uppercase;
+		padding-left: 10px;
+		padding-top: 8px;
+		 
+	}
+	.front #block-menu-menu-men-principal-responsivo .content select{
+		background-color: transparent;
+		background-image: url(../img/bg-menu-responsivo-flecha.jpg);
+		background-position: 81% center;
+		background-repeat: no-repeat;
+		color: #594A42;
+	}
+	
+	.not-front #block-menu-menu-men-principal-responsivo .content select,
+	.not-front #block-menu-menu-men-principal-responsivo--2 .content select{
+		background-color: #EAD7CA;
+		background-image: url(../img/flecha-menu-responsivo-interno.jpg);
+		background-position: 82% center;
+		background-repeat: no-repeat;
+		color: #813400;
+	}
+	
+	#block-menu-menu-men-principal-responsivo .content select option,
+	#block-menu-menu-men-principal-responsivo--2 .content select option{
+		
+		height: 38px;
+		
+		font-size: 15px;
+		line-height: 38px;
+		font-family: "Raleway", sans-serif;
+		font-weight: 400;
+		color: #594A42;
+		text-transform: uppercase;
+		 
+	}
+	
+	#footer {
+		background: none repeat scroll 0 0 #fff;
+		border-top: none;
+		border-bottom: 10px solid #F2E3DA;
+		width: 96%;
+		margin: 0 auto 20px;
+		min-height: 600px;
+		padding: 1.7em 0;
+	}
+	
+	#page{
+		background: none repeat scroll 0 0 #FFFCF1;
+	}
+	
+	
+	/*Index*/
+	
+	#block-views-main-slider-block .view .views-slideshow-cycle-main-frame-row-item .views-field-title {
+		bottom: 5px;
+		font-size: 16px;
+		padding: 6px 0;
+		position: absolute;
+		text-align: center;
+		text-transform: uppercase;
+		width: 100%;
+	}
+	
+	#block-views-main-slider-block .views-slideshow-controls-bottom #views_slideshow_controls_text_previous_main_slider-block {
+		height: 25px;
+		left: 8px;
+		position: absolute;
+		top: 110px;
+		width: 23px;
+	}
+	
+	
+	#block-views-main-slider-block .views-slideshow-controls-bottom #views_slideshow_controls_text_next_main_slider-block {
+		height: 25px;
+		position: absolute;
+		right: 8px;
+		top: 110px;
+		width: 23px;
+	}
+	
+		/* Added by Juan, fix style to slider islas home page */
+	.block-carousel-manatus   {padding: 10px 5px !important; clear: both; float: none; height: 50% !important; margin: 10px auto; width: 300px; display: block; background-color: #fff; border-color: #F5EAE3;
+    border-image: none;
+    border-style: solid;
+    border-width: 1px 1px 7px;}
+	.m-carousel  .wrapper-imagen-carousel-sidebar a img { width: 100% !important; }
+	.m-carousel .views-field.views-field-body, .m-carousel  .wrapper-imagen-carousel-sidebar, .m-carousel  .views-field.views-field-view-node{ float: left; }
+	.m-carousel .m-card-light {display: block; float: left; height: 100%; }
+		.m-carousel .views-field.views-field-body { margin-left: 10px; margin-right: 0; width: 45%; }
+	.m-carousel .views-field.views-field-view-node {margin-left: 10px;}
+	.m-carousel .views-field.views-field-view-node a{font-family: 'Raleway'; font-size: 13px; color: #CA9879; font-weight: 600;}
+	.m-carousel .views-field.views-field-body .field-content p{font-family: open sans; font-size: 12px; color: #594A42 !important;}
+	.m-carousel  .views-field.views-field-title{margin-bottom: 10px;}
+	.m-carousel  .views-field.views-field-title a{font-family: 'Raleway'; font-size: 16px; color: #B57651;}
+	.m-carousel .m-item { width: 280px;}
+	.m-carousel  .wrapper-imagen-carousel-sidebar {width: 117px;}
+	
+	.block-carousel-manatus .m-card-light { background: url("../img/mobilmanatus_background_isla.png") no-repeat scroll 260px 44px rgba(0, 0, 0, 0); }
+	.m-card-dark, .m-card-light { padding: 5px 20px 0;}
+	.m-carousel-controls {padding-top: 0px;}
+	.m-carousel-inner{height: 117px;}
+	#block-block-14 h2:before, #block-block-15 h2:before, #block-block-16 h2:before, #block-block-17 h2:before, #block-block-40 h2:before, #block-block-41 h2:before, #block-block-42 h2:before, #block-block-43 h2:before, #block-block-14 h2:after, #block-block-15 h2:after, #block-block-16 h2:after, #block-block-17 h2:after, #block-block-40 h2:after, #block-block-41 h2:after, #block-block-42 h2:after, #block-block-43 h2:after {content: "";}
+    
+    #block-block-14 , #block-block-15 , #block-block-16 , #block-block-17 , #block-block-40 , #block-block-41 , #block-block-42 , #block-block-43  {background: url("../img/mobilmanatus_background_isla.png") no-repeat scroll 265px 80px rgba(0, 0, 0, 0); min-height: 130px !important; height: auto;}
+    #block-block-14 h2, #block-block-15 h2, #block-block-16 h2, #block-block-17 h2, #block-block-40 h2, #block-block-41 h2, #block-block-42 h2, #block-block-43 h2 {font-size: 18px; width: 100%; height: 18px; min-height: 2em !important; text-align: left; padding: 0px !important; float: left;}
+    #block-block-14 img, #block-block-15 img, #block-block-16 img, #block-block-17 img, #block-block-40 img, #block-block-41 img, #block-block-42 img, #block-block-43 img {width: 120px; float: left; margin-bottom: 0; margin-right: 10px;}
+    #block-block-14 p, #block-block-15 p, #block-block-16 p, #block-block-17 p, #block-block-40 p, #block-block-41 p, #block-block-42 p, #block-block-43 p {float: none; padding-right: 10px; font-size: 11px; line-height: 12px;}
+    #book-today-link {font-family: 'Raleway'; font-size: 11px; color: #BD9670;}
+
+    .page-node-101 .field-name-body p, .page-node-101 .field-name-body ol, .page-node-101 .field-name-body ol li, .page-node-100 .field-name-body p, .page-node-100 .field-name-body ol, .page-node-100 .field-name-body ol li, .page-node-106 .field-name-body p, .page-node-106 .field-name-body ol, .page-node-106 .field-name-body ol li, .page-node-107 .field-name-body p, .page-node-107 .field-name-body ol, .page-node-107 .field-name-body ol li { color: #594A42; font-family: "Open Sans",sans-serif; font-size: 12px; font-weight: 400;}
+	.page-node-101 .field-name-body h2, .page-node-100 .field-name-body h2, .page-node-106 .field-name-body h2, .page-node-107 .field-name-body h2 { color: #813400; font-family: "Raleway"; font-size: 19px; font-weight: 600; border-bottom: 2px solid #813400; padding-bottom: 5px;}
+
+/* ESTILO PARA EL ACORDION */
+	 .ui-state-default, .ui-widget-content .ui-state-default, .ui-widget-header .ui-state-default{background: none !important; border: none !important;}
+	 .ui-corner-all, .ui-corner-top, .ui-corner-right, .ui-corner-tr { border-top-right-radius: 0px !important; }
+	 .ui-corner-all, .ui-corner-top, .ui-corner-left, .ui-corner-tl { border-top-left-radius: 0px !important; }
+	 .ui-accordion-content {border: none !important;}
+	 .ui-accordion-content p, .ui-accordion-content li {color: #594A42; float: left; font-family: open sans; font-size: 13px;}
+
+	 .ui-accordion-header {background: url('../img/acordion.png')no-repeat scroll 265px 9px transparent !important;}
+	 #ui-accordion-ui-accordion-1-panel-0-header-0.ui-accordion-header, #ui-accordion-ui-accordion-1-panel-0-header-1.ui-accordion-header, #ui-accordion-ui-accordion-1-panel-0-header-2.ui-accordion-header, #ui-accordion-ui-accordion-1-panel-1-header-0.ui-accordion-header, #ui-accordion-ui-accordion-1-panel-1-header-1.ui-accordion-header, #ui-accordion-ui-accordion-1-panel-1-header-2.ui-accordion-header, #ui-accordion-ui-accordion-1-panel-2-header-0.ui-accordion-header, #ui-accordion-ui-accordion-1-panel-2-header-1.ui-accordion-header, #ui-accordion-ui-accordion-1-panel-2-header-2.ui-accordion-header {color: #BB805D !important; padding-left: 15px; padding-top: 13px; padding-right: 30px; padding-bottom: 13px; background: url('../img/acordion.png')no-repeat scroll 265px 12px #F5ECE5 !important;}
+
+	 .ui-accordion-header {border-left: 1px solid #813400 !important; border-right: 1px solid #813400 !important; border-bottom: 1px solid #813400 !important; border-top: 5px solid #813400 !important; border-bottom-left-radius: 0px; border-bottom-right-radius: 0px; font-family: 'Raleway' !important; font-weight: normal; color: #813400 !important; font-size: 17px !important; text-transform: uppercase; margin-bottom: 10px !important;}
+	 .ui-accordion-header-active {background: url('../img/acordion_activo.png')no-repeat scroll 265px 15px transparent !important;}
+	 .ui-state-active.ui-icon, .ui-accordion-header-icon.ui-icon {background-image: none !important;}
+	 .ui-accordion .ui-accordion-icons {padding-left: 6px !important; padding-right: 30px !important;}
+
+	 #block-block-14, #block-block-16, #block-block-15, #block-block-17,
+	#block-block-40, #block-block-41, #block-block-42, #block-block-43	 { margin: 0 auto 15px !important; float: none;}
+
+	 .contenedor-rates, .rates-columna1, .rates-columna2 {width: 300px !important;}
+	 .columna-tabla-rates { float: none !important; margin: 0 auto !important; }
+	 .columna-tabla-rates > table + table {margin-bottom: 10px;}
+	 .blox-buttom-contacto-wrapper {float: left; margin-top: 25px !important;}
+
+	 #ui-accordion-ui-accordion-1-panel-0-header-0.ui-accordion-header-active, #ui-accordion-ui-accordion-1-panel-0-header-1.ui-accordion-header-active, #ui-accordion-ui-accordion-1-panel-0-header-2.ui-accordion-header-active, #ui-accordion-ui-accordion-1-panel-1-header-0.ui-accordion-header-active, #ui-accordion-ui-accordion-1-panel-1-header-1.ui-accordion-header-active, #ui-accordion-ui-accordion-1-panel-1-header-2.ui-accordion-header-active, #ui-accordion-ui-accordion-1-panel-2-header-0.ui-accordion-header-active, #ui-accordion-ui-accordion-1-panel-2-header-1.ui-accordion-header-active, #ui-accordion-ui-accordion-1-panel-2-header-2.ui-accordion-header-active {color: #BB805D !important; padding-left: 15px; padding-top: 15px; padding-right: 30px; padding-bottom: 15px; background: url('../img/acordion_activo.png')no-repeat scroll 265px 20px #F5ECE5 !important;}
+
+	 .ui-accordion-content h4 {font-family: open sans; font-size: 14px; font-weight: bold; color: #813400; text-transform: uppercase; float: left; width: 100%;}
+	 .ui-accordion-content .titulo-dia {font-family: open sans; font-size: 14px; font-weight: 400; color: #813400; margin-bottom: 5px; padding-bottom: 5px; border-bottom: 1px solid #F5ECE5; float: left; width: 100%;}
+
+	 /* Responsividad blog */
+	.page-blog .view-blog-page .field-name-title h2 a, .node-type-blog #block-system-main .field-name-title h1, .not-front #main #block-system-main .field-name-body h3, .section-blog-category #block-system-main .field-name-title h2 a, .section-etiquetas #block-system-main .field-name-title h2 
+	.page-blog .view-blog-page .field-name-title-con-seo-h2-blog h2 a, .node-type-blog #block-system-main .field-name-title-con-seo h1, .section-blog-category #block-system-main .field-name-title-con-seo-h2-blog h2 a, .section-etiquetas #block-system-main .field-name-title-con-seo-h2-blog h2 {float: left; font-size: 18px; line-height: 23px; margin-bottom: 8px;}
+	.section-etiquetas #block-system-main .field-name-title h2 a {font-size: 18px;}
+	.page-blog .view-blog-page .field-name-field-blog-imagen, .page-blog .view-blog-page .field-name-field-blog-imagen img, .node-type-blog #block-system-main .field-name-field-blog-imagen, .node-type-blog #block-system-main .field-name-field-blog-imagen img, .section-blog-category .field-name-field-blog-imagen, .section-blog-category .field-name-field-blog-imagen img, .section-etiquetas .field-name-field-blog-imagen, .section-etiquetas .field-name-field-blog-imagen img {width: 100%; height: auto;}
+	.page-blog .view-blog-page .views-row, .node-type-blog .node-blog {margin: 0 auto;}
+	.page-blog .view-blog-page .field-name-field-tags-de-blog .field-item, .node-type-blog #block-system-main .field-name-field-tags-de-blog .field-item, .section-blog-category #block-system-main .field-name-field-tags-de-blog .field-item, .section-etiquetas #block-system-main .field-name-field-tags-de-blog .field-item {margin: 0 5px 5px 0;}
+	#block-webform-client-block-141, #block-webform-client-block-142 {height: 180px;}
+	#block-webform-client-block-141 .form-actions, #block-webform-client-block-142 .form-actions {margin:0 0 10px 0 !important;}
+	#block-webform-client-block-141 #webform-component-e-mail, #block-webform-client-block-142 #webform-component-e-mail {width: 100%;}
+
+	/* Share this */
+	.sharethis-wrapper span {margin: 0 5px 5px 0 !important;}
+	#block-block-27 .logos-redes-contacto h3, #block-block-64 .logos-redes-contacto h3 {width: 100% !important;}
+
+	/* formulario de comentarios */
+	.node-type-blog #comments input[type="text"], .node-type-blog #comments textarea, .node-type-blog #comments .captcha {width: 100% !important;}
+	.node-type-blog #comments textarea { min-width: 100%; max-width: 100%;}
+
+	/* articulos relacionados */
+	.node-type-blog #block-views-dc196aef6a44f7ad51f2c746684916c7, .node-type-blog #block-views-23030c3a60c05df90602904e4f49bfba {float: left; height: auto; width: 100%;}
+	.view-articulos-relacionados-blog .views-row {float: none !important; margin: 5% auto !important;}
+ 	.node-type-blog #block-views-dc196aef6a44f7ad51f2c746684916c7 h2, .node-type-blog #block-views-23030c3a60c05df90602904e4f49bfba h2 {text-align: center;}
+
+ 	 #block-views-slider-block {display: none;}
+
+ 	 .page-node-33 #block-system-main h2, .page-node-47 #block-system-main h2, .page-node-90 #block-system-main h2, .page-node-91 #block-system-main h2, #node-44 h2, #node-191 h2 {font-size: 18px; padding: 0 0.2em; }
+ 	 #node-44 h2, #node-191 h2 {padding: 0 0.2em 1em;}
+ 	 .page-node-33 #block-system-main .columna-1, .page-node-33 #block-system-main .columna-2, .page-node-47 #block-system-main .columna-1, .page-node-47 #block-system-main .columna-2, .page-node-90 #block-system-main .columna-1, .page-node-90 #block-system-main .columna-2, .page-node-91 #block-system-main .columna-1, .page-node-91 #block-system-main .columna-2{width: 100%;}
+ 	 .btn-contacto-tortuguero a, .page-node-33 #block-system-main .btn a, .page-node-47 #block-system-main .btn a, .page-node-90 #block-system-main .btn a, .page-node-91 #block-system-main .btn a {font-size: 17px; }
+ 	 .btn-contacto-tortuguero {width: 140px; margin-left: 0.2em;}
+ 	 .page-node-33 #block-system-main .btn, .page-node-47 #block-system-main .btn, .page-node-90 #block-system-main .btn, .page-node-91 #block-system-main .btn {width: 98%; margin-left: 0.2em;}
+ 	 .page-node-33 #block-system-main p, .page-node-47 #block-system-main p, .page-node-90 #block-system-main p, .page-node-91 #block-system-main p {padding-left: 0.2em;}
+
+ 	 .page-node-46 input[type="text"], .page-node-46 input[type="email"], .page-node-139 input[type="text"], .page-node-139 input[type="email"] {font-size: 14px;}
+ 	 /* Flexslider tortuguero */
+
+	.flexslider .slides img, .flexslider {height: auto;}
+	.flexslider .flex-direction-nav, #block-system-main .view-gallery-page{display: none;}
+	.flex-control-paging li a.flex-active, .flex-control-paging li a:hover {background: none repeat scroll 0 0 #813400;}
+	.flex-control-paging li a { background: none repeat scroll 0 0 #F5ECE5;}
+
+	/* formulario book now */
+	#node-44 input[type="text"], #node-44 input[type="email"], #node-44 select, #node-191 input[type="text"], #node-191 input[type="email"], #node-191 select,  #node-44 #webform-component-number-of-people label, #node-191 #webform-component-numero-de-personas label{font-size: 13px !important;}
+	#node-44 #webform-component-rooms label, #node-191 #webform-component-habitaciones label {font-size: 13px !important;}
+	#node-44 #webform-component-number-of-people label, #node-191 #webform-component-numero-de-personas label {margin-left: -160px;}
+	#node-44 #webform-component-number-of-people, #node-191 #webform-component-numero-de-personas  {margin-left: 162px;}
+	#node-191 #webform-component-numero-de-personas {width: 93px !important;}
+
+	.sidebar .chat-link h3:after {line-height: 0px;}
+
+	#node-44 input[type="submit"], #node-191 input[type="submit"]{font-size: 23px !important;}
+
+	#node-44 textarea, #node-191 textarea {font-size: 14px;}
+
+	#node-44 #webform-component-check-in, #node-191 #webform-component-check-in, #node-44 #webform-component-check-in input, #node-191 #webform-component-check-in input, #node-44 #webform-component-check-out, #node-191 #webform-component-check-out, #node-44 #webform-component-check-out input, #node-191 #webform-component-check-out input{width: 100% !important; }
+	#node-44 #webform-component-rooms {width: 180px !important;}
+	#node-191 #webform-component-habitaciones {width: 138px !important;}
+	#node-44 #webform-component-terms a, #node-191 #webform-component-terminos a {font-size: 14px;}
+	#node-44 #webform-component-accept-terms .option, #node-191 #webform-component-aceptar-terminos .option {font-size: 14px;}
+	/* Redimensionar el ancho del #main */
+	#main{width: 90%;}
+	.body-pack-col1 h2 {background-image: none; border-bottom: 2px solid #813400; font-size: 16px; font-weight: 600; height: 30px; text-transform: uppercase;}
+
+	.page-node-94 #node-94 .body-pack-col1, .page-node-97 #node-97 .body-pack-col1{width: 100%;}
+	.page-node-97 #node-97 p, .page-node-94 #node-94 p{width: 54%; float: left;}
+	.page-node-94 #node-94 {width: 100%;}
+	.page-node-94 #node-94 .btn-book-pack, .page-node-97 #node-97 .btn-book-pack {width: 110px; background-color: #813400; margin: 10px 0 0 24px; height: 43px; float: right;} 
+	.page-node-94 #node-94 .btn-book-pack a, .page-node-97 #node-97 .btn-book-pack a {color: #FFFFFF; display: block; font-family: "Raleway"; font-size: 16px; font-weight: 400; line-height: 43px; padding-left: 10px; text-decoration: none; text-transform: uppercase;}
+	.page-node-31 #node-31 .field-name-body h2, .page-node-83 #node-83 .field-name-body h2 { border-bottom: 2px solid #813400; padding-bottom: 5px;}
+
+	/* Ocultar bloques */
+	#block-block-2, #block-block-3, #block-block-4, #block-block-5, #block-block-29, #block-block-36, #block-block-37, #block-block-38, #block-views-slider-block-11, #block-views-slider-block-12, .page-node-83 #block-block-39, .page-node-83 #block-block-35, .page-node-106 #block-block-9, .page-node-106 #block-block-18, .page-node-107 #block-block-39, .page-node-107 #block-block-35, .page-node-31 #block-block-9, .page-node-31 #block-block-18, #block-views-slider-block-14, #block-views-slider-block-13, .page-node-100 #block-block-9, .page-node-100 #block-block-18, .page-node-101 #block-block-39, .page-node-101 #block-block-35, #block-block-44, .page-node-94 #node-94 .body-pack-col2, #block-views-paquetes-regulares-block, #block-block-46, #block-block-45, #block-block-47, #block-block-48, #block-block-49, #block-views-paquetes-regulares-block-1, #normal, .page-node-25 #block-views-blog-block-1, .page-node-143 #block-views-blog-block-3, .page-node-146 #block-views-blog-block-3, .page-node-21 #block-views-blog-block-1, .page-node-23 #block-views-blog-block-1, .page-node-145 #block-views-blog-block-3, .page-node-144 #block-views-blog-block-3, .page-node-24 #block-views-blog-block-1, #block-views-slider-block-23{ display: none; }
+	
+	#block-views-paquetes-regulares-block-2 {float: left;}
+
+	.ui-accordion-content{height: auto !important; padding: 1em 0em !important;}
+
+	#highlighted .region-highlighted{
+		width: 96% !important;
+		background: #fff;
+		margin: 0 auto;
+		padding: 20px 0;
+	}
+		/*Keylor*/
+	#block-block-6, #block-block-30{
+		float: none;
+		width: 294px;
+		clear: both;
+		margin: 0 auto;
+		max-height: 500px;
+		height: 240px;
+	}
+	
+	#block-block-7, #block-webform-client-block-48, #block-webform-client-block-64, #block-block-24{
+		background-image: none !important;
+		clear: both !important;
+		float: none !important;
+		height: 250px !important;
+		margin: 0 auto !important;
+		max-height: 600px !important;
+		padding: 10px 10px 15px !important;
+		width: 294px !important;
+	}
+	
+	#block-block-7 h2, #block-webform-client-block-48 h2, #block-webform-client-block-64 h2, #block-block-24 h2{
+		font-family: "Raleway", sans-serif !important;
+		font-size: 17px !important;
+		color: #B57651 !important;
+		background-image: url(../img/bg-h2-reservations-responsive.png) !important;
+		margin: 0 0px 10px 0 !important;
+		float: none !important;
+		padding: 6px 0 !important;
+	}
+	
+	#block-webform-client-block-48 fieldset, #block-webform-client-block-64 fieldset{
+		float: none !important;
+		margin: 0 auto !important;
+	}
+	
+	#block-webform-client-block-48 input[type="submit"], #block-webform-client-block-64 input[type="submit"]{
+		float: none !important;
+		margin: 0 auto !important;
+	}
+	
+	#block-webform-client-block-48 #edit-actions, #block-webform-client-block-64 #edit-actions{
+		text-align: center !important;
+	}
+	
+	#block-views-blog-block, #block-views-blog-block-2{
+		display: none;
+	}
+	
+	#block-views-virtual-tours-block, #block-views-virtual-tours-block-1{
+		display: none;
+	}
+	
+	#block-views-gallery-block, #block-views-gallery-block-1{
+		display: none;
+	}
+	
+	#block-menu-menu-men-sidebar-responsivo{
+		width: 294px;
+		margin: 0 auto 30px;
+		float: none;
+	}
+
+
+
+	
+	#block-menu-menu-men-sidebar-responsivo ul li{
+		width: 100%;
+		color: #FFFFFF;
+		font-family: "Raleway",sans-serif;
+		font-size: 22px;
+		font-weight: 400;
+		margin: 10px 0;
+		padding: 6px 20px;
+		text-transform: uppercase;
+		list-style: none;
+		background-image: url(../img/bg-titulo-sidebar-responsivo-flecha.png);
+		background-repeat: no-repeat;
+		background-position: 96% center;
+		
+	}
+	
+	#block-menu-menu-men-sidebar-responsivo ul li.mid-960,
+	#block-menu-menu-men-sidebar-responsivo ul li.mid-959{
+		background-color:#813400;
+		border-top: 5px solid #F5ECE5;
+		line-height: 42px;
+	}
+	
+	#block-menu-menu-men-sidebar-responsivo ul li.mid-962,
+	#block-menu-menu-men-sidebar-responsivo ul li.mid-961{
+		background-color: #F7C795;
+		border-top: 5px solid #F7E8D5;
+		line-height: 20px;
+	}
+	
+	#block-menu-menu-men-sidebar-responsivo ul li.mid-964,
+	#block-menu-menu-men-sidebar-responsivo ul li.mid-963{
+		background-color:#7E9B67;
+		border-top: 5px solid #B2C3A4;
+		line-height: 42px;
+	}
+	
+	#block-menu-menu-men-sidebar-responsivo ul li a{
+		display: block;
+		color: #FFFFFF;
+		text-decoration: none;
+	}
+	
+	#block-menu-menu-men-sidebar-responsivo ul{
+		padding: 0;
+	}
+	
+	#main{
+		width: 96% !important;
+		background-color: #fff;
+		padding-left: 2%;
+		padding-right: 2%;
+		padding-top: 32px;
+		margin-top: -50px;
+	}
+	
+	#sidebar-second{
+		width: 100% !important;
+		margin-top: 20px;
+	}
+	
+	/*Keylor - 11feb2014*/
+	
+	/*Manatus Experience*/
+	
+	.not-front #header-region .title-container{
+		display: none;
+	}
+	
+	#header {
+		border-bottom: none;
+	}
+	
+	#highlighted {
+		border-bottom: none;
+	}
+	
+	.not-front #main #block-system-main .field-name-body{
+		margin-bottom: 10px;
+	}
+	
+	.not-front #main #block-system-main .field-name-body p,
+.not-front #main #block-system-main .field-name-body ul li,
+.not-front #main #block-system-main .field-name-body ol li{
+		font-family: "Open Sans", sans-serif;
+		font-size: 12px;
+		color: #594A42;
+	}
+	
+	#block-block-9 h3, #block-block-35 h3{
+		background-color: #87ADBA;
+		border-top: 5px solid #D2F0FB;
+		line-height: 42px;
+		color: #FFFFFF;
+		font-family: "Raleway",sans-serif;
+		font-size: 22px;
+		font-weight: 400;
+		margin: 10px 0;
+		padding: 6px 20px;
+		text-transform: uppercase;
+		width: 100%;
+	}
+	
+	#block-block-9, #block-block-35{
+		width: 294px;
+		float: none;
+		margin: 10px auto;
+	}
+	
+	
+	#block-block-9 h4, #block-block-35 h4 {
+		color: #87ADBA;
+		font-family: "Raleway",sans-serif;
+		font-size:17px;
+		font-weight: 400;
+		margin: 15px 0 5px;
+		padding-left: 5px;
+
+	}
+	
+	#block-block-9 p, #block-block-35 p{
+		padding: 0 5px;
+	}
+	
+	#block-block-9 .image-what-to-do-sidebar, #block-block-35 .image-what-to-do-sidebar{
+		width: 108px;
+		float: left;
+		margin-right: 10px;
+	}
+	
+	#block-block-9 .image-what-to-do-sidebar a, #block-block-35 .image-what-to-do-sidebar a,
+	#block-block-9 .image-what-to-do-sidebar a img, #block-block-35 .image-what-to-do-sidebar a img{
+		width: 100%;
+	}
+	
+	#block-block-9 .texto-what-to-do-sidebar p, #block-block-35 .texto-what-to-do-sidebar p{
+		width: 160px;
+		float: left;
+		font-size: 11px;
+		font-family: "Open-sans", sans-serif;
+		color: #594A42;
+	}
+	
+	#block-block-31, #block-block-32, #block-block-33, #block-block-34,
+	#block-block-10, #block-block-11, #block-block-12, #block-block-13{
+		display: none;
+	}
+	
+	/* Manatus Experience interna */
+	
+	.not-front #header{
+		border-bottom: none;
+	}
+	
+	.page-node-30 #block-system-main, 
+	.page-node-49 #block-system-main, 
+	.page-node-52 #block-system-main, 
+	.page-node-55 #block-system-main, 
+	.page-node-58 #block-system-main, 
+	.page-node-61 #block-system-main, 
+	.page-node-67 #block-system-main, 
+	.page-node-70 #block-system-main, 
+	.page-node-73 #block-system-main, 
+	.page-node-76 #block-system-main{
+		width: 294px;
+		float: none;
+		margin: 10px auto 30px;
+		padding: 0;
+	}
+	
+	.page-node-30 #highlighted #block-system-main p, 
+	.page-node-49 #highlighted #block-system-main p, 
+	.page-node-52 #highlighted #block-system-main p, 
+	.page-node-55 #highlighted #block-system-main p, 
+	.page-node-58 #highlighted #block-system-main p, 
+	.page-node-61 #highlighted #block-system-main p, 
+	.page-node-67 #highlighted #block-system-main p, 
+	.page-node-70 #highlighted #block-system-main p, 
+	.page-node-73 #highlighted #block-system-main p, 
+	.page-node-76 #highlighted #block-system-main p{
+		font-size: 11px;
+		line-height: 15px;
+	}
+	
+	.page-node-30 #highlighted #block-system-main ul li, 
+	.page-node-49 #highlighted #block-system-main ul li, 
+	.page-node-52 #highlighted #block-system-main ul li, 
+	.page-node-55 #highlighted #block-system-main ul li, 
+	.page-node-58 #highlighted #block-system-main ul li, 
+	.page-node-61 #highlighted #block-system-main ul li, 
+	.page-node-67 #highlighted #block-system-main ul li, 
+	.page-node-70 #highlighted #block-system-main ul li, 
+	.page-node-73 #highlighted #block-system-main ul li, 
+	.page-node-76 #highlighted #block-system-main ul li{
+		font-size: 11px;
+		line-height: 15px;
+	}
+	
+	.page-node-30 #block-system-main .content h2, 
+	.page-node-49 #block-system-main .content h2, 
+	.page-node-52 #block-system-main .content h2, 
+	.page-node-55 #block-system-main .content h2, 
+	.page-node-58 #block-system-main .content h2, 
+	.page-node-61 #block-system-main .content h2, 
+	.page-node-67 #block-system-main .content h2,
+	.page-node-70 #block-system-main .content h2,
+	.page-node-73 #block-system-main .content h2, 
+	.page-node-76 #block-system-main .content h2{
+		font-size: 16px;
+	}
+	
+	.page-node-30 #highlighted #block-system-main h3, 
+	.page-node-49 #highlighted #block-system-main h3, 
+	.page-node-52 #highlighted #block-system-main h3, 
+	.page-node-55 #highlighted #block-system-main h3, 
+	.page-node-58 #highlighted #block-system-main h3, 
+	.page-node-61 #highlighted #block-system-main h3, 
+	.page-node-67 #highlighted #block-system-main h3, 
+	.page-node-70 #highlighted #block-system-main h3, 
+	.page-node-73 #highlighted #block-system-main h3, 
+	.page-node-76 #highlighted #block-system-main h3{
+		font-size: 14px;
+		margin: 8px 0;
+	}
+	
+	.page-node-30 #sidebar-second, 
+	.page-node-49 #sidebar-second, 
+	.page-node-52 #sidebar-second, 
+	.page-node-55 #sidebar-second, 
+	.page-node-58 #sidebar-second, 
+	.page-node-61 #sidebar-second, 
+	.page-node-67 #sidebar-second, 
+	.page-node-70 #sidebar-second, 
+	.page-node-73 #sidebar-second, 
+	.page-node-76 #sidebar-second{
+		margin-top: 0;
+	}
+	
+	.view-slider-interno-bloque,
+	#block-views-blog-block-1,
+	#block-views-blog-block-3,
+	#block-block-19,
+	#block-block-20,
+	#block-block-21,
+	#block-block-22,
+	#block-block-50,
+	#block-block-51,
+	#block-block-52,
+	#block-block-53,
+	#block-block-56,
+	#block-block-62,
+	#block-block-55,
+	#block-block-59,
+	#block-block-60,
+	#block-block-61{
+		display: none;
+	}
+	
+	#block-block-9 h3, #block-block-35 h3,
+	#block-block-23 h3, #block-block-54 h3,
+	#block-block-39 h3, #block-block-18 h3{
+		background-color: #87ADBA;
+		border-top: 5px solid #D2F0FB;
+		line-height: 42px;
+		color: #FFFFFF;
+		font-family: "Raleway",sans-serif;
+		font-size: 20px;
+		font-weight: 400;
+		margin: 10px 0;
+		padding: 6px 20px;
+		text-transform: uppercase;
+		width: 100%;
+	}
+	
+	#block-block-9, #block-block-35,
+	#block-block-23, #block-block-54,
+	#block-block-39, #block-block-18{
+		width: 294px;
+		float: none;
+		margin: 10px auto;
+	}
+	
+	
+	#block-block-9 h4, #block-block-35 h4,
+	#block-block-23 h4, #block-block-54 h4 ,
+	#block-block-39 h4, #block-block-18 h4 	{
+		color: #87ADBA;
+		font-family: "Raleway",sans-serif;
+		font-size:17px;
+		font-weight: 400;
+		margin: 15px 0 5px;
+		padding-left: 5px;
+
+	}
+	
+	#block-block-9 p, #block-block-35 p,
+	#block-block-23 p, #block-block-54 p,
+	#block-block-39 p, #block-block-18 p{
+		padding: 0 5px;
+	}
+	
+	#block-block-9 .image-what-to-do-sidebar, #block-block-35 .image-what-to-do-sidebar,
+	#block-block-23 .image-what-to-do-sidebar, #block-block-54 .image-what-to-do-sidebar,
+	#block-block-39 .image-what-to-do-sidebar, #block-block-18 .image-what-to-do-sidebar{
+		width: 108px;
+		float: left;
+		margin-right: 10px;
+	}
+	
+	#block-block-9 .image-what-to-do-sidebar a, #block-block-35 .image-what-to-do-sidebar a,
+	#block-block-9 .image-what-to-do-sidebar a img, #block-block-35 .image-what-to-do-sidebar a img,
+	#block-block-23 .image-what-to-do-sidebar a, #block-block-54 .image-what-to-do-sidebar a,
+	#block-block-23 .image-what-to-do-sidebar a img, #block-block-54 .image-what-to-do-sidebar a img,
+	#block-block-39 .image-what-to-do-sidebar a, #block-block-18 .image-what-to-do-sidebar a,
+	#block-block-39 .image-what-to-do-sidebar a img, #block-block-18 .image-what-to-do-sidebar a img{
+		width: 100%;
+	}
+	
+	#block-block-9 .texto-what-to-do-sidebar p, #block-block-35 .texto-what-to-do-sidebar p,
+	#block-block-23 .texto-what-to-do-sidebar p, #block-block-54 .texto-what-to-do-sidebar p,
+	#block-block-39 .texto-what-to-do-sidebar p, #block-block-18 .texto-what-to-do-sidebar p{
+		width: 160px;
+		float: left;
+		font-size: 11px;
+		font-family: "Open-sans", sans-serif;
+		color: #594A42;
+	}
+	
+	.front #footer #block-menu-menu-men-principal-responsivo--2{
+		display: none;
+	}
+	
+	
+	/* Sport Fishing */
+	
+	.page-node-134 #highlighted .block .sport-fish-columna1, .page-node-133 #highlighted .block .sport-fish-columna1{
+		width: 96%;
+		float: none;
+		margin-right: auto;
+		margin-left: auto;
+	}
+	
+	
+	.page-node-134 #highlighted .block .sport-fish-columna1 p, .page-node-133 #highlighted .block .sport-fish-columna1 p{
+		font-size: 11px;
+	}
+	
+	.page-node-134 #highlighted .block .sport-fish-columna1 .box-text-sport-fishing h2, .page-node-133 #highlighted .block .sport-fish-columna1 .box-text-sport-fishing h2{
+		font-size: 16px;
+	}
+	
+	.page-node-134 #highlighted .block .sport-fish-columna2, .page-node-133 #highlighted .block .sport-fish-columna2{
+		width: 96%;
+		float: none;
+		margin-right: auto;
+		margin-left: auto;
+	}
+	.page-node-134 #highlighted .block .sport-fish-columna2 .box-columna2-sportfish h2, .page-node-133 #highlighted .block .sport-fish-columna2 .box-columna2-sportfish h2{
+		font-size: 16px;
+		height: 28px;
+	}
+	
+	.page-node-134 #highlighted .block .sport-fish-columna2 .box-columna2-sportfish h3, .page-node-133 #highlighted .block .sport-fish-columna2 .box-columna2-sportfish h3{
+		font-size: 14px;
+		margin: 5px 0;
+	}
+	
+	.page-node-134 #highlighted .block .sport-fish-columna2 .box-columna2-sportfish p, .page-node-133 #highlighted .block .sport-fish-columna2 .box-columna2-sportfish p{
+		font-size: 12px; 
+	}
+	
+	.page-node-134 #highlighted .block .sport-fish-columna1 .box-text-sport-fishing ul li, .page-node-133 #highlighted .block .sport-fish-columna1 .box-text-sport-fishing ul li{
+		font-size: 11px;
+	}
+	
+	.page-node-134 #highlighted .block .sport-fish-columna2 .box-columna2-sportfish ul li, .page-node-133 #highlighted .block .sport-fish-columna2 .box-columna2-sportfish ul li{
+		font-size: 12px;
+	}
+	
+	.page-tours-and-activities #highlighted, .page-tours-actividades #highlighted, .page-node-134 #highlighted, .page-node-133 #highlighted{
+		border-bottom: none;
+	}
+	
+	.page-tours-and-activities #block-system-main h2, .page-tours-actividades #block-system-main h2{
+		font-size: 18px;
+	}
+	
+	.page-tours-and-activities #block-system-main .view-adventure-tours .views-row, .page-tours-actividades #block-system-main .view-adventure-tours .views-row{
+		float: left;
+		margin: 0 auto 15px !important;
+		width: 100%;
+		padding: 10px;
+		height: auto !important;
+	}
+	
+	.page-tours-and-activities #block-system-main .view-adventure-tours .views-row .texto-tour h3, .page-tours-actividades #block-system-main .view-adventure-tours .views-row .texto-tour h3{
+		font-size: 14px;
+	}
+	
+	.page-tours-and-activities #block-system-main .view-adventure-tours .views-row .imagen-tour, .page-tours-actividades #block-system-main .view-adventure-tours .views-row .imagen-tour{
+		height: 77px;
+		margin-right: 10px;
+		width: 110px;
+		padding-top: 5px;
+	}
+	
+	.page-tours-and-activities #block-system-main .view-adventure-tours .views-row .texto-tour p, .page-tours-actividades #block-system-main .view-adventure-tours .views-row .texto-tour p{
+		font-size: 11px;
+	}
+	
+	
+	.page-tours-and-activities #block-system-main .view-adventure-tours .views-row .texto-tour, .page-tours-actividades #block-system-main .view-adventure-tours .views-row .texto-tour{
+		float: left;
+		width: 152px;
+		height: auto !important;
+	}
+	
+	
+	.page-tours-and-activities #block-system-main .view-adventure-tours .view-content{
+		float: none;
+		width: 294px;
+		margin: 0 auto;
+	}
+	
+	.page-node-94 #highlighted .region-highlighted,
+	.page-node-97 #highlighted .region-highlighted{
+		padding: 0;
+	}
+	
+	.page-node-97 #block-menu-menu-men-principal-responsivo,
+	.page-node-94 #block-menu-menu-men-principal-responsivo,
+	.page-node-67 #block-menu-menu-men-principal-responsivo,
+	.page-node-70 #block-menu-menu-men-principal-responsivo,
+	.page-node-61 #block-menu-menu-men-principal-responsivo,
+	.page-node-76 #block-menu-menu-men-principal-responsivo,
+	.page-node-55 #block-menu-menu-men-principal-responsivo,
+	.page-node-30 #block-menu-menu-men-principal-responsivo,
+	.page-node-49 #block-menu-menu-men-principal-responsivo,
+	.page-node-58 #block-menu-menu-men-principal-responsivo,
+	.page-node-31 #block-menu-menu-men-principal-responsivo,
+	.page-node-83 #block-menu-menu-men-principal-responsivo,
+	.page-node-100 #block-menu-menu-men-principal-responsivo,
+	.page-node-106 #block-menu-menu-men-principal-responsivo,
+	.page-node-101 #block-menu-menu-men-principal-responsivo,
+	.page-node-107 #block-menu-menu-men-principal-responsivo,
+	.page-tours-actividades #block-menu-menu-men-principal-responsivo,
+	.page-tours-and-activities #block-menu-menu-men-principal-responsivo,
+	.page-node-133 #block-menu-menu-men-principal-responsivo,
+	.page-node-134 #block-menu-menu-men-principal-responsivo
+	{
+		margin-bottom: -18px;
+	}
+	
+	
+	/* Video Gallery */
+	
+	.link-galeria{
+		font-size: 16px;
+	}
+	
+	.flex-control-nav{
+		bottom: -55px !important;
+	}
+	
+	#colorbox .player iframe{
+		width: 100%;
+		height: auto;
+	}
+	
+	#block-views-video-gallery-view-block-1{
+		display: none;
+	}
+	
+	#block-views-video-gallery-view-block-2{
+		display: block;
+	}
+	
+	#block-views-video-gallery-view-block-2 .view-video-gallery-view .views-row{
+		width: 100% !important;
+		float: none !important;
+	}
+
+	.node-type-maravilla-de-manatus #block-menu-menu-men-sidebar-responsivo,
+	.page-node-357 #block-menu-menu-men-sidebar-responsivo,
+	.page-node-358 #block-menu-menu-men-sidebar-responsivo,
+	.node-type-maravilla-de-manatus #block-menu-menu-men-principal-responsivo--2,
+	.page-node-357 #block-menu-menu-men-principal-responsivo--2,
+	.page-node-358 #block-menu-menu-men-principal-responsivo--2{
+		display: none;
+	}
+
+	.node-type-maravilla-de-manatus #block-block-72,
+	.page-node-357 #block-block-72,
+	.page-node-358 #block-block-72{
+		display: none;
+	}
+
+	.node-type-maravilla-de-manatus #footer,
+	.page-node-357 #footer,
+	.page-node-358 #footer{
+		min-height: 200px;
+	}
+
+}

@@ -1,0 +1,4 @@
+name=Gamified To Do
+description= "Allows users to handle TODO list in a funny way"
+package = "gamified TO DO"
+core = 7.x

@@ -1,0 +1,3 @@
+Webform Remote Post 7.x-1.1
+---------------------------
+#2038071 by that0n3guy, enrique.delgado: Adding functionality to be able to send JSON (selectable)

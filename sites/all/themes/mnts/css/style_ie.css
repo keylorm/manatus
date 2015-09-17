@@ -1,0 +1,106 @@
+/* 
+    Document   : style_ie
+    Created on : 06-mar-2014, 17:25:35
+    Author     : Keylor
+    Description:
+        Purpose of the stylesheet follows.
+*/
+
+root { 
+    display: block;
+}
+
+#block-webform-client-block-48 fieldset, #block-webform-client-block-64 fieldset{
+    width: 214px !important;
+
+}
+
+#sidebar-second{
+    width: 35% !important;
+    float: right;
+}
+
+#content{
+    width: 60% !important;
+
+}
+
+#block-views-gallery-block .views-row, #block-views-gallery-block-1 .views-row{
+    width: 136px !important;
+
+}
+
+#block-views-blog-block .view .views-row .views-field-field-blog-imagen, #block-views-blog-block-2 .view .views-row .views-field-field-blog-imagen{
+    width: 152px !important;
+
+}
+
+#block-menu-menu-footer-menu li{
+    display: inline;
+    float: left;
+    width: 30%;
+}
+
+
+#highlighted .block.last{
+    margin-right:0;
+}
+
+#block-system-main-menu .expanded ul li {
+    background-color: #fff;
+}
+
+#block-block-10, #block-block-12, #block-block-31, #block-block-33{
+    margin-right: 12px !important;
+}
+
+.page-node-30 #block-system-main, .page-node-49 #block-system-main, .page-node-52 #block-system-main, .page-node-55 #block-system-main, .page-node-58 #block-system-main, .page-node-61 #block-system-main, .page-node-67 #block-system-main, .page-node-70 #block-system-main, .page-node-73 #block-system-main, .page-node-76 #block-system-main{
+    width: 450px !important;
+}
+
+.page-node-30 #highlighted #block-block-7, .page-node-30 #highlighted #block-webform-client-block-48, .page-node-49 #highlighted #block-webform-client-block-48, .page-node-52 #highlighted #block-webform-client-block-48, .page-node-55 #highlighted #block-webform-client-block-48, .page-node-58 #highlighted #block-webform-client-block-48, .page-node-61 #highlighted #block-webform-client-block-64, .page-node-67 #highlighted #block-webform-client-block-64, .page-node-70 #highlighted #block-webform-client-block-64, .page-node-73 #highlighted #block-webform-client-block-64, .page-node-76 #highlighted #block-webform-client-block-64{
+    width: 530px !important;
+}
+
+#block-webform-client-block-141 #webform-component-e-mail input, #block-webform-client-block-142 #webform-component-e-mail input{
+    width: 174px !important;
+    height: 44px !important;
+    line-height: 44px !important;
+}
+
+#block-webform-client-block-141 #webform-component-e-mail, #block-webform-client-block-142 #webform-component-e-mail{
+    width: 174px !important;
+    overflow: hidden !important;
+}
+
+.no-sidebars #content{
+    width: 100% !important;
+}
+
+#block-block-14, #block-block-15, #block-block-16, #block-block-17, #block-block-40, #block-block-41, #block-block-42, #block-block-43{
+    width: 282px !important;
+}
+
+.page-tours-and-activities #block-system-main .view-adventure-tours .views-row .texto-tour, .page-tours-actividades #block-system-main .view-adventure-tours .views-row .texto-tour{
+    width: 242px !important;
+}
+
+.view-slider-interno-bloque .views_slideshow_cycle_main .views-field-nothing{
+    width: 418px !important;
+    display: block !important;
+    float: left !important;
+}
+
+.view-slider-interno-bloque .views_slideshow_cycle_main .views-field-field-slider-image{
+    width: 490px !important;
+    display: block !important;
+    float: left !important;
+}
+
+.views-slideshow-pager-field-item{
+    margin-right: 11px;
+}
+
+#edit-webform-ajax-submit-46{
+    width: auto !important;
+}

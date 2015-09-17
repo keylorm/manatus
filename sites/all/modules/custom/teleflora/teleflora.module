@@ -1,0 +1,107 @@
+<?php
+define('TELEFLORA_GATEWAY_URL', 'https://secure2.eflorist.com/testorder.asp');
+
+function teleflora_uc_payment_gateway() {
+  $gateways['teleflora'] = array(
+    'title' => t('Teleflora'),
+    'description' => t('Process payments through teleflora payment gateway'),
+  );
+  return $gateways;
+}
+
+
+function teleflora_uc_payment_method() {
+  $methods[] = array(
+    'id' => 'teleflora',
+    'name' => t('Teleflora'),
+    'title' => t('Teleflora'),
+    'desc' => t('Pay through teleflora gateway'),
+    'callback' => 'teleflora_payment_method',
+    'redirect' => 'teleflora_payment_form',
+    'weight' => 1,
+    'checkout' => TRUE,
+  );
+  return $methods;
+}
+
+
+function teleflora_payment_method($op, &$order) {
+  switch ($op) {
+    case 'settings':
+      $form['teleflora_payment_gateway_username'] = array(
+        '#type' => 'textfield',
+        '#title' => t('Username'),
+        '#description' => t('Your merchant username'),
+        '#default_value' => variable_get('my_payment_gateway_username'),
+      );
+      $form['teleflora_custom_checkout_label'] = array(
+        '#type' => 'textfield',
+        '#title' => t('Checkout button label'),
+        '#description' => t('Customize the label of the final checkout button when the customer is about to pay.'),
+        '#default_value' => variable_get('my_custom_checkout_label'),
+      );
+      return $form;
+  }
+}
+
+function teleflora_payment_form($form, &$form_state, $order) {
+
+  // Collect some information about the order
+  $time = time();
+  $order_id = $order->order_id;
+  $order_total = number_format($order->order_total, 2, '.', '');
+  $customer_email = $order->primary_email;
+  $cart_id = uc_cart_get_id();
+
+  // Build the data to send to my payment gateway
+  $data = array(
+    'timestamp' => $time,
+    'order_id' => $order_id,
+    'order_total' => $order_total,
+    'customer_email' => $customer_email,
+    'cart_id' => $cart_id,
+    'telefloraID' => '59169400',
+  );
+
+  // This code goes behind the final checkout button of the checkout pane
+  foreach ($data as $name => $value) {
+    if (!empty($value)) {
+      $form[$name] = array('#type' => 'hidden', '#value' => $value);
+    }
+  }
+
+  $form['#action'] = TELEFLORA_GATEWAY_URL;
+  $form['actions'] = array('#type' => 'actions');
+  $form['actions']['submit'] = array(
+    '#type' => 'submit',
+    '#value' => variable_get('my_custom_checkout_label', t('Submit Orders')),
+  );
+  return $form;
+}
+
+function teleflora_menu() {
+  $items['paymentcomplete'] = array(
+    'title' => 'Payment Complete',
+    'page callback' => 'my_pay_gateway_complete',
+    'access arguments' => array('access content'),
+    'type' => MENU_CALLBACK,
+  );
+  return $items;
+}
+
+function teleflora_uc_checkout_complete() {
+  echo "hello";
+  if ($_POST['status'] == 'SUCCESS') {
+    // Insert logic here to make sure payment info can be matched to valid order
+    // Assuming all tests passed and payment was successful
+    // Complete the order
+    uc_payment_enter($order->order_id, 'teleflora_gateway', $amount, $order->uid, NULL, $order->order_id);
+    return 'Thank you for your purchase';
+  }else{
+    watchdog('My Payment Gateway',
+      'Received an empty or incomplete response.  Response details: @request_details',
+      array('@request_details' =>  print_r($_POST,true)), WATCHDOG_ERROR);
+
+    return 'There was a problem with your payment';
+  }
+}

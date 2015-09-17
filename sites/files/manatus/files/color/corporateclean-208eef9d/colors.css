@@ -1,0 +1,129 @@
+
+/* ---------- Color Module Styles ----------- */
+body { color: #6b5c55; background:#fefcf0; }
+
+a, li a.active,
+#footer a:hover, #footer li a.active:hover, #footer-bottom a:hover, #footer-bottom li a.active:hover,
+#header a, #header-menu ul.menu li a:hover, #header-menu ul.menu li a.active, #header-menu ul.menu li ul.menu li a:hover,
+#navigation .block-superfish ul.sf-menu li a:focus, #navigation .block-superfish ul.sf-menu li a:hover, #navigation .block-superfish ul.sf-menu li a.active,
+.front .node h1.front-heading { color:#852602; }
+
+#header-menu a, #header-menu ul.menu li a, #navigation .block-superfish ul.sf-menu li a { color:#ffffff; }
+
+#footer a, #footer li a.active, #footer-bottom a, #footer-bottom li a.active { color:#e4e4e4; }
+
+h1, h2, h3, h4, h5, h6 { color:#852602; text-shadow: 1px 1px 1px #eaf1ea; }
+
+#slogan { color:#d5d5d5; }
+
+#header {
+background: #fefcf0;
+/* IE10 */ 
+background-image: -ms-linear-gradient(top, #fefcf0 0%, #fefcf0 100%);
+/* Mozilla Firefox */ 
+background-image: -moz-linear-gradient(top, #fefcf0 0%, #fefcf0 100%);
+/* Opera */ 
+background-image: -o-linear-gradient(top, #fefcf0 0%, #fefcf0 100%);
+/* Webkit (Safari/Chrome 10) */ 
+background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #fefcf0), color-stop(1, #fefcf0));
+/* Webkit (Chrome 11+) */ 
+background-image: -webkit-linear-gradient(top, #fefcf0 0%, #fefcf0 100%);
+/* Proposed W3C Markup */ 
+background-image: linear-gradient(top, #fefcf0 0%, #fefcf0 100%);
+/* IE6-9 */ 
+filter:  progid:DXImageTransform.Microsoft.gradient(startColorstr='#fefcf0', endColorstr='#fefcf0'); }
+
+#header-menu { background: #fefcf0; border-top:1px solid #fefcf0; border-bottom:1px solid #fefcf0; }
+
+#header-menu ul.menu li.expanded ul.menu, #navigation .block-superfish ul.sf-menu li, #navigation .block-superfish ul.sf-menu li li a { background: #fefcf0; }
+
+#header-menu ul.menu li.expanded ul.menu li a, #footer .block ul.menu li a, #navigation .block-superfish ul.sf-menu li li a { border-bottom:1px solid #fefcf0; }
+#footer-bottom { border-top:1px solid #fefcf0; }
+ul.secondary-menu li, #footer-bottom ul.menu li { border-right:1px solid #fefcf0; }
+
+#header-menu ul.menu li ul.menu li a:hover,
+#header-menu ul.menu li.expanded ul.menu li.expanded a:hover,
+#header-menu ul.menu li.expanded ul.menu li.leaf a:hover,
+#navigation .block-superfish ul.sf-menu li li:hover,
+#navigation .block-superfish ul.sf-menu li li a:focus, #navigation .block-superfish ul.sf-menu li li a:hover, #navigation .block-superfish ul.sf-menu li li a:active  { background-color:#fefcf0; }
+
+#banner  {
+background: #ffffff;
+/* IE10 */ 
+background-image: -ms-linear-gradient(top, #ffffff 0%, #ffffff 100%);
+/* Mozilla Firefox */ 
+background-image: -moz-linear-gradient(top, #ffffff 0%, #ffffff 100%);
+/* Opera */ 
+background-image: -o-linear-gradient(top, #ffffff 0%, #ffffff 100%);
+/* Webkit (Safari/Chrome 10) */ 
+background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #ffffff), color-stop(1, #ffffff));
+/* Webkit (Chrome 11+) */ 
+background-image: -webkit-linear-gradient(top, #ffffff 0%, #ffffff 100%);
+/* Proposed W3C Markup */ 
+background-image: linear-gradient(top, #ffffff 0%, #ffffff 100%);
+/* IE6-9 */ 
+filter:  progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffff', endColorstr='#ffffff');
+ 
+border-bottom:1px solid #fcfcfc; }
+
+#content {
+background: #ffffff;
+/* IE10 */ 
+background-image: -ms-linear-gradient(top, #ffffff 0%, #ffffff 100%);
+/* Mozilla Firefox */ 
+background-image: -moz-linear-gradient(top, #ffffff 0%, #ffffff 100%);
+/* Opera */ 
+background-image: -o-linear-gradient(top, #ffffff 0%, #ffffff 100%);
+/* Webkit (Safari/Chrome 10) */ 
+background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #ffffff), color-stop(1, #ffffff));
+/* Webkit (Chrome 11+) */ 
+background-image: -webkit-linear-gradient(top, #ffffff 0%, #ffffff 100%);
+/* Proposed W3C Markup */ 
+background-image: linear-gradient(top, #ffffff 0%, #ffffff 100%);
+/* IE6-9 */ 
+filter:  progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffff', endColorstr='#ffffff'); }
+
+#footer { background:#fefcf0; }
+
+#footer-bottom { 
+background: #fefcf0;
+/* IE10 */ 
+background-image: -ms-linear-gradient(top, #fefcf0 0%, #fefcf0 100%);
+/* Mozilla Firefox */ 
+background-image: -moz-linear-gradient(top, #fefcf0 0%, #fefcf0 100%);
+/* Opera */ 
+background-image: -o-linear-gradient(top, #fefcf0 0%, #fefcf0 100%);
+/* Webkit (Safari/Chrome 10) */ 
+background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #fefcf0), color-stop(1, #fefcf0));
+/* Webkit (Chrome 11+) */ 
+background-image: -webkit-linear-gradient(top, #fefcf0 0%, #fefcf0 100%);
+/* Proposed W3C Markup */ 
+background-image: linear-gradient(top, #fefcf0 0%, #fefcf0 100%);
+/* IE6-9 */ 
+filter:  progid:DXImageTransform.Microsoft.gradient(startColorstr='#fefcf0', endColorstr='#fefcf0'); }
+
+.links ul li a, a.more, #comments ul.links li a,
+input[type="submit"], input[type="reset"], input[type="button"] { color:#fefefe; text-shadow: 0 1px 1px #003547; 
+/* background */
+background: #a54622;
+/* IE10 */ 
+background-image: -ms-linear-gradient(top, #a54622 0%, #751602 100%);
+/* Mozilla Firefox */ 
+background-image: -moz-linear-gradient(top, #a54622 0%, #751602 100%);
+/* Opera */ 
+background-image: -o-linear-gradient(top, #a54622 0%, #751602 100%);
+/* Webkit (Safari/Chrome 10) */ 
+background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #a54622), color-stop(1, #751602));
+/* Webkit (Chrome 11+) */ 
+background-image: -webkit-linear-gradient(top, #a54622 0%, #751602 100%);
+/* Proposed W3C Markup */ 
+background-image: linear-gradient(top, #a54622 0%, #751602 100%);
+/* IE6-9 */ 
+filter:  progid:DXImageTransform.Microsoft.gradient(startColorstr='#a54622', endColorstr='#751602');
+/* shadow */
+-webkit-box-shadow: 0px 1px 2px #939da2; -moz-box-shadow: 0px 1px 2px #939da2; box-shadow: 0px 1px 2px #939da2; }
+
+.links ul li a:hover, a.more:hover, #comments ul.links li a:hover,
+input[type="submit"]:hover, input[type="reset"]:hover, input[type="button"]:hover { background: #852602; }
+
+.region-sidebar-first .block .content, .region-sidebar-second .block .content { background:#fdfdfd; }

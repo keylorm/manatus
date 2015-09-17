@@ -1,0 +1,23 @@
+/* 
+    Document   : style_ie_general
+    Created on : 07-mar-2014, 10:07:59
+    Author     : Keylor
+    Description:
+        Purpose of the stylesheet follows.
+*/
+
+root { 
+    display: block;
+}
+
+#block-block-10 h2:after, #block-block-12 h2:after, #block-block-13 h2:after, #block-block-11 h2:after, #block-block-31 h2:after, #block-block-32 h2:after, #block-block-33 h2:after, #block-block-34 h2:after{
+    content: "" !important;
+}
+
+#block-block-10 h2:before, #block-block-12 h2:before, #block-block-13 h2:before, #block-block-11 h2:before, #block-block-31 h2:before, #block-block-32 h2:before, #block-block-33 h2:before, #block-block-34 h2:before{
+    content: "" !important;
+}
+
+.view-video-gallery-view .views-row{
+    width: 322px;
+}

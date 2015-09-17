@@ -1,0 +1,272 @@
+/* 
+    Document   : responsive para tablet
+    Created on : 05-feb-2014, 13:04:09
+    Author     : Keylor Mora
+    Description:
+        This CSS is used to apply the Responsive Appereance to the website.
+*/
+
+
+@media only screen and (min-width : 691px) and (max-width : 1000px) {
+@charset "UTF-8";
+
+.witges-trip {
+  width: 615px;
+  margin: 0 auto;
+}
+    #block-block-1{
+        float: right;
+        display: none;
+    }
+    #block-block-1--2{
+        display: block;
+		width: 96%;
+		margin: 0px auto 10px;
+		text-align: center;
+    }
+    #block-menu-menu-top-menu .menu{
+        float: right;
+        display: none;
+    }
+
+    #block-menu-menu-top-menu--2 .menu{
+        display: block;
+		margin: 0 auto;
+		width: 255px;
+    }
+	 #block-menu-menu-top-menu--2{
+        width: 96%;
+		margin: 10px auto;
+		text-align: center;
+    }
+	
+	#block-locale-language .language-switcher-locale-url {
+		float: right;
+		display: none;
+	}
+	#block-locale-language--2 .language-switcher-locale-url {
+		display: block;
+		width: 96%;
+		margin: 0px auto 10px;
+		text-align: center;
+		padding: 0;
+	}
+	.zopim{
+		display: none;
+	}
+	
+	#block-menu-menu-footer-menu{
+		display: none;
+	}
+	
+	#block-block-8{
+        display: none;
+    }
+	.tinynav { display: block }
+    .region-header #block-system-main-menu .menu{ display: none }
+	.region-header #block-menu-menu-men-principal-responsivo .menu {display: none;}
+	.region-header #block-system-main-menu{
+		margin-top: 20px;
+	}
+	
+	#block-system-main-menu {
+		border-top: none;
+	}
+	
+	.region-header {
+		border-top: 10px solid #F2E3DA;
+		margin: -90px auto 20px;
+		width: 96%;
+		background: #fff;
+	}
+	
+	
+	#header #header-region {
+		width: 100% !important;
+	}
+	
+	#footer .region-footer{
+		width: 100% !important;
+	}
+
+	#logo {
+		display: block;
+		height: 128px;
+		margin: 10px auto 0;
+		position: relative;
+		width: 244px;
+		z-index: 100;
+	}
+	
+	
+	#block-menu-menu-men-principal-responsivo{
+		margin-top: 100px;
+		margin-bottom: 30px;
+	}
+	
+	#block-menu-menu-men-principal-responsivo .content{
+		width: 100%;
+		overflow: hidden;
+		
+		border: 1px solid #F5ECE5;
+		height: 38px;
+	}
+	
+	#block-menu-menu-men-principal-responsivo .content select{
+		width: 120%;
+		border: none;
+		height: 38px;
+		border-radius: 0;
+		font-size: 15px;
+		line-height: 38px;
+		font-family: "Raleway", sans-serif;
+		font-weight: 400;
+		color: #594A42;
+		background-image: url(../img/bg-menu-responsivo-flecha.jpg);
+		background-repeat: no-repeat;
+		background-position: 82% center;
+		background-color: transparent;
+		text-transform: uppercase;
+		padding-left: 10px;
+		padding-top: 6px;
+		 
+	}
+	
+	#block-menu-menu-men-principal-responsivo .content select option{
+		
+		height: 38px;
+		
+		font-size: 15px;
+		line-height: 38px;
+		font-family: "Raleway", sans-serif;
+		font-weight: 400;
+		color: #594A42;
+		text-transform: uppercase;
+		 
+	}
+	
+	#footer {
+		background: none repeat scroll 0 0 #fff;
+		border-top: none;
+		border-bottom: 10px solid #F2E3DA;
+		width: 96%;
+		margin: 0 auto 20px;
+		min-height: 260px;
+		padding: 1.7em 0;
+	}
+	
+	#page{
+		background: none repeat scroll 0 0 #FFFCF1;
+	}
+	
+	/*Index*/
+	
+	#block-views-main-slider-block .view .views-slideshow-cycle-main-frame-row-item .views-field-title {
+		bottom: 5px;
+		font-size: 24px;
+		padding: 12px 0;
+		position: absolute;
+		text-align: center;
+		text-transform: uppercase;
+		width: 100%;
+	}
+	
+	#block-views-main-slider-block .views-slideshow-controls-bottom #views_slideshow_controls_text_previous_main_slider-block {
+		height: 34px;
+		left: 12px;
+		position: absolute;
+		top: 270px;
+		width: 26px;
+	}
+	
+	
+	#block-views-main-slider-block .views-slideshow-controls-bottom #views_slideshow_controls_text_next_main_slider-block {
+		height: 34px;
+		position: absolute;
+		right: 12px;
+		top: 270px;
+		width: 26px;
+	}
+	
+		/*Keylor*/
+	#block-block-6, #block-block-30{
+		float: left;
+		width: 47%;
+		margin: 0;
+		clear: none;
+		max-height: 500px;
+		height: 280px;
+	}
+	
+	#block-block-7, #block-webform-client-block-48, #block-webform-client-block-64, #block-block-24{
+		background-image: none;
+		clear: none;
+		float: left;
+		height: 280px;
+		margin: 0;
+		max-height: 600px;
+		padding: 10px 10px 15px;
+		width: 53%;
+		
+	}
+	
+	#block-webform-client-block-48 fieldset, #block-webform-client-block-64 fieldset{
+		float: none;
+		margin: 0 auto;
+	}
+	
+	#block-webform-client-block-48 input[type="submit"], #block-webform-client-block-64 input[type="submit"]{
+		float: none;
+		margin: 0 auto;
+	}
+	
+	#block-webform-client-block-48 #edit-actions, #block-webform-client-block-64 #edit-actions{
+		text-align: center;
+	}
+	
+	
+	/* Added by Juan, fix style to slider islas home page */
+	#block-carousel-manatus-carousel-main, #block-carousel-manatus-carousel-principal {clear: both; float: none; height: 50% !important; margin: 0 auto; width: 600px; display: block;}
+	#block-carousel-manatus-carousel-main .wrapper-imagen-carousel-sidebar a img , #block-carousel-manatus-carousel-principal .wrapper-imagen-carousel-sidebar a img { width: 100% !important; }
+	#block-carousel-manatus-carousel-main .views-field.views-field-body, #block-carousel-manatus-carousel-main .wrapper-imagen-carousel-sidebar, #block-carousel-manatus-carousel-main .views-field.views-field-view-node,  #block-carousel-manatus-carousel-principal .views-field.views-field-body, #block-carousel-manatus-carousel-principal .wrapper-imagen-carousel-sidebar, #block-carousel-manatus-carousel-principal .views-field.views-field-view-node{ float: left; }
+	.m-card-light {display: block; float: left; height: 100%; }
+	.views-field.views-field-body { margin-left: 10px; margin-right: 5%;  width: 58%; }
+	#block-carousel-manatus-carousel-main .views-field.views-field-view-node, #block-carousel-manatus-carousel-principal .views-field.views-field-view-node {margin-left: 10px;}
+	#block-carousel-manatus-carousel-main .views-field.views-field-view-node a, #block-carousel-manatus-carousel-principal .views-field.views-field-view-node a {font-family: 'Raleway'; font-size: 13px; color: #813400; font-weight: 600;}
+	#block-carousel-manatus-carousel-main .views-field.views-field-body .field-content p, #block-carousel-manatus-carousel-principal .views-field.views-field-body .field-content p {font-family: open sans; font-size: 12px; color: #594A42 !important;}
+	#block-carousel-manatus-carousel-main .views-field.views-field-title, #block-carousel-manatus-carousel-principal .views-field.views-field-title {margin-bottom: 10px;}
+	#block-carousel-manatus-carousel-main .views-field.views-field-title a, #block-carousel-manatus-carousel-principal .views-field.views-field-title a {font-family: 'Raleway'; font-size: 18px; color: #813400;}
+	.m-carousel .m-item { width: 610px;}
+	#block-block-2, #block-block-3, #block-block-4, #block-block-5, #block-block-29, #block-block-36, #block-block-37, #block-block-38{
+		display: none;
+	}
+	#highlighted .region-highlighted{
+		width: 96% !important;
+	}
+	
+	#block-menu-menu-men-sidebar-responsivo{
+		display: none;	
+	}
+	
+	.front #footer #block-menu-menu-men-principal-responsivo--2{
+		display: none;
+	}
+	
+	#block-views-video-gallery-view-block-1{
+		display: block;
+	}
+	
+	#block-views-video-gallery-view-block-2{
+		display: none;
+	}
+
+
+	#block-block-72{
+		display: block;
+	}
+	
+}
+
+
+
+

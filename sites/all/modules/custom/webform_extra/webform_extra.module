@@ -1,0 +1,42 @@
+<?php
+
+
+function webform_extra_form_alter(&$form, &$form_state, $form_id)                 
+{
+   //only want form with nid 1171 to submit externally 
+   //Note that "webform_client_form_1171" means modify the Webform form for the node with NID "1171". Adjust to match whichever webform node's form you're modifying
+   if($form_id == 'webform_client_form_64') 
+       {
+            $form['#submit'][] = 'webform_extra_submit_esp';    
+       }
+	   
+	if($form_id == 'webform_client_form_48') 
+       {
+            $form['#submit'][] = 'webform_extra_submit_eng';    
+       }
+
+}
+
+// Adds a submit handler/function for the app signup form (Webform ID #1171) 
+
+
+  
+function webform_extra_submit_eng($form, &$form_state) {
+
+   
+    $url = 'http://booking.manatuscostarica.com/reservacion_en.aspx?checkin='.$form_state['values']['submitted_tree']['fechas']['check_in'].'&checkout='.$form_state['values']['submitted_tree']['fechas']['check_out'].'&rooms='.$form_state['values']['submitted_tree']['selects']['number_of_rooms'];
+	
+    // Put your additional headers here. Cookie can be set as well. 
+    
+   
+   $form_state['redirect'] = url($url);
+	
+}
+
+
+function webform_extra_submit_esp($form, &$form_state) {
+
+    $url = 'http://booking.manatuscostarica.com/reservacion_sp.aspx?checkin='.$form_state['values']['submitted_tree']['fechas']['check_in_esp'].'&checkout='.$form_state['values']['submitted_tree']['fechas']['check_out_esp'].'&rooms='.$form_state['values']['submitted_tree']['selects']['habitaciones'];
+
+	$form_state['redirect'] = url($url);
+}

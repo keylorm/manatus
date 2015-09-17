@@ -1,0 +1,4 @@
+name = Webform extra functions
+description = Este es un módulo para manejar la redirección de los formularios de reserva al sitio externo de reserva
+package = Webform
+core = 7.x 

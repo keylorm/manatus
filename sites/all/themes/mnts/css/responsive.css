@@ -1,0 +1,399 @@
+/* 
+    Document   : responsive
+    Created on : 05-feb-2014, 13:04:09
+    Author     : Keylor Mora
+    Description:
+        This CSS is used to apply the Responsive Appereance to the website.
+*/
+
+
+
+
+
+@media only screen and (min-width: 1000px){
+    #block-block-1{
+        float: right;
+        display: block;
+    }
+    #block-block-1--2{
+        display: none;
+    }
+    #block-menu-menu-top-menu .menu{
+
+        float: right;
+        display: block;
+    }
+
+    #block-menu-menu-top-menu--2 .menu{
+        display: none;
+    }
+	
+	#block-locale-language .language-switcher-locale-url {
+		float: right;
+		display: block;
+	}
+	#block-locale-language--2 .language-switcher-locale-url {
+		display: none;
+	}
+	.zopim{
+		display: block;
+	}
+	
+	#block-menu-menu-footer-menu{
+		display: block;
+	}
+	
+	#block-block-8{
+        display: block;
+		
+    }
+	.tinynav { display: none }
+	.region-header #block-system-main-menu .menu{ display: marker; }
+	.region-header #block-menu-menu-men-principal-responsivo .menu {display: none;}
+	
+	#block-system-main-menu {
+		border-top: 10px solid #F2E3DA;
+	}
+	
+	.region-header {
+		border-top: none;
+		margin: auto;
+		width: 100%;
+		background: transparent;
+	}
+	
+	#header #header-region {
+		width: 980px !important;
+	}
+	
+	#footer .region-footer{
+		width: 980px !important;
+	}
+
+	#logo {
+			margin-left: 2.55em;
+			margin-right: 0;
+			margin-top: 0;
+			position: absolute;
+			z-index: 100;
+		}
+		
+	
+	#footer {
+		background: none repeat scroll 0 0 #FFFCF1;
+		border-top: 3px solid #F2E3DA;
+		border-bottom: none;
+		margin: 2em auto 0;
+		min-height: 260px;
+		padding: 1.7em 0;
+		width: 100%;
+	}
+	#page{
+		background: none repeat scroll 0 0 #fff;
+	}
+	
+	
+}
+
+
+
+
+
+@media only screen and (min-width : 690px) and (max-width : 1000px) {
+    #block-block-1{
+        float: right;
+        display: none;
+    }
+    #block-block-1--2{
+        display: block;
+		width: 96%;
+		margin: 0px auto 10px;
+		text-align: center;
+    }
+    #block-menu-menu-top-menu .menu{
+        float: right;
+        display: none;
+    }
+
+    #block-menu-menu-top-menu--2 .menu{
+        display: block;
+		margin: 0 auto;
+		width: 255px;
+    }
+	 #block-menu-menu-top-menu--2{
+        width: 96%;
+		margin: 10px auto;
+		text-align: center;
+    }
+	
+	#block-locale-language .language-switcher-locale-url {
+		float: right;
+		display: none;
+	}
+	#block-locale-language--2 .language-switcher-locale-url {
+		display: block;
+		width: 96%;
+		margin: 0px auto 10px;
+		text-align: center;
+		padding: 0;
+	}
+	.zopim{
+		display: none;
+	}
+	
+	#block-menu-menu-footer-menu{
+		display: none;
+	}
+	
+	#block-block-8{
+        display: none;
+    }
+	.tinynav { display: block }
+    .region-header #block-system-main-menu .menu{ display: none }
+	.region-header #block-menu-menu-men-principal-responsivo .menu {display: none;}
+	.region-header #block-system-main-menu{
+		margin-top: 20px;
+	}
+	
+	#block-system-main-menu {
+		border-top: none;
+	}
+	
+	.region-header {
+		border-top: 10px solid #F2E3DA;
+		margin: -90px auto 20px;
+		width: 96%;
+		background: #fff;
+	}
+	
+	
+	#header #header-region {
+		width: 100% !important;
+	}
+	
+	#footer .region-footer{
+		width: 100% !important;
+	}
+
+	#logo {
+		display: block;
+		height: 128px;
+		margin: 10px auto 0;
+		position: relative;
+		width: 244px;
+		z-index: 100;
+	}
+	
+	
+	#block-menu-menu-men-principal-responsivo{
+		margin-top: 100px;
+		margin-bottom: 30px;
+	}
+	
+	#block-menu-menu-men-principal-responsivo .content{
+		width: 100%;
+		overflow: hidden;
+		
+		border: 1px solid #F5ECE5;
+		height: 38px;
+	}
+	
+	#block-menu-menu-men-principal-responsivo .content select{
+		width: 120%;
+		border: none;
+		height: 38px;
+		border-radius: 0;
+		font-size: 15px;
+		line-height: 38px;
+		font-family: "Raleway", sans-serif;
+		font-weight: 400;
+		color: #594A42;
+		background-image: url(../img/bg-menu-responsivo-flecha.jpg);
+		background-repeat: no-repeat;
+		background-position: 82% center;
+		background-color: transparent;
+		text-transform: uppercase;
+		padding-left: 10px;
+		padding-top: 6px;
+		 
+	}
+	
+	#block-menu-menu-men-principal-responsivo .content select option{
+		
+		height: 38px;
+		
+		font-size: 15px;
+		line-height: 38px;
+		font-family: "Raleway", sans-serif;
+		font-weight: 400;
+		color: #594A42;
+		text-transform: uppercase;
+		 
+	}
+	
+	#footer {
+		background: none repeat scroll 0 0 #fff;
+		border-top: none;
+		border-bottom: 10px solid #F2E3DA;
+		width: 96%;
+		margin: 0 auto 20px;
+		min-height: 260px;
+		padding: 1.7em 0;
+	}
+	
+	#page{
+		background: none repeat scroll 0 0 #FFFCF1;
+	}
+}
+
+
+
+
+
+@media only screen and (max-width : 690px) {
+    #block-block-1{
+        float: right;
+        display: none;
+    }
+    #block-block-1--2{
+        display: block;
+		width: 96%;
+		margin: 0px auto 10px;
+		text-align: center;
+    }
+    #block-menu-menu-top-menu .menu{
+        float: right;
+        display: none;
+    }
+
+    #block-menu-menu-top-menu--2 .menu{
+        display: block;
+		margin: 0 auto;
+		width: 255px;
+    }
+	 #block-menu-menu-top-menu--2{
+        width: 96%;
+		margin: 10px auto;
+		text-align: center;
+    }
+	
+	#block-locale-language .language-switcher-locale-url {
+		float: right;
+		display: none;
+	}
+	#block-locale-language--2 .language-switcher-locale-url {
+		display: block;
+		width: 96%;
+		margin: 0px auto 10px;
+		text-align: center;
+		padding: 0;
+	}
+	.zopim{
+		display: none;
+	}
+	
+	#block-menu-menu-footer-menu{
+		display: none;
+	}
+	
+	#block-block-8{
+        display: none;
+    }
+	
+	.tinynav { display: block }
+    .region-header #block-system-main-menu .menu{ display: none }
+	.region-header #block-menu-menu-men-principal-responsivo .menu {display: none;}
+	.region-header #block-system-main-menu{
+		margin-top: 20px;
+	}
+	
+	#block-system-main-menu {
+		border-top: none;
+	}
+	
+	.region-header {
+		border-top: 10px solid #F2E3DA;
+		margin: -90px auto 20px;
+		width: 96%;
+		background: #fff;
+	}
+	
+	
+	#header #header-region {
+		width: 100% !important;
+	}
+	
+	#footer .region-footer{
+		width: 100% !important;
+	}
+
+	#logo {
+		display: block;
+		height: 128px;
+		margin: 10px auto 0;
+		position: relative;
+		width: 244px;
+		z-index: 100;
+	}
+	
+	
+	#block-menu-menu-men-principal-responsivo{
+		margin-top: 100px;
+		margin-bottom: 30px;
+	}
+	
+	#block-menu-menu-men-principal-responsivo .content{
+		width: 100%;
+		overflow: hidden;
+		
+		border: 1px solid #F5ECE5;
+		height: 38px;
+	}
+	
+	#block-menu-menu-men-principal-responsivo .content select{
+		width: 120%;
+		border: none;
+		height: 38px;
+		border-radius: 0;
+		font-size: 15px;
+		line-height: 38px;
+		font-family: "Raleway", sans-serif;
+		font-weight: 400;
+		color: #594A42;
+		background-image: url(../img/bg-menu-responsivo-flecha.jpg);
+		background-repeat: no-repeat;
+		background-position: 81% center;
+		background-color: transparent;
+		text-transform: uppercase;
+		padding-left: 10px;
+		padding-top: 6px;
+		 
+	}
+	
+	#block-menu-menu-men-principal-responsivo .content select option{
+		
+		height: 38px;
+		
+		font-size: 15px;
+		line-height: 38px;
+		font-family: "Raleway", sans-serif;
+		font-weight: 400;
+		color: #594A42;
+		text-transform: uppercase;
+		 
+	}
+	
+	#footer {
+		background: none repeat scroll 0 0 #fff;
+		border-top: none;
+		border-bottom: 10px solid #F2E3DA;
+		width: 96%;
+		margin: 0 auto 20px;
+		min-height: 260px;
+		padding: 1.7em 0;
+	}
+	
+	#page{
+		background: none repeat scroll 0 0 #FFFCF1;
+	}
+}

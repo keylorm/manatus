@@ -1,0 +1,197 @@
+/* 
+    Document   : style_ie7
+    Created on : 06-mar-2014, 17:25:25
+    Author     : Keylor
+    Description:
+        Purpose of the stylesheet follows.
+*/
+
+root { 
+    display: block;
+}
+
+a{
+    text-decoration: none !important;
+}
+.grid-4{
+    width: 20% !important;
+    
+}
+
+#block-block-6, #block-block-30{
+    width:42% !important;
+    padding-top: 11px !important;
+}
+
+#block-block-7, #block-webform-client-block-48, #block-webform-client-block-64, #block-block-24{
+    width: 49% !important;
+    padding-bottom: 13px !important;
+    padding-top: 10px !important;
+}
+
+#block-webform-client-block-48 input, #block-webform-client-block-64 input{
+    height: 20px;
+}
+
+#highlighted .block h2, .highlighted-like h2{
+    
+    color: #B47051 !important;
+}
+
+#highlighted .block h2 a, .highlighted-like h2 a{
+    
+    color: #B47051 !important;
+}
+
+#block-system-main-menu ul li{
+    display: block !important;
+    float: left !important;
+}
+
+#block-system-main-menu ul{
+    float: right !important;
+}
+
+#block-system-main-menu .expanded ul li{
+    display: block !important;
+    float: none !important;
+    z-index: 999 !important;
+}
+
+#block-system-main-menu .expanded ul{
+    position: absolute !important;
+    top: 50px !important;
+    z-index: 999 !important;
+    display: none !important;
+}
+
+.language-switcher-locale-url li{
+    display: block !important;
+    float: left !important;
+    padding: 0 5px !important;
+    border-right: 1px solid #594A42 !important;
+}
+
+.language-switcher-locale-url li.last{
+    border-right: none !important; 
+}
+
+#block-menu-menu-top-menu .menu li, #block-menu-menu-top-menu--2 .menu li{
+    padding: 0 5px !important;
+    border-right: 1px solid #594A42 !important;
+}
+
+#block-menu-menu-top-menu .menu li.last, #block-menu-menu-top-menu--2 .menu li.last{
+    padding-right: 0px !important;
+    border-right: none !important; 
+}
+
+
+#block-block-10, #block-block-11, #block-block-12, #block-block-13,
+#block-block-31, #block-block-32, #block-block-33, #block-block-34
+{
+    width: 259px !important;
+    
+}
+#block-block-19, #block-block-20, #block-block-21, #block-block-22, 
+#block-block-50, #block-block-51, #block-block-52, #block-block-53, 
+#block-block-55, #block-block-56, #block-block-59, #block-block-60, 
+#block-block-61, #block-block-62{
+    width: 257px !important;
+}
+
+.page-node-30 #block-system-main, .page-node-49 #block-system-main, .page-node-52 #block-system-main, .page-node-55 #block-system-main, .page-node-58 #block-system-main, .page-node-61 #block-system-main, .page-node-67 #block-system-main, .page-node-70 #block-system-main, .page-node-73 #block-system-main, .page-node-76 #block-system-main{
+    width: 410px !important;
+}
+
+.page-node-30 #highlighted #block-block-7, .page-node-30 #highlighted #block-webform-client-block-48, .page-node-49 #highlighted #block-webform-client-block-48, .page-node-52 #highlighted #block-webform-client-block-48, .page-node-55 #highlighted #block-webform-client-block-48, .page-node-58 #highlighted #block-webform-client-block-48, .page-node-61 #highlighted #block-webform-client-block-64, .page-node-67 #highlighted #block-webform-client-block-64, .page-node-70 #highlighted #block-webform-client-block-64, .page-node-73 #highlighted #block-webform-client-block-64, .page-node-76 #highlighted #block-webform-client-block-64{
+    width: 460px !important;
+    padding-top: 0px !important;
+    padding-bottom: 0px !important;
+}
+
+a{
+    text-decoration: none !important;
+}
+
+h3 a{
+    color: #fff !important;
+}
+
+.page-tours-and-activities #block-system-main .view-adventure-tours .views-row, .page-tours-actividades #block-system-main .view-adventure-tours .views-row{
+    width: 435px !important;
+}
+
+.page-node-134 #highlighted .block .sport-fish-columna2, .page-node-133 #highlighted .block .sport-fish-columna2{
+    width: 470px !important;
+}
+
+#block-block-14, #block-block-15, #block-block-16, #block-block-17, #block-block-40, #block-block-41, #block-block-42, #block-block-43{
+    width: 255px !important;
+}
+
+.no-sidebars #content{
+    width: 100% !important;
+}
+
+#block-webform-client-block-141 #webform-component-e-mail, #block-webform-client-block-142 #webform-component-e-mail{
+    width: 174px !important;
+    overflow: hidden !important;
+}
+
+#block-webform-client-block-141 #webform-component-e-mail input, #block-webform-client-block-142 #webform-component-e-mail input{
+    width: 174px !important;
+    height: 27px !important;
+    line-height: 27px !important;
+}
+
+.node-type-blog #comments .captcha{
+    width: 399px !important;
+}
+
+.view-slider-interno-bloque .views-slideshow-controls-top{
+    width: 38px !important;
+}
+
+.view-slider-interno-bloque .views_slideshow_cycle_main .views-field-nothing{
+    width: 410px !important;
+    display: block !important;
+    float: left !important;
+}
+
+.view-slider-interno-bloque .views_slideshow_cycle_main .views-field-field-slider-image{
+    width: 470px !important;
+    display: block !important;
+    float: left !important;
+}
+
+.view-slider-interno-bloque .views_slideshow_cycle_main .views-field-nothing p{
+    clear: both;
+}
+
+.view-slider-interno-bloque.verde .views_slideshow_cycle_main .views-field-nothing .points{
+    display: none;
+}
+
+.page-node-46 #webform-component-country select, .page-node-139 #webform-component-pais select{
+    width: 630px !important;
+}
+
+.page-node-46 input[type="text"], .page-node-46 input[type="email"], .page-node-139 input[type="text"], .page-node-139 input[type="email"]{
+    width: 562px !important;
+}
+
+.page-node-46  textarea,
+.page-node-139 textarea{
+     width: 562px !important;
+}
+
+.page-node-46 #webform-component-country, .page-node-139 #webform-component-pais{
+    background-position: 90% center;
+}
+
+#sidebar-second{
+    width: 35% !important;
+    float: right;
+    margin-right: 0;
+}

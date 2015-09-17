@@ -1,0 +1,2186 @@
+<?php
+
+/*
+ *
+ * Implements hook_block_info()
+ *
+ */
+
+function carousel_manatus_block_info() {
+  $blocks = array();
+  $blocks['Carousel Main'] = array(
+    'info' => t('Carousel blocks front page'),
+    'cache' => DRUPAL_CACHE_CUSTOM,
+  );
+
+  $blocks['Carousel principal'] = array(
+    'info' => t('Carousel bloques pagina frontal'),
+    'cache' => DRUPAL_CACHE_CUSTOM,
+  );
+
+  $blocks['Carousel packages'] = array(
+    'info' => t('Carousel bloques packages'),
+    'cache' => DRUPAL_CACHE_CUSTOM,
+  );
+
+  $blocks['Carousel packages es'] = array(
+    'info' => t('Carousel bloques packages es'),
+    'cache' => DRUPAL_CACHE_CUSTOM,
+  );
+  
+  $blocks['Carousel special packages'] = array(
+    'info' => t('Carousel bloques special packages'),
+    'cache' => DRUPAL_CACHE_CUSTOM,
+  );
+
+  $blocks['Carousel paquetes especiales'] = array(
+    'info' => t('Carousel bloques paquetes especiales'),
+    'cache' => DRUPAL_CACHE_CUSTOM,
+  );
+
+  $blocks['Carousel honeymoon packages'] = array(
+    'info' => t('Carousel bloques honey moon'),
+    'cache' => DRUPAL_CACHE_CUSTOM,
+  );
+
+  $blocks['Carousel paquetes noche de bodas'] = array(
+    'info' => t('Carousel bloques noche de bodas'),
+    'cache' => DRUPAL_CACHE_CUSTOM,
+  );
+
+  $blocks['Carousel Manatus Experience ENG'] = array(
+    'info' => t('Carousel bloques Manatus Experience ENG'),
+    'cache' => DRUPAL_CACHE_CUSTOM,
+  );
+  
+  $blocks['Carousel Manatus Experience ESP'] = array(
+    'info' => t('Carousel bloques Manatus Experience ESP'),
+    'cache' => DRUPAL_CACHE_CUSTOM,
+  );
+  
+  $blocks['Carousel Cozy Rooms Eng'] = array(
+    'info' => t('Carousel Cozy Rooms Eng'),
+    'cache' => DRUPAL_CACHE_CUSTOM,
+  );
+  
+  $blocks['Carousel Cozy Rooms Esp'] = array(
+    'info' => t('Carousel Cozy Rooms Esp'),
+    'cache' => DRUPAL_CACHE_CUSTOM,
+  );
+  
+  $blocks['Carousel Gardens Eng'] = array(
+    'info' => t('Carousel Gardens Eng'),
+    'cache' => DRUPAL_CACHE_CUSTOM,
+  );
+  
+  $blocks['Carousel Gardens Esp'] = array(
+    'info' => t('Carousel Gardens Esp'),
+    'cache' => DRUPAL_CACHE_CUSTOM,
+  );
+  
+  $blocks['Carousel Restaurant Esp'] = array(
+    'info' => t('Carousel Restaurant Esp'),
+    'cache' => DRUPAL_CACHE_CUSTOM,
+  );
+  
+  $blocks['Carousel Restaurant Eng'] = array(
+    'info' => t('Carousel Restaurant Eng'),
+    'cache' => DRUPAL_CACHE_CUSTOM,
+  );
+  
+  $blocks['Carousel Amenities Esp'] = array(
+    'info' => t('Carousel Amenities Esp'),
+    'cache' => DRUPAL_CACHE_CUSTOM,
+  );
+  
+  $blocks['Carousel Amenities Eng'] = array(
+    'info' => t('Carousel Amenities Eng'),
+    'cache' => DRUPAL_CACHE_CUSTOM,
+  );
+  
+  $blocks['Carousel Pool Eng'] = array(
+    'info' => t('Carousel Pool Eng'),
+    'cache' => DRUPAL_CACHE_CUSTOM,
+  );
+  
+  $blocks['Carousel Pool Esp'] = array(
+    'info' => t('Carousel Pool Esp'),
+    'cache' => DRUPAL_CACHE_CUSTOM,
+  );
+  
+  $blocks['Carousel What to do ESP'] = array(
+    'info' => t('Carousel What to do ESP'),
+    'cache' => DRUPAL_CACHE_CUSTOM,
+  );
+  
+  $blocks['Carousel What to do ENG'] = array(
+    'info' => t('Carousel What to do ENG'),
+    'cache' => DRUPAL_CACHE_CUSTOM,
+  );
+  
+  $blocks['Carousel Sportfis Inf ESP'] = array(
+    'info' => t('Carousel Sportfis Inf ESP'),
+    'cache' => DRUPAL_CACHE_CUSTOM,
+  );
+  
+  $blocks['Carousel Sportfis Inf ENG'] = array(
+    'info' => t('Carousel Sportfis Inf ENG'),
+    'cache' => DRUPAL_CACHE_CUSTOM,
+  );
+  
+  $blocks['Carousel Slider Sportfis Esp'] = array(
+    'info' => t('Carousel Slider Sportfis Esp'),
+    'cache' => DRUPAL_CACHE_CUSTOM,
+  );
+  
+  $blocks['Carousel Slider Sportfis Eng'] = array(
+    'info' => t('Carousel Slider Sportfis Eng'),
+    'cache' => DRUPAL_CACHE_CUSTOM,
+  );
+  
+  $blocks['Carousel Slider Adventure Esp'] = array(
+    'info' => t('Carousel Slider Adventure Esp'),
+    'cache' => DRUPAL_CACHE_CUSTOM,
+  );
+  
+  $blocks['Carousel Slider Adventure Eng'] = array(
+    'info' => t('Carousel Slider Adventure Eng'),
+    'cache' => DRUPAL_CACHE_CUSTOM,
+  );
+  
+  $blocks['Carousel Advent Inf ESP'] = array(
+    'info' => t('Carousel Advent Inf ESP'),
+    'cache' => DRUPAL_CACHE_CUSTOM,
+  );
+  
+  $blocks['Carousel Advent Inf ENG'] = array(
+    'info' => t('Carousel Advent Inf ENG'),
+    'cache' => DRUPAL_CACHE_CUSTOM,
+  );
+
+  
+  return $blocks;
+}
+
+/*
+ *
+ * Implements hook_block_view($delta='')
+ *
+ */
+
+function carousel_manatus_block_view($delta = '') {
+  $block = array();
+
+  //ingresamos los javascript y el estilo
+  drupal_add_css(drupal_get_path('module', 'carousel_manatus') . '/carousel-style.css');
+  drupal_add_css(drupal_get_path('module', 'carousel_manatus') . '/carousel.css');
+  
+  
+  global $base_path;
+  
+  $content2="";
+  $image = "";
+  $titulo = "";
+  $descripcion=""; 
+  $bullets="";
+
+  $image2 = "";
+  $titulo2 = "";
+  $descripcion2=""; 
+      
+  $image3 = "";
+  $titulo3 = "";
+  $descripcion3=""; 
+
+  $image4 = "";
+  $titulo4 = "";
+  $descripcion4=""; 
+
+  switch ($delta) {
+
+    case 'Carousel Main':
+
+      $block['subject'] = '';
+
+        
+          // CONTENIDO PRIMER SLIDE
+          $image = "<div class=\"wrapper-imagen-carousel-sidebar\"><a href=\"".$base_path."rooms"."\" title=\""." COZY ROOMS"."\" ><img alt='Cozy Rooms Manatus' src=\"" . $base_path . "sites/files/manatus/hardwired/images_opt/bed-cel.jpg". "\" /></a></div>";
+          
+          $titulo = "<div class=\"views-field views-field-title\">
+                        <span class=\"field-content\">
+                        <a href=\"".$base_path."rooms"."\" title=\""." Cozy Rooms"."\" >"."COZY ROOMS"."</a></span></div>";
+          $descripcion ="<div class=\"views-field views-field-body\">
+                            <div class=\"field-content\"><p>".substr("A room at Manatus Hotel begins with an extraordinary sense of peace and comfort. Designed to inspire, its beauty connects you with the surrounding environment of a wildlife sanctuary and the water canals.", 0, 45)."..."."</p></div>
+                            </div>
+                            <div class=\"views-field views-field-view-node\">
+                            <span class=\"field-content\">
+                            <a href=\"".$base_path."rooms"."\" title=\""." Cozy Rooms"."\" >BOOK TODAY ></a>
+                            </span>
+                            </div>";
+        
+           // CONTENIDO SEGUNDO SLIDE
+          $image2 = "<div class=\"wrapper-imagen-carousel-sidebar\"><a href=\"".$base_path."amenities"."\" title=\""." EXCLUSIVE AMENITIES"."\" ><img alt='Exclusive Amenities Manatus' src=\"" . $base_path . "sites/files/manatus/hardwired/images_opt/AMENITIES-HOME-FEB2014-cel.jpg". "\" /></a></div>";
+          
+          $titulo2 = "<div class=\"views-field views-field-title\">
+                        <span class=\"field-content\">
+                        <a href=\"".$base_path."amenities"."\" title=\""." Cozy Rooms"."\" >"."EXCLUSIVE AMENITIES"."</a></span></div>";
+          $descripcion2 ="<div class=\"views-field views-field-body\">
+                            <div class=\"field-content\"><p>".substr("A swimming pool only few meters from the water canals, fitness room, full internet access, spa services, art gallery and a private reserve, are only a few of our unique amenities in the area of Tortuguero.", 0, 45)."..."."</p></div>
+                            </div>
+                            <div class=\"views-field views-field-view-node\">
+                            <span class=\"field-content\">
+                            <a href=\"".$base_path."amenities"."\" title=\""." EXCLUSIVE AMENITIES"."\" >BOOK TODAY ></a>
+                            </span>
+                            </div>";
+
+           // CONTENIDO TERCER SLIDE
+          $image3 = "<div class=\"wrapper-imagen-carousel-sidebar\"><a href=\"".$base_path."restaurant"."\" title=\""." CARIBBEAN FOOD RESTAURANT"."\" ><img alt='Caribbean Food Manatus' src=\"" . $base_path . "sites/files/manatus/hardwired/images_opt/FOOD-HOME-FEB2014-cel.jpg". "\" /></a></div>";
+          
+          $titulo3 = "<div class=\"views-field views-field-title\">
+                        <span class=\"field-content\">
+                        <a href=\"".$base_path."restaurant"."\" title=\""." CARIBBEAN FOOD RESTAURANT"."\" >"."CARIBBEAN FOOD RESTAURANT"."</a></span></div>";
+          $descripcion3 ="<div class=\"views-field views-field-body\">
+                            <div class=\"field-content\"><p>".substr("Ara Macaw a la carte restaurant is our top service restaurant, which aims to delight all your senses with an Afro-Caribbean fusion menu, exclusively designed by a renowned international chef. ", 0, 45)."..."."</p></div>
+                            </div>
+                            <div class=\"views-field views-field-view-node\">
+                            <span class=\"field-content\">
+                            <a href=\"".$base_path."restaurant"."\" title=\""."CARIBBEAN FOOD RESTAURANT"."\" >BOOK TODAY ></a>
+                            </span>
+                            </div>";
+
+
+                     // CONTENIDO TERCER SLIDE
+          $image4 = "<div class=\"wrapper-imagen-carousel-sidebar\"><a href=\"".$base_path."tours-and-activities"."\" title=\""."NATURE TOURS & ACTIVITIES"."\" ><img  alt='Nature tours and activities Manatus' src=\"" . $base_path . "sites/files/manatus/hardwired/images_opt/TOURS-HOME-2014-cel.jpg". "\" /></a></div>";
+          
+          $titulo4 = "<div class=\"views-field views-field-title\">
+                        <span class=\"field-content\">
+                        <a href=\"".$base_path."tours-and-activities"."\" title=\""."NATURE TOURS & ACTIVITIES"."\" >"."NATURE TOURS & ACTIVITIES"."</a></span></div>";
+          $descripcion4 ="<div class=\"views-field views-field-body\">
+                            <div class=\"field-content\"><p>".substr("Tortuguero is a unique place on Earth and Manatus offers a full list of activities and tours specially designed to live the best of Tortuguero natural beauties in a comfort able and safe way. ", 0, 45)."..."."</p></div>
+                            </div>
+                            <div class=\"views-field views-field-view-node\">
+                            <span class=\"field-content\">
+                            <a href=\"".$base_path."tours-and-activities"."\" title=\""."NATURE TOURS & ACTIVITIES"."\" >BOOK TODAY ></a>
+                            </span>
+                            </div>";
+          
+          $content2 = "<div class=\"m-item\"><div class=\"m-card-light\">".$titulo.$image.$descripcion."</div></div><div class=\"m-item\"><div class=\"m-card-light\">".$titulo2.$image2.$descripcion2."</div></div><div class=\"m-item\"><div class=\"m-card-light\">".$titulo3.$image3.$descripcion3."</div></div><div class=\"m-item\"><div class=\"m-card-light\">".$titulo4.$image4.$descripcion4."</div></div>";          
+          $bullets = "<a href=\"#\" data-slide=\"1\">1</a><a href=\"#\" data-slide=\"2\">2</a><a href=\"#\" data-slide=\"3\">3</a><a href=\"#\" data-slide=\"4\">4</a>";  
+
+            //CONTENIDO DEL BLOQUE
+          $content = "<div class=\"m-carousel m-center m-fade-out\">
+                            <div class=\"m-carousel-controls m-carousel-bulleted arriba\">".$bullets."</div>
+                            <div class=\"m-carousel-inner\">".$content2."</div>
+                      </div>";
+
+      
+        
+      $block['content'] = $content;
+
+      break;
+
+	case 'Carousel Manatus Experience ENG':
+
+      $block['subject'] = '';
+
+        
+          // CONTENIDO PRIMER SLIDE
+          $image = "<div class=\"wrapper-imagen-carousel-sidebar\"><a href=\"".$base_path."rooms"."\" title=\""." COZY ROOMS"."\" ><img src=\"" . $base_path . "sites/files/manatus/hardwired/images_opt/ROOMS-feb2014-cel.jpg". "\" /></a></div>";
+          
+          $titulo = "<div class=\"views-field views-field-title\">
+                        <span class=\"field-content\">
+                        <a href=\"".$base_path."rooms"."\" title=\""." Cozy Rooms"."\" >"."COZY ROOMS"."</a></span></div>";
+          $descripcion ="<div class=\"views-field views-field-body\">
+                            <div class=\"field-content\"><p>".substr("A room at Manatus Hotel begins with an extraordinary sense of peace and comfort. Designed to inspire, its beauty connects you with the surrounding environment of a wildlife sanctuary and the water canals.", 0, 45)."..."."</p></div>
+                            </div>";
+        
+           // CONTENIDO SEGUNDO SLIDE
+          $image2 = "<div class=\"wrapper-imagen-carousel-sidebar\"><a href=\"".$base_path."gardens-surroundings"."\" title=\""." HOTEL GARDENS & SURROUNDINGS"."\" ><img src=\"" . $base_path . "sites/files/manatus/hardwired/images_opt/GARDENS-feb2014-cel.jpg". "\" /></a></div>";
+          
+          $titulo2 = "<div class=\"views-field views-field-title\">
+                        <span class=\"field-content\">
+                        <a href=\"".$base_path."gardens-surroundings"."\" title=\""." Cozy Rooms"."\" >"."HOTEL GARDENS & SURROUNDING"."</a></span></div>";
+          $descripcion2 ="<div class=\"views-field views-field-body\">
+                            <div class=\"field-content\"><p>".substr("Enjoy nature at its maximum splendor, without sacrificing comfort. The exuberant gardens at Manatus Hotel will give you a sense of peace and tranquility.", 0, 45)."..."."</p></div>
+                            </div>";
+
+           // CONTENIDO TERCER SLIDE
+          $image3 = "<div class=\"wrapper-imagen-carousel-sidebar\"><a href=\"".$base_path."restaurant"."\" title=\""." CARIBBEAN FOOD RESTAURANT"."\" ><img src=\"" . $base_path . "sites/files/manatus/hardwired/images_opt/RESTAURANT-feb2014-cel.jpg". "\" /></a></div>";
+          
+          $titulo3 = "<div class=\"views-field views-field-title\">
+                        <span class=\"field-content\">
+                        <a href=\"".$base_path."restaurant"."\" title=\""." CARIBBEAN FOOD RESTAURANT"."\" >"."CARIBBEAN FOOD RESTAURANT"."</a></span></div>";
+          $descripcion3 ="<div class=\"views-field views-field-body\">
+                            <div class=\"field-content\"><p>".substr("An all inclusive top service is offered at the Ara Macaw a la carte Restaurant, which aims to delight all our senses with its Afro-Caribbean fusion menu, exclusively designed by a renowned international chef. ", 0, 45)."..."."</p></div>
+                            </div>";
+
+
+                     // CONTENIDO CUARTO SLIDE
+          $image4 = "<div class=\"wrapper-imagen-carousel-sidebar\"><a href=\"pool\" title=\""."RIVER FRONT POOL AREA"."\" ><img src=\"" . $base_path . "sites/files/manatus/hardwired/images_opt/POOL-feb2014-cel.jpg". "\" /></a></div>";
+          
+          $titulo4 = "<div class=\"views-field views-field-title\">
+                        <span class=\"field-content\">
+                        <a href=\"".$base_path."pool"."\" title=\""."RIVER FRONT POOL AREA"."\" >"."RIVER FRONT POOL AREA"."</a></span></div>";
+          $descripcion4 ="<div class=\"views-field views-field-body\">
+                            <div class=\"field-content\"><p>".substr("Enjoy our beautiful outdoor pool, surrounded by the magical landscape of a natural water canal, swaying palms, and the abundant natural beauty of Tortuguero, Costa Rica. ", 0, 45)."..."."</p></div>
+                            </div>";
+          
+          $content2 = "<div class=\"m-item\"><div class=\"m-card-light\">".$titulo.$image.$descripcion."</div></div><div class=\"m-item\"><div class=\"m-card-light\">".$titulo2.$image2.$descripcion2."</div></div><div class=\"m-item\"><div class=\"m-card-light\">".$titulo3.$image3.$descripcion3."</div></div><div class=\"m-item\"><div class=\"m-card-light\">".$titulo4.$image4.$descripcion4."</div></div>";          
+          $bullets = "<a href=\"#\" data-slide=\"1\">1</a><a href=\"#\" data-slide=\"2\">2</a><a href=\"#\" data-slide=\"3\">3</a><a href=\"#\" data-slide=\"4\">4</a>";  
+
+            //CONTENIDO DEL BLOQUE
+          $content = "<div class=\"m-carousel m-center m-fade-out\">
+                            <div class=\"m-carousel-controls m-carousel-bulleted arriba\">".$bullets."</div>
+                            <div class=\"m-carousel-inner\">".$content2."</div>
+                      </div>";
+
+      
+        
+      $block['content'] = $content;
+
+      break;
+	  
+	  case 'Carousel Manatus Experience ESP':
+
+      $block['subject'] = '';
+
+        
+          // CONTENIDO PRIMER SLIDE
+          $image = "<div class=\"wrapper-imagen-carousel-sidebar\"><a href=\"".$base_path."es/habitaciones"."\" title=\""."HABITACIONES ACOGEDORAS"."\" ><img src=\"" . $base_path . "sites/files/manatus/hardwired/images_opt/ROOMS-feb2014-cel.jpg". "\" /></a></div>";
+          
+          $titulo = "<div class=\"views-field views-field-title\">
+                        <span class=\"field-content\">
+                        <a href=\"".$base_path."es/habitaciones"."\" title=\""." HABITACIONES ACOGEDORAS"."\" >"."HABITACIONES ACOGEDORAS"."</a></span></div>";
+          $descripcion ="<div class=\"views-field views-field-body\">
+                            <div class=\"field-content\"><p>".substr("Una habitación en el Hotel Manatus comienza con un sentimiento extraordinario de paz y comodidad. Diseñados para inspirar, lo conectarán con el ambiente circundante de este santuario de vida silvestre y los canales de agua.", 0, 45)."..."."</p></div>
+                            </div>";
+        
+           // CONTENIDO SEGUNDO SLIDE
+          $image2 = "<div class=\"wrapper-imagen-carousel-sidebar\"><a href=\"".$base_path."es/jardines"."\" title=\""." JARDINES Y ALREDEDORES DEL HOTEL"."\" ><img src=\"" . $base_path . "sites/files/manatus/hardwired/images_opt/GARDENS-feb2014-cel.jpg". "\" /></a></div>";
+          
+          $titulo2 = "<div class=\"views-field views-field-title\">
+                        <span class=\"field-content\">
+                        <a href=\"".$base_path."es/jardines"."\" title=\""." JARDINES Y ALREDEDORES DEL HOTEL"."\" >"."JARDINES Y ALREDEDORES DEL HOTEL"."</a></span></div>";
+          $descripcion2 ="<div class=\"views-field views-field-body\">
+                            <div class=\"field-content\"><p>".substr("Disfrute de la naturaleza en su máximo esplendor, sin sacrificar la comodidad. Los exuberantes jardines en el Hotel Manatus le darán una sensación de paz y tranquilidad.", 0, 45)."..."."</p></div>
+                            </div>";
+
+           // CONTENIDO TERCER SLIDE
+          $image3 = "<div class=\"wrapper-imagen-carousel-sidebar\"><a href=\"".$base_path."es/restaurante\" title=\""." RESTAURANTE DE COMIDA CARIBEÑA"."\" ><img src=\"" . $base_path . "sites/files/manatus/hardwired/images_opt/RESTAURANT-feb2014-cel.jpg". "\" /></a></div>";
+          
+          $titulo3 = "<div class=\"views-field views-field-title\">
+                        <span class=\"field-content\">
+                        <a href=\"".$base_path."es/restaurante"."\" title=\""." RESTAURANTE DE COMIDA CARIBEÑA"."\" >"."RESTAURANTE DE COMIDA CARIBEÑA"."</a></span></div>";
+          $descripcion3 ="<div class=\"views-field views-field-body\">
+                            <div class=\"field-content\"><p>".substr("Nuestro restaurante a la carta Ara Macaw, es nuestro restaurante de alta calidad, que tiene como objetivo deleitar todos sus sentidos con un menú de fusión Afro-Caribeña, diseñado exclusivamente por un reconocido chef internacional.", 0, 45)."..."."</p></div>
+                            </div>";
+
+
+                     // CONTENIDO CUARTO SLIDE
+          $image4 = "<div class=\"wrapper-imagen-carousel-sidebar\"><a href=\"es/piscina\" title=\""."ÁREA DE LA PISCINA "."\" ><img src=\"" . $base_path . "sites/files/manatus/hardwired/images_opt/POOL-feb2014-cel.jpg". "\" /></a></div>";
+          
+          $titulo4 = "<div class=\"views-field views-field-title\">
+                        <span class=\"field-content\">
+                        <a href=\"".$base_path."es/piscina"."\" title=\""."ÁREA DE LA PISCINA"."\" >"."ÁREA DE LA PISCINA "."</a></span></div>";
+          $descripcion4 ="<div class=\"views-field views-field-body\">
+                            <div class=\"field-content\"><p>".substr("Disfrute de nuestra hermosa piscina al aire libre, rodeada por el paisaje mágico de un canal de agua natural, palmeras, y la abundante belleza natural de Tortuguero, Costa Rica.", 0, 45)."..."."</p></div>
+                            </div>";
+          
+          $content2 = "<div class=\"m-item\"><div class=\"m-card-light\">".$titulo.$image.$descripcion."</div></div><div class=\"m-item\"><div class=\"m-card-light\">".$titulo2.$image2.$descripcion2."</div></div><div class=\"m-item\"><div class=\"m-card-light\">".$titulo3.$image3.$descripcion3."</div></div><div class=\"m-item\"><div class=\"m-card-light\">".$titulo4.$image4.$descripcion4."</div></div>";          
+          $bullets = "<a href=\"#\" data-slide=\"1\">1</a><a href=\"#\" data-slide=\"2\">2</a><a href=\"#\" data-slide=\"3\">3</a><a href=\"#\" data-slide=\"4\">4</a>";  
+
+            //CONTENIDO DEL BLOQUE
+          $content = "<div class=\"m-carousel m-center m-fade-out\">
+                            <div class=\"m-carousel-controls m-carousel-bulleted arriba\">".$bullets."</div>
+                            <div class=\"m-carousel-inner\">".$content2."</div>
+                      </div>";
+
+      
+        
+      $block['content'] = $content;
+
+      break;
+
+      case 'Carousel principal':
+
+      $block['subject'] = '';
+
+        
+          // CONTENIDO PRIMER SLIDE
+          $image = "<div class=\"wrapper-imagen-carousel-sidebar\"><a href=\"".$base_path."es/habitaciones"."\" title=\""." HABITACIONES ACOGEDORAS"."\" ><img alt='Habitaciones Acogedoras Manatus' src=\"" . $base_path . "sites/files/manatus/hardwired/images_opt/bed-cel.jpg". "\" /></a></div>";
+          
+          $titulo = "<div class=\"views-field views-field-title\">
+                        <span class=\"field-content\">
+                        <a href=\"".$base_path."es/habitaciones"."\" title=\""." HABITACIONES ACOGEDORAS"."\" >"."HABITACIONES ACOGEDORAS"."</a></span></div>";
+          $descripcion ="<div class=\"views-field views-field-body\">
+                            <div class=\"field-content\"><p>".substr("Una habitación en el Hotel Manatus comienza con un sentimiento extraordinario de paz y comodidad. Diseñados para inspirar, lo conectarán con el ambiente circundante de este santuario de vida silvestre y los canales de agua.", 0, 45)."..."."</p></div>
+                            </div>
+                            <div class=\"views-field views-field-view-node\">
+                            <span class=\"field-content\">
+                            <a href=\"".$base_path."habitaciones"."\" title=\""." Cozy Rooms"."\" >BOOK TODAY ></a>
+                            </span>
+                            </div>";
+        
+           // CONTENIDO SEGUNDO SLIDE
+          $image2 = "<div class=\"wrapper-imagen-carousel-sidebar\"><a href=\"".$base_path."es/servicios"."\" title=\""." SERVICIOS EXCLUSIVOS"."\" ><img alt='Servicios Exclusivos Manatus' src=\"" . $base_path . "sites/files/manatus/hardwired/images_opt/AMENITIES-HOME-FEB2014-cel.jpg". "\" /></a></div>";
+          
+          $titulo2 = "<div class=\"views-field views-field-title\">
+                        <span class=\"field-content\">
+                        <a href=\"".$base_path."es/servicios"."\" title=\""." Cozy Rooms"."\" >"."SERVICIOS EXCLUSIVOS"."</a></span></div>";
+          $descripcion2 ="<div class=\"views-field views-field-body\">
+                            <div class=\"field-content\"><p>".substr("Una piscina a pocos metros de los canales de agua, una sala de entrenamiento, acceso completo a Internet, servicios de spa, galería de arte y una reserva privada, son sólo algunos de nuestros exclusivos servicios en el área de Tortuguero.", 0, 45)."..."."</p></div>
+                            </div>
+                            <div class=\"views-field views-field-view-node\">
+                            <span class=\"field-content\">
+                            <a href=\"".$base_path."servicios"."\" title=\""." SERVICIOS EXCLUSIVOS"."\" >BOOK TODAY ></a>
+                            </span>
+                            </div>";
+
+           // CONTENIDO TERCER SLIDE
+          $image3 = "<div class=\"wrapper-imagen-carousel-sidebar\"><a href=\"es/restaurante\" title=\""."RESTAURANTE DE COMIDA CARIBEÑA"."\" ><img alt='Restaurante de Comida Caribeña Manatus' src=\"" . $base_path . "sites/files/manatus/hardwired/images_opt/FOOD-HOME-FEB2014-cel.jpg". "\" /></a></div>";
+          
+          $titulo3 = "<div class=\"views-field views-field-title\">
+                        <span class=\"field-content\">
+                        <a href=\"".$base_path."es/restaurante"."\" title=\""."RESTAURANTE DE COMIDA CARIBEÑA"."\" >"."RESTAURANTE DE COMIDA CARIBEÑA"."</a></span></div>";
+          $descripcion3 ="<div class=\"views-field views-field-body\">
+                            <div class=\"field-content\"><p>".substr("Nuestro restaurante a la carta Ara Macaw, es un restaurante de alta calidad, que tiene como objetivo deleitar todos sus sentidos con un menú de fusión Afro-Caribeña, diseñado exclusivamente por un reconocido chef internacional.", 0, 45)."..."."</p></div>
+                            </div>
+                            <div class=\"views-field views-field-view-node\">
+                            <span class=\"field-content\">
+                            <a href=\"".$base_path."restaurante"."\" title=\""."RESTAURANTE DE COMIDA CARIBEÑA"."\" >BOOK TODAY ></a>
+                            </span>
+                            </div>";
+
+
+                     // CONTENIDO TERCER SLIDE
+          $image4 = "<div class=\"wrapper-imagen-carousel-sidebar\"><a href=\"tours-actividades\" title=\""."ACTIVIDADES Y TOURS"."\" ><img alt='Actividades y Tours Manatus' src=\"" . $base_path . "sites/files/manatus/hardwired/images_opt/TOURS-HOME-2014-cel.jpg". "\" /></a></div>";
+          
+          $titulo4 = "<div class=\"views-field views-field-title\">
+                        <span class=\"field-content\">
+                        <a href=\"".$base_path."es/tours-actividades"."\" title=\""."NATURE TOURS & ACTIVITIES"."\" >"."ACTIVIDADES Y TOURS"."</a></span></div>";
+          $descripcion4 ="<div class=\"views-field views-field-body\">
+                            <div class=\"field-content\"><p>".substr("Tortuguero es un lugar único en la Tierra y Manatus ofrece una lista completa de actividades y excursiones especialmente diseñadas para vivir lo mejor de este lugar excepcional y sus bellezas naturales de una manera cómoda y segura.", 0, 45)."..."."</p></div>
+                            </div>
+                            <div class=\"views-field views-field-view-node\">
+                            <span class=\"field-content\">
+                            <a href=\"".$base_path."tours-actividades"."\" title=\""."ACTIVIDADES Y TOURS"."\" >BOOK TODAY ></a>
+                            </span>
+                            </div>";
+          
+          $content2 = "<div class=\"m-item\"><div class=\"m-card-light\">".$titulo.$image.$descripcion."</div></div><div class=\"m-item\"><div class=\"m-card-light\">".$titulo2.$image2.$descripcion2."</div></div><div class=\"m-item\"><div class=\"m-card-light\">".$titulo3.$image3.$descripcion3."</div></div><div class=\"m-item\"><div class=\"m-card-light\">".$titulo4.$image4.$descripcion4."</div></div>";          
+          $bullets = "<a href=\"#\" data-slide=\"1\">1</a><a href=\"#\" data-slide=\"2\">2</a><a href=\"#\" data-slide=\"3\">3</a><a href=\"#\" data-slide=\"4\">4</a>";  
+
+            //CONTENIDO DEL BLOQUE
+          $content = "<div class=\"m-carousel m-center m-fade-out\">
+                            <div class=\"m-carousel-controls m-carousel-bulleted arriba\">".$bullets."</div>
+                            <div class=\"m-carousel-inner\">".$content2."</div>
+                      </div>";
+
+      
+        
+
+      $block['content'] = $content;
+
+      break; 
+
+      case 'Carousel packages':
+
+        //REALIZAR UNA CONSULTA A LA BASE DE DATOS CON LOS NODOS DE TIPO SLIDER Y CATEGORIZADOS COMO PACKAGES  AND RATE
+      $query = db_select('node','n');
+      $query -> fields('n',array('nid', 'title'));
+      $query -> fields('fm',array('filename'));
+      $query -> fields('fdb',array('body_value'));
+      $query -> join('taxonomy_index','ti','ti.nid = n.nid');
+      $query -> join('field_revision_field_slider_image','fdfsi','fdfsi.entity_id =  n.nid');
+      $query -> join('file_managed','fm','fm.fid = fdfsi.field_slider_image_fid');
+      $query -> join('field_revision_body','fdb','fdb.entity_id = n.nid');
+      $query -> condition('n.status',1,'=');
+      $query -> condition('n.type','slider','=');
+      $query -> condition('n.language','en','=');
+      $query -> condition('ti.tid',7,'=');
+      $query -> orderBy('n.created', 'DESC');
+     
+      $query_result = $query -> execute();
+
+
+      //asignamos el resultado en un variable content
+      $content = "";
+      $alias = "";
+      $contador = 0;
+
+      while(
+          $record = $query_result->fetchAssoc()) {
+
+          $contador++;
+
+          $alias = drupal_lookup_path('alias','node/'.$record['nid']);
+
+          //almacenar la imagen
+         $image = "<div class=\"wrapper-imagen-carousel-sidebar\"><a href=\"reservation-step1\" ><img src=\"" . $base_path . "sites/files/manatus/". $record['filename'] . "\" /></a></div>";
+
+         $titulo = "<div class=\"views-field views-field-title\">
+                        <span class=\"field-content\">
+                        <a href=\"reservation-step1\" >".$record['title']."</a></span></div>";
+
+          $descripcion ="<div class=\"views-field views-field-body\">
+                            <div class=\"field-content\"><p>".substr($record['body_value'], 0, 45)."..."."</p></div>
+                            </div>
+                            <div class=\"views-field views-field-view-node\">
+                            <span class=\"field-content\">
+                            <a href=\"reservation-step1\" >BOOK TODAY ></a>
+                            </span>
+                            </div>";
+
+           $content2 .= "<div class=\"m-item\"><div class=\"m-card-light\">".$titulo.$image.$descripcion."</div></div>";                 
+           $bullets .= "<a href=\"#\" data-slide=\"".$contador."\">".$contador."</a>";
+
+      }
+
+        //CONTENIDO DEL SLIDER
+          $content = "<div class=\"m-carousel m-center m-fade-out\">
+                            <div class=\"m-carousel-controls m-carousel-bulleted arriba\">".$bullets."</div>
+                            <div class=\"m-carousel-inner\">".$content2."</div>
+                      </div>";
+
+      $block['subject'] = '';
+
+      
+        
+
+      $block['content'] = $content;
+
+      break;
+	  
+
+      case 'Carousel packages es':
+
+        //REALIZAR UNA CONSULTA A LA BASE DE DATOS CON LOS NODOS DE TIPO SLIDER Y CATEGORIZADOS COMO PACKAGES  AND RATE
+      $query = db_select('node','n');
+      $query -> fields('n',array('nid', 'title'));
+      $query -> fields('fm',array('filename'));
+      $query -> fields('fdb',array('body_value'));
+      $query -> join('taxonomy_index','ti','ti.nid = n.nid');
+      $query -> join('field_revision_field_slider_image','fdfsi','fdfsi.entity_id =  n.nid');
+      $query -> join('file_managed','fm','fm.fid = fdfsi.field_slider_image_fid');
+      $query -> join('field_revision_body','fdb','fdb.entity_id = n.nid');
+      $query -> condition('n.status',1,'=');
+      $query -> condition('n.type','slider','=');
+      $query -> condition('n.language','es','=');
+      $query -> condition('ti.tid',7,'=');
+      $query -> orderBy('n.created', 'DESC');
+     
+      $query_result = $query -> execute();
+
+
+      //asignamos el resultado en un variable content
+      $content = "";
+      $alias = "";
+      $contador = 0;
+
+      while(
+          $record = $query_result->fetchAssoc()) {
+
+          $contador++;
+
+          $alias = drupal_lookup_path('alias','node/'.$record['nid']);
+
+          //almacenar la imagen
+         $image = "<div class=\"wrapper-imagen-carousel-sidebar\"><a href=\"reservación-paso1\" ><img src=\"" . $base_path . "sites/files/manatus/". $record['filename'] . "\" /></a></div>";
+
+         $titulo = "<div class=\"views-field views-field-title\">
+                        <span class=\"field-content\">
+                        <a href=\"reservación-paso1\" >".$record['title']."</a></span></div>";
+
+          $descripcion ="<div class=\"views-field views-field-body\">
+                            <div class=\"field-content\"><p>".substr($record['body_value'], 0, 45)."..."."</p></div>
+                            </div>
+                            <div class=\"views-field views-field-view-node\">
+                            <span class=\"field-content\">
+                            <a href=\"reservación-paso1\" >RESERVAR ></a>
+                            </span>
+                            </div>";
+
+           $content2 .= "<div class=\"m-item\"><div class=\"m-card-light\">".$titulo.$image.$descripcion."</div></div>";                 
+           $bullets .= "<a href=\"#\" data-slide=\"".$contador."\">".$contador."</a>";
+
+      }
+
+        //CONTENIDO DEL SLIDER
+          $content = "<div class=\"m-carousel m-center m-fade-out\">
+                            <div class=\"m-carousel-controls m-carousel-bulleted arriba\">".$bullets."</div>
+                            <div class=\"m-carousel-inner\">".$content2."</div>
+                      </div>";
+
+      $block['subject'] = '';
+
+      
+        
+
+      $block['content'] = $content;
+
+      break;
+
+      case 'Carousel special packages':
+
+        //REALIZAR UNA CONSULTA A LA BASE DE DATOS CON LOS NODOS DE TIPO SLIDER Y CATEGORIZADOS COMO PACKAGES  AND RATE
+      $query = db_select('node','n');
+      $query -> fields('n',array('nid', 'title'));
+      $query -> fields('fm',array('filename'));
+      $query -> fields('fdb',array('body_value'));
+      $query -> join('taxonomy_index','ti','ti.nid = n.nid');
+      $query -> join('field_revision_field_slider_image','fdfsi','fdfsi.entity_id =  n.nid');
+      $query -> join('file_managed','fm','fm.fid = fdfsi.field_slider_image_fid');
+      $query -> join('field_revision_body','fdb','fdb.entity_id = n.nid');
+      $query -> condition('n.status',1,'=');
+      $query -> condition('n.type','slider','=');
+      $query -> condition('n.language','en','=');
+      $query -> condition('ti.tid',10,'=');
+      $query -> orderBy('n.created', 'DESC');
+     
+      $query_result = $query -> execute();
+
+
+      //asignamos el resultado en un variable content
+      $content = "";
+      $alias = "";
+      $contador = 0;
+
+      while(
+          $record = $query_result->fetchAssoc()) {
+
+          $contador++;
+
+          $alias = drupal_lookup_path('alias','node/'.$record['nid']);
+
+          //almacenar la imagen
+         $image = "<div class=\"wrapper-imagen-carousel-sidebar\"><a href=\"reservation-step1\" ><img src=\"" . $base_path . "sites/files/manatus/". $record['filename'] . "\" /></a></div>";
+
+         $titulo = "<div class=\"views-field views-field-title\">
+                        <span class=\"field-content\">
+                        <a href=\"reservation-step1\" >".$record['title']."</a></span></div>";
+
+          $descripcion ="<div class=\"views-field views-field-body\">
+                            <div class=\"field-content\"><p>".substr($record['body_value'], 0, 45)."..."."</p></div>
+                            </div>
+                            <div class=\"views-field views-field-view-node\">
+                            <span class=\"field-content\">
+                            <a href=\"reservation-step1".$record['title']."\" >BOOK TODAY ></a>
+                            </span>
+                            </div>";
+
+           $content2 .= "<div class=\"m-item\"><div class=\"m-card-light\">".$titulo.$image.$descripcion."</div></div>";                 
+           $bullets .= "<a href=\"#\" data-slide=\"".$contador."\">".$contador."</a>";
+
+      }
+
+        //CONTENIDO DEL SLIDER
+          $content = "<div class=\"m-carousel m-center m-fade-out\">
+                            <div class=\"m-carousel-controls m-carousel-bulleted arriba\">".$bullets."</div>
+                            <div class=\"m-carousel-inner\">".$content2."</div>
+                      </div>";
+
+      $block['subject'] = '';
+
+      
+        
+
+      $block['content'] = $content;
+
+      break;
+
+      case 'Carousel paquetes especiales':
+
+        //REALIZAR UNA CONSULTA A LA BASE DE DATOS CON LOS NODOS DE TIPO SLIDER Y CATEGORIZADOS COMO PACKAGES  AND RATE
+      $query = db_select('node','n');
+      $query -> fields('n',array('nid', 'title'));
+      $query -> fields('fm',array('filename'));
+      $query -> fields('fdb',array('body_value'));
+      $query -> join('taxonomy_index','ti','ti.nid = n.nid');
+      $query -> join('field_revision_field_slider_image','fdfsi','fdfsi.entity_id =  n.nid');
+      $query -> join('file_managed','fm','fm.fid = fdfsi.field_slider_image_fid');
+      $query -> join('field_revision_body','fdb','fdb.entity_id = n.nid');
+      $query -> condition('n.status',1,'=');
+      $query -> condition('n.type','slider','=');
+      $query -> condition('n.language','es','=');
+      $query -> condition('ti.tid',10,'=');
+      $query -> orderBy('n.created', 'DESC');
+     
+      $query_result = $query -> execute();
+
+
+      //asignamos el resultado en un variable content
+      $content = "";
+      $alias = "";
+      $contador = 0;
+
+      while(
+          $record = $query_result->fetchAssoc()) {
+
+          $contador++;
+
+          $alias = drupal_lookup_path('alias','node/'.$record['nid']);
+
+          //almacenar la imagen
+         $image = "<div class=\"wrapper-imagen-carousel-sidebar\"><a href=\"reservación-paso1\" ><img src=\"" . $base_path . "sites/files/manatus/". $record['filename'] . "\" /></a></div>";
+
+         $titulo = "<div class=\"views-field views-field-title\">
+                        <span class=\"field-content\">
+                        <a href=\"reservación-paso1\" >".$record['title']."</a></span></div>";
+
+          $descripcion ="<div class=\"views-field views-field-body\">
+                            <div class=\"field-content\"><p>".substr($record['body_value'], 0, 45)."..."."</p></div>
+                            </div>
+                            <div class=\"views-field views-field-view-node\">
+                            <span class=\"field-content\">
+                            <a href=\"reservación-paso1\" >RESERVAR ></a>
+                            </span>
+                            </div>";
+
+           $content2 .= "<div class=\"m-item\"><div class=\"m-card-light\">".$titulo.$image.$descripcion."</div></div>";                 
+           $bullets .= "<a href=\"#\" data-slide=\"".$contador."\">".$contador."</a>";
+
+      }
+
+        //CONTENIDO DEL SLIDER
+          $content = "<div class=\"m-carousel m-center m-fade-out\">
+                            <div class=\"m-carousel-controls m-carousel-bulleted arriba\">".$bullets."</div>
+                            <div class=\"m-carousel-inner\">".$content2."</div>
+                      </div>";
+
+      $block['subject'] = '';
+
+      
+        
+
+      $block['content'] = $content;
+
+      break;
+
+      case 'Carousel honeymoon packages':
+
+        //REALIZAR UNA CONSULTA A LA BASE DE DATOS CON LOS NODOS DE TIPO SLIDER Y CATEGORIZADOS COMO PACKAGES  AND RATE
+      $query = db_select('node','n');
+      $query -> fields('n',array('nid', 'title'));
+      $query -> fields('fm',array('filename'));
+      $query -> fields('fdb',array('body_value'));
+      $query -> join('taxonomy_index','ti','ti.nid = n.nid');
+      $query -> join('field_revision_field_slider_image','fdfsi','fdfsi.entity_id =  n.nid');
+      $query -> join('file_managed','fm','fm.fid = fdfsi.field_slider_image_fid');
+      $query -> join('field_revision_body','fdb','fdb.entity_id = n.nid');
+      $query -> condition('n.status',1,'=');
+      $query -> condition('n.type','slider','=');
+      $query -> condition('n.language','en','=');
+      $query -> condition('ti.tid',9,'=');
+      $query -> orderBy('n.created', 'DESC');
+     
+      $query_result = $query -> execute();
+
+
+      //asignamos el resultado en un variable content
+      $content = "";
+      $alias = "";
+      $contador = 0;
+
+      while(
+          $record = $query_result->fetchAssoc()) {
+
+          $contador++;
+
+          $alias = drupal_lookup_path('alias','node/'.$record['nid']);
+
+          //almacenar la imagen
+         $image = "<div class=\"wrapper-imagen-carousel-sidebar\"><a href=\"reservation-step1\" ><img src=\"" . $base_path . "sites/files/manatus/". $record['filename'] . "\" /></a></div>";
+
+         $titulo = "<div class=\"views-field views-field-title\">
+                        <span class=\"field-content\">
+                        <a href=\"reservation-step1\" >".$record['title']."</a></span></div>";
+
+          $descripcion ="<div class=\"views-field views-field-body\">
+                            <div class=\"field-content\"><p>".substr($record['body_value'], 0, 45)."..."."</p></div>
+                            </div>
+                            <div class=\"views-field views-field-view-node\">
+                            <span class=\"field-content\">
+                            <a href=\"reservation-step1\" >BOOK TODAY ></a>
+                            </span>
+                            </div>";
+
+           $content2 .= "<div class=\"m-item\"><div class=\"m-card-light\">".$titulo.$image.$descripcion."</div></div>";                 
+           $bullets .= "<a href=\"#\" data-slide=\"".$contador."\">".$contador."</a>";
+
+      }
+
+        //CONTENIDO DEL SLIDER
+          $content = "<div class=\"m-carousel m-center m-fade-out\">
+                            <div class=\"m-carousel-controls m-carousel-bulleted arriba\">".$bullets."</div>
+                            <div class=\"m-carousel-inner\">".$content2."</div>
+                      </div>";
+
+      $block['subject'] = '';
+
+      
+        
+
+      $block['content'] = $content;
+
+      break;
+
+       case 'Carousel paquetes noche de bodas':
+
+        //REALIZAR UNA CONSULTA A LA BASE DE DATOS CON LOS NODOS DE TIPO SLIDER Y CATEGORIZADOS COMO PACKAGES  AND RATE
+      $query = db_select('node','n');
+      $query -> fields('n',array('nid', 'title'));
+      $query -> fields('fm',array('filename'));
+      $query -> fields('fdb',array('body_value'));
+      $query -> join('taxonomy_index','ti','ti.nid = n.nid');
+      $query -> join('field_revision_field_slider_image','fdfsi','fdfsi.entity_id =  n.nid');
+      $query -> join('file_managed','fm','fm.fid = fdfsi.field_slider_image_fid');
+      $query -> join('field_revision_body','fdb','fdb.entity_id = n.nid');
+      $query -> condition('n.status',1,'=');
+      $query -> condition('n.type','slider','=');
+      $query -> condition('n.language','es','=');
+      $query -> condition('ti.tid',9,'=');
+      $query -> orderBy('n.created', 'DESC');
+     
+      $query_result = $query -> execute();
+
+
+      //asignamos el resultado en un variable content
+      $content = "";
+      $alias = "";
+      $contador = 0;
+
+      while(
+          $record = $query_result->fetchAssoc()) {
+
+          $contador++;
+
+          $alias = drupal_lookup_path('alias','node/'.$record['nid']);
+
+          //almacenar la imagen
+         $image = "<div class=\"wrapper-imagen-carousel-sidebar\"><a href=\"reservación-paso1\" ><img src=\"" . $base_path . "sites/files/manatus/". $record['filename'] . "\" /></a></div>";
+
+         $titulo = "<div class=\"views-field views-field-title\">
+                        <span class=\"field-content\">
+                        <a href=\"reservación-paso1\" >".$record['title']."</a></span></div>";
+
+          $descripcion ="<div class=\"views-field views-field-body\">
+                            <div class=\"field-content\"><p>".substr($record['body_value'], 0, 45)."..."."</p></div>
+                            </div>
+                            <div class=\"views-field views-field-view-node\">
+                            <span class=\"field-content\">
+                            <a href=\"reservación-paso1\" >RESERVAR ></a>
+                            </span>
+                            </div>";
+
+           $content2 .= "<div class=\"m-item\"><div class=\"m-card-light\">".$titulo.$image.$descripcion."</div></div>";                 
+           $bullets .= "<a href=\"#\" data-slide=\"".$contador."\">".$contador."</a>";
+
+      }
+
+        //CONTENIDO DEL SLIDER
+          $content = "<div class=\"m-carousel m-center m-fade-out\">
+                            <div class=\"m-carousel-controls m-carousel-bulleted arriba\">".$bullets."</div>
+                            <div class=\"m-carousel-inner\">".$content2."</div>
+                      </div>";
+
+      $block['subject'] = '';
+
+      
+        
+
+      $block['content'] = $content;
+
+      break;
+	  
+	  
+	  
+	  /*Carousel Cozy Rooms Eng*/
+	  
+	  case 'Carousel Cozy Rooms Eng':
+
+        //REALIZAR UNA CONSULTA A LA BASE DE DATOS CON LOS NODOS DE TIPO SLIDER Y CATEGORIZADOS COMO PACKAGES  AND RATE
+      $query = db_select('node','n');
+      $query -> fields('n',array('nid', 'title'));
+      $query -> fields('fm',array('filename'));
+      $query -> fields('fdb',array('body_value'));
+      $query -> join('taxonomy_index','ti','ti.nid = n.nid');
+      $query -> join('field_revision_field_slider_image','fdfsi','fdfsi.entity_id =  n.nid');
+      $query -> join('file_managed','fm','fm.fid = fdfsi.field_slider_image_fid');
+      $query -> join('field_revision_body','fdb','fdb.entity_id = n.nid');
+      $query -> condition('n.status',1,'=');
+      $query -> condition('n.type','slider','=');
+      $query -> condition('n.language','en','=');
+      $query -> condition('ti.tid',2,'=');
+      $query -> orderBy('n.created', 'DESC');
+     
+      $query_result = $query -> execute();
+
+
+      //asignamos el resultado en un variable content
+      $content = "";
+      $alias = "";
+      $contador = 0;
+
+      while(
+          $record = $query_result->fetchAssoc()) {
+
+          $contador++;
+
+          $alias = drupal_lookup_path('alias','node/'.$record['nid']);
+
+          //almacenar la imagen
+         $image = "<div class=\"wrapper-imagen-carousel-sidebar\"><a href=\"reservation-step1\" ><img src=\"" . $base_path . "sites/files/manatus/". $record['filename'] . "\" /></a></div>";
+
+         $titulo = "<div class=\"views-field views-field-title\">
+                        <span class=\"field-content\">
+                        <a href=\"reservation-step1\" >".$record['title']."</a></span></div>";
+
+          $descripcion ="<div class=\"views-field views-field-body\">
+                            <div class=\"field-content\"><p>".substr($record['body_value'], 0, 45)."..."."</p></div>
+                            </div>
+                            <div class=\"views-field views-field-view-node\">
+                            <span class=\"field-content\">
+                            <a href=\"reservation-step1\" >BOOK TODAY ></a>
+                            </span>
+                            </div>";
+
+           $content2 .= "<div class=\"m-item\"><div class=\"m-card-light\">".$titulo.$image.$descripcion."</div></div>";                 
+           $bullets .= "<a href=\"#\" data-slide=\"".$contador."\">".$contador."</a>";
+
+      }
+
+        //CONTENIDO DEL SLIDER
+          $content = "<div class=\"m-carousel m-center m-fade-out\">
+                            <div class=\"m-carousel-controls m-carousel-bulleted arriba\">".$bullets."</div>
+                            <div class=\"m-carousel-inner\">".$content2."</div>
+                      </div>";
+
+      $block['subject'] = '';
+
+      
+        
+
+      $block['content'] = $content;
+
+      break;
+	  
+	  /*Carousel Cozy Rooms Esp*/
+	  
+	  case 'Carousel Cozy Rooms Esp':
+
+        //REALIZAR UNA CONSULTA A LA BASE DE DATOS CON LOS NODOS DE TIPO SLIDER Y CATEGORIZADOS COMO PACKAGES  AND RATE
+      $query = db_select('node','n');
+      $query -> fields('n',array('nid', 'title'));
+      $query -> fields('fm',array('filename'));
+      $query -> fields('fdb',array('body_value'));
+      $query -> join('taxonomy_index','ti','ti.nid = n.nid');
+      $query -> join('field_revision_field_slider_image','fdfsi','fdfsi.entity_id =  n.nid');
+      $query -> join('file_managed','fm','fm.fid = fdfsi.field_slider_image_fid');
+      $query -> join('field_revision_body','fdb','fdb.entity_id = n.nid');
+      $query -> condition('n.status',1,'=');
+      $query -> condition('n.type','slider','=');
+      $query -> condition('n.language','es','=');
+      $query -> condition('ti.tid',2,'=');
+      $query -> orderBy('n.created', 'DESC');
+     
+      $query_result = $query -> execute();
+
+
+      //asignamos el resultado en un variable content
+      $content = "";
+      $alias = "";
+      $contador = 0;
+
+      while(
+          $record = $query_result->fetchAssoc()) {
+
+          $contador++;
+
+          $alias = drupal_lookup_path('alias','node/'.$record['nid']);
+
+          //almacenar la imagen
+         $image = "<div class=\"wrapper-imagen-carousel-sidebar\"><a href=\"reservación-paso1\" ><img src=\"" . $base_path . "sites/files/manatus/". $record['filename'] . "\" /></a></div>";
+
+         $titulo = "<div class=\"views-field views-field-title\">
+                        <span class=\"field-content\">
+                        <a href=\"reservación-paso1\" >".$record['title']."</a></span></div>";
+
+          $descripcion ="<div class=\"views-field views-field-body\">
+                            <div class=\"field-content\"><p>".substr($record['body_value'], 0, 45)."..."."</p></div>
+                            </div>
+                            <div class=\"views-field views-field-view-node\">
+                            <span class=\"field-content\">
+                            <a href=\"reservación-paso1\" >RESERVAR ></a>
+                            </span>
+                            </div>";
+
+           $content2 .= "<div class=\"m-item\"><div class=\"m-card-light\">".$titulo.$image.$descripcion."</div></div>";                 
+           $bullets .= "<a href=\"#\" data-slide=\"".$contador."\">".$contador."</a>";
+
+      }
+
+        //CONTENIDO DEL SLIDER
+          $content = "<div class=\"m-carousel m-center m-fade-out\">
+                            <div class=\"m-carousel-controls m-carousel-bulleted arriba\">".$bullets."</div>
+                            <div class=\"m-carousel-inner\">".$content2."</div>
+                      </div>";
+
+      $block['subject'] = '';
+
+      
+
+      $block['content'] = $content;
+
+      break;
+	  
+	  /*Carousel Hotel Gardens Esp*/
+	  
+	  case 'Carousel Gardens Esp':
+
+        //REALIZAR UNA CONSULTA A LA BASE DE DATOS CON LOS NODOS DE TIPO SLIDER Y CATEGORIZADOS COMO PACKAGES  AND RATE
+      $query = db_select('node','n');
+      $query -> fields('n',array('nid', 'title'));
+      $query -> fields('fm',array('filename'));
+      $query -> fields('fdb',array('body_value'));
+      $query -> join('taxonomy_index','ti','ti.nid = n.nid');
+      $query -> join('field_revision_field_slider_image','fdfsi','fdfsi.entity_id =  n.nid');
+      $query -> join('file_managed','fm','fm.fid = fdfsi.field_slider_image_fid');
+      $query -> join('field_revision_body','fdb','fdb.entity_id = n.nid');
+      $query -> condition('n.status',1,'=');
+      $query -> condition('n.type','slider','=');
+      $query -> condition('n.language','es','=');
+      $query -> condition('ti.tid',3,'=');
+      $query -> orderBy('n.created', 'DESC');
+     
+      $query_result = $query -> execute();
+
+
+      //asignamos el resultado en un variable content
+      $content = "";
+      $alias = "";
+      $contador = 0;
+
+      while(
+          $record = $query_result->fetchAssoc()) {
+
+          $contador++;
+
+          $alias = drupal_lookup_path('alias','node/'.$record['nid']);
+
+          //almacenar la imagen
+         $image = "<div class=\"wrapper-imagen-carousel-sidebar\"><a href=\"reservación-paso1\" ><img src=\"" . $base_path . "sites/files/manatus/". $record['filename'] . "\" /></a></div>";
+
+         $titulo = "<div class=\"views-field views-field-title\">
+                        <span class=\"field-content\">
+                        <a href=\"reservación-paso1\" >".$record['title']."</a></span></div>";
+
+          $descripcion ="<div class=\"views-field views-field-body\">
+                            <div class=\"field-content\"><p>".substr($record['body_value'], 0, 45)."..."."</p></div>
+                            </div>
+                            <div class=\"views-field views-field-view-node\">
+                            <span class=\"field-content\">
+                            <a href=\"reservación-paso1\" >RESERVAR ></a>
+                            </span>
+                            </div>";
+
+           $content2 .= "<div class=\"m-item\"><div class=\"m-card-light\">".$titulo.$image.$descripcion."</div></div>";                 
+           $bullets .= "<a href=\"#\" data-slide=\"".$contador."\">".$contador."</a>";
+
+      }
+
+        //CONTENIDO DEL SLIDER
+          $content = "<div class=\"m-carousel m-center m-fade-out\">
+                            <div class=\"m-carousel-controls m-carousel-bulleted arriba\">".$bullets."</div>
+                            <div class=\"m-carousel-inner\">".$content2."</div>
+                      </div>";
+
+      $block['subject'] = '';
+
+      
+        
+
+      $block['content'] = $content;
+
+      break;
+	  
+	  /*Carousel Hotel Gardens Eng*/
+	  
+	  case 'Carousel Gardens Eng':
+
+        //REALIZAR UNA CONSULTA A LA BASE DE DATOS CON LOS NODOS DE TIPO SLIDER Y CATEGORIZADOS COMO PACKAGES  AND RATE
+      $query = db_select('node','n');
+      $query -> fields('n',array('nid', 'title'));
+      $query -> fields('fm',array('filename'));
+      $query -> fields('fdb',array('body_value'));
+      $query -> join('taxonomy_index','ti','ti.nid = n.nid');
+      $query -> join('field_revision_field_slider_image','fdfsi','fdfsi.entity_id =  n.nid');
+      $query -> join('file_managed','fm','fm.fid = fdfsi.field_slider_image_fid');
+      $query -> join('field_revision_body','fdb','fdb.entity_id = n.nid');
+      $query -> condition('n.status',1,'=');
+      $query -> condition('n.type','slider','=');
+      $query -> condition('n.language','en','=');
+      $query -> condition('ti.tid',3,'=');
+      $query -> orderBy('n.created', 'DESC');
+     
+      $query_result = $query -> execute();
+
+
+      //asignamos el resultado en un variable content
+      $content = "";
+      $alias = "";
+      $contador = 0;
+
+      while(
+          $record = $query_result->fetchAssoc()) {
+
+          $contador++;
+
+          $alias = drupal_lookup_path('alias','node/'.$record['nid']);
+
+          //almacenar la imagen
+         $image = "<div class=\"wrapper-imagen-carousel-sidebar\"><a href=\"reservation-step1\" ><img src=\"" . $base_path . "sites/files/manatus/". $record['filename'] . "\" /></a></div>";
+
+         $titulo = "<div class=\"views-field views-field-title\">
+                        <span class=\"field-content\">
+                        <a href=\"reservation-step1\" >".$record['title']."</a></span></div>";
+
+          $descripcion ="<div class=\"views-field views-field-body\">
+                            <div class=\"field-content\"><p>".substr($record['body_value'], 0, 45)."..."."</p></div>
+                            </div>
+                            <div class=\"views-field views-field-view-node\">
+                            <span class=\"field-content\">
+                            <a href=\"reservation-step1\" >BOOK TODAY ></a>
+                            </span>
+                            </div>";
+
+           $content2 .= "<div class=\"m-item\"><div class=\"m-card-light\">".$titulo.$image.$descripcion."</div></div>";                 
+           $bullets .= "<a href=\"#\" data-slide=\"".$contador."\">".$contador."</a>";
+
+      }
+
+        //CONTENIDO DEL SLIDER
+          $content = "<div class=\"m-carousel m-center m-fade-out\">
+                            <div class=\"m-carousel-controls m-carousel-bulleted arriba\">".$bullets."</div>
+                            <div class=\"m-carousel-inner\">".$content2."</div>
+                      </div>";
+
+      $block['subject'] = '';
+
+      
+        
+
+      $block['content'] = $content;
+
+      break;
+	  
+	  /*Carousel Restaurant Eng*/
+	  
+	  case 'Carousel Restaurant Eng':
+
+        //REALIZAR UNA CONSULTA A LA BASE DE DATOS CON LOS NODOS DE TIPO SLIDER Y CATEGORIZADOS COMO PACKAGES  AND RATE
+      $query = db_select('node','n');
+      $query -> fields('n',array('nid', 'title'));
+      $query -> fields('fm',array('filename'));
+      $query -> fields('fdb',array('body_value'));
+      $query -> join('taxonomy_index','ti','ti.nid = n.nid');
+      $query -> join('field_revision_field_slider_image','fdfsi','fdfsi.entity_id =  n.nid');
+      $query -> join('file_managed','fm','fm.fid = fdfsi.field_slider_image_fid');
+      $query -> join('field_revision_body','fdb','fdb.entity_id = n.nid');
+      $query -> condition('n.status',1,'=');
+      $query -> condition('n.type','slider','=');
+      $query -> condition('n.language','en','=');
+      $query -> condition('ti.tid',6,'=');
+      $query -> orderBy('n.created', 'DESC');
+     
+      $query_result = $query -> execute();
+
+
+      //asignamos el resultado en un variable content
+      $content = "";
+      $alias = "";
+      $contador = 0;
+
+      while(
+          $record = $query_result->fetchAssoc()) {
+
+          $contador++;
+
+          $alias = drupal_lookup_path('alias','node/'.$record['nid']);
+
+          //almacenar la imagen
+         $image = "<div class=\"wrapper-imagen-carousel-sidebar\"><a href=\"reservation-step1\" ><img src=\"" . $base_path . "sites/files/manatus/". $record['filename'] . "\" /></a></div>";
+
+         $titulo = "<div class=\"views-field views-field-title\">
+                        <span class=\"field-content\">
+                        <a href=\"reservation-step1\" >".$record['title']."</a></span></div>";
+
+          $descripcion ="<div class=\"views-field views-field-body\">
+                            <div class=\"field-content\"><p>".substr($record['body_value'], 0, 45)."..."."</p></div>
+                            </div>
+                            <div class=\"views-field views-field-view-node\">
+                            <span class=\"field-content\">
+                            <a href=\"reservation-step1\" >BOOK TODAY ></a>
+                            </span>
+                            </div>";
+
+           $content2 .= "<div class=\"m-item\"><div class=\"m-card-light\">".$titulo.$image.$descripcion."</div></div>";                 
+           $bullets .= "<a href=\"#\" data-slide=\"".$contador."\">".$contador."</a>";
+
+      }
+
+        //CONTENIDO DEL SLIDER
+          $content = "<div class=\"m-carousel m-center m-fade-out\">
+                            <div class=\"m-carousel-controls m-carousel-bulleted arriba\">".$bullets."</div>
+                            <div class=\"m-carousel-inner\">".$content2."</div>
+                      </div>";
+
+      $block['subject'] = '';
+
+      
+        
+
+      $block['content'] = $content;
+
+      break;
+	  
+	  
+	  /*Carousel Restaurant Esp*/
+	  
+	  case 'Carousel Restaurant Esp':
+
+        //REALIZAR UNA CONSULTA A LA BASE DE DATOS CON LOS NODOS DE TIPO SLIDER Y CATEGORIZADOS COMO PACKAGES  AND RATE
+      $query = db_select('node','n');
+      $query -> fields('n',array('nid', 'title'));
+      $query -> fields('fm',array('filename'));
+      $query -> fields('fdb',array('body_value'));
+      $query -> join('taxonomy_index','ti','ti.nid = n.nid');
+      $query -> join('field_revision_field_slider_image','fdfsi','fdfsi.entity_id =  n.nid');
+      $query -> join('file_managed','fm','fm.fid = fdfsi.field_slider_image_fid');
+      $query -> join('field_revision_body','fdb','fdb.entity_id = n.nid');
+      $query -> condition('n.status',1,'=');
+      $query -> condition('n.type','slider','=');
+      $query -> condition('n.language','es','=');
+      $query -> condition('ti.tid',6,'=');
+      $query -> orderBy('n.created', 'DESC');
+     
+      $query_result = $query -> execute();
+
+
+      //asignamos el resultado en un variable content
+      $content = "";
+      $alias = "";
+      $contador = 0;
+
+      while(
+          $record = $query_result->fetchAssoc()) {
+
+          $contador++;
+
+          $alias = drupal_lookup_path('alias','node/'.$record['nid']);
+
+          //almacenar la imagen
+         $image = "<div class=\"wrapper-imagen-carousel-sidebar\"><a href=\"reservación-paso1\" ><img src=\"" . $base_path . "sites/files/manatus/". $record['filename'] . "\" /></a></div>";
+
+         $titulo = "<div class=\"views-field views-field-title\">
+                        <span class=\"field-content\">
+                        <a href=\"reservación-paso1\" >".$record['title']."</a></span></div>";
+
+          $descripcion ="<div class=\"views-field views-field-body\">
+                            <div class=\"field-content\"><p>".substr($record['body_value'], 0, 45)."..."."</p></div>
+                            </div>
+                            <div class=\"views-field views-field-view-node\">
+                            <span class=\"field-content\">
+                            <a href=\"reservación-paso1\" >RESERVAR ></a>
+                            </span>
+                            </div>";
+
+           $content2 .= "<div class=\"m-item\"><div class=\"m-card-light\">".$titulo.$image.$descripcion."</div></div>";                 
+           $bullets .= "<a href=\"#\" data-slide=\"".$contador."\">".$contador."</a>";
+
+      }
+
+        //CONTENIDO DEL SLIDER
+          $content = "<div class=\"m-carousel m-center m-fade-out\">
+                            <div class=\"m-carousel-controls m-carousel-bulleted arriba\">".$bullets."</div>
+                            <div class=\"m-carousel-inner\">".$content2."</div>
+                      </div>";
+
+      $block['subject'] = '';
+
+      
+        
+
+      $block['content'] = $content;
+
+      break;
+	  
+	  /*Carousel Amenities Eng*/
+	  
+	  case 'Carousel Amenities Eng':
+
+        //REALIZAR UNA CONSULTA A LA BASE DE DATOS CON LOS NODOS DE TIPO SLIDER Y CATEGORIZADOS COMO PACKAGES  AND RATE
+      $query = db_select('node','n');
+      $query -> fields('n',array('nid', 'title'));
+      $query -> fields('fm',array('filename'));
+      $query -> fields('fdb',array('body_value'));
+      $query -> join('taxonomy_index','ti','ti.nid = n.nid');
+      $query -> join('field_revision_field_slider_image','fdfsi','fdfsi.entity_id =  n.nid');
+      $query -> join('file_managed','fm','fm.fid = fdfsi.field_slider_image_fid');
+      $query -> join('field_revision_body','fdb','fdb.entity_id = n.nid');
+      $query -> condition('n.status',1,'=');
+      $query -> condition('n.type','slider','=');
+      $query -> condition('n.language','en','=');
+      $query -> condition('ti.tid',4,'=');
+      $query -> orderBy('n.created', 'DESC');
+     
+      $query_result = $query -> execute();
+
+
+      //asignamos el resultado en un variable content
+      $content = "";
+      $alias = "";
+      $contador = 0;
+
+      while(
+          $record = $query_result->fetchAssoc()) {
+
+          $contador++;
+
+          $alias = drupal_lookup_path('alias','node/'.$record['nid']);
+
+          //almacenar la imagen
+         $image = "<div class=\"wrapper-imagen-carousel-sidebar\"><a href=\"reservation-step1\" ><img src=\"" . $base_path . "sites/files/manatus/". $record['filename'] . "\" /></a></div>";
+
+         $titulo = "<div class=\"views-field views-field-title\">
+                        <span class=\"field-content\">
+                        <a href=\"reservation-step1\" >".$record['title']."</a></span></div>";
+
+          $descripcion ="<div class=\"views-field views-field-body\">
+                            <div class=\"field-content\"><p>".substr($record['body_value'], 0, 45)."..."."</p></div>
+                            </div>
+                            <div class=\"views-field views-field-view-node\">
+                            <span class=\"field-content\">
+                            <a href=\"reservation-step1\" >BOOK TODAY ></a>
+                            </span>
+                            </div>";
+
+           $content2 .= "<div class=\"m-item\"><div class=\"m-card-light\">".$titulo.$image.$descripcion."</div></div>";                 
+           $bullets .= "<a href=\"#\" data-slide=\"".$contador."\">".$contador."</a>";
+
+      }
+
+        //CONTENIDO DEL SLIDER
+          $content = "<div class=\"m-carousel m-center m-fade-out\">
+                            <div class=\"m-carousel-controls m-carousel-bulleted arriba\">".$bullets."</div>
+                            <div class=\"m-carousel-inner\">".$content2."</div>
+                      </div>";
+
+      $block['subject'] = '';
+
+      
+        
+
+      $block['content'] = $content;
+
+      break;
+	  
+	  
+	  /*Carousel Amenities Esp*/
+	  
+	  case 'Carousel Amenities Esp':
+
+        //REALIZAR UNA CONSULTA A LA BASE DE DATOS CON LOS NODOS DE TIPO SLIDER Y CATEGORIZADOS COMO PACKAGES  AND RATE
+      $query = db_select('node','n');
+      $query -> fields('n',array('nid', 'title'));
+      $query -> fields('fm',array('filename'));
+      $query -> fields('fdb',array('body_value'));
+      $query -> join('taxonomy_index','ti','ti.nid = n.nid');
+      $query -> join('field_revision_field_slider_image','fdfsi','fdfsi.entity_id =  n.nid');
+      $query -> join('file_managed','fm','fm.fid = fdfsi.field_slider_image_fid');
+      $query -> join('field_revision_body','fdb','fdb.entity_id = n.nid');
+      $query -> condition('n.status',1,'=');
+      $query -> condition('n.type','slider','=');
+      $query -> condition('n.language','es','=');
+      $query -> condition('ti.tid',4,'=');
+      $query -> orderBy('n.created', 'DESC');
+     
+      $query_result = $query -> execute();
+
+
+      //asignamos el resultado en un variable content
+      $content = "";
+      $alias = "";
+      $contador = 0;
+
+      while(
+          $record = $query_result->fetchAssoc()) {
+
+          $contador++;
+
+          $alias = drupal_lookup_path('alias','node/'.$record['nid']);
+
+          //almacenar la imagen
+         $image = "<div class=\"wrapper-imagen-carousel-sidebar\"><a href=\"reservación-paso1\" ><img src=\"" . $base_path . "sites/files/manatus/". $record['filename'] . "\" /></a></div>";
+
+         $titulo = "<div class=\"views-field views-field-title\">
+                        <span class=\"field-content\">
+                        <a href=\"reservación-paso1\" >".$record['title']."</a></span></div>";
+
+          $descripcion ="<div class=\"views-field views-field-body\">
+                            <div class=\"field-content\"><p>".substr($record['body_value'], 0, 45)."..."."</p></div>
+                            </div>
+                            <div class=\"views-field views-field-view-node\">
+                            <span class=\"field-content\">
+                            <a href=\"reservación-paso1\" >RESERVAR ></a>
+                            </span>
+                            </div>";
+
+           $content2 .= "<div class=\"m-item\"><div class=\"m-card-light\">".$titulo.$image.$descripcion."</div></div>";                 
+           $bullets .= "<a href=\"#\" data-slide=\"".$contador."\">".$contador."</a>";
+
+      }
+
+        //CONTENIDO DEL SLIDER
+          $content = "<div class=\"m-carousel m-center m-fade-out\">
+                            <div class=\"m-carousel-controls m-carousel-bulleted arriba\">".$bullets."</div>
+                            <div class=\"m-carousel-inner\">".$content2."</div>
+                      </div>";
+
+      $block['subject'] = '';
+
+      
+        
+
+      $block['content'] = $content;
+
+      break;
+	  
+	  /*Carousel Pool Eng*/
+	  
+	  case 'Carousel Pool Eng':
+
+        //REALIZAR UNA CONSULTA A LA BASE DE DATOS CON LOS NODOS DE TIPO SLIDER Y CATEGORIZADOS COMO PACKAGES  AND RATE
+      $query = db_select('node','n');
+      $query -> fields('n',array('nid', 'title'));
+      $query -> fields('fm',array('filename'));
+      $query -> fields('fdb',array('body_value'));
+      $query -> join('taxonomy_index','ti','ti.nid = n.nid');
+      $query -> join('field_revision_field_slider_image','fdfsi','fdfsi.entity_id =  n.nid');
+      $query -> join('file_managed','fm','fm.fid = fdfsi.field_slider_image_fid');
+      $query -> join('field_revision_body','fdb','fdb.entity_id = n.nid');
+      $query -> condition('n.status',1,'=');
+      $query -> condition('n.type','slider','=');
+      $query -> condition('n.language','en','=');
+      $query -> condition('ti.tid',5,'=');
+      $query -> orderBy('n.created', 'DESC');
+     
+      $query_result = $query -> execute();
+
+
+      //asignamos el resultado en un variable content
+      $content = "";
+      $alias = "";
+      $contador = 0;
+
+      while(
+          $record = $query_result->fetchAssoc()) {
+
+          $contador++;
+
+          $alias = drupal_lookup_path('alias','node/'.$record['nid']);
+
+          //almacenar la imagen
+         $image = "<div class=\"wrapper-imagen-carousel-sidebar\"><a href=\"reservation-step1\" ><img src=\"" . $base_path . "sites/files/manatus/". $record['filename'] . "\" /></a></div>";
+
+         $titulo = "<div class=\"views-field views-field-title\">
+                        <span class=\"field-content\">
+                        <a href=\"reservation-step1\" >".$record['title']."</a></span></div>";
+
+          $descripcion ="<div class=\"views-field views-field-body\">
+                            <div class=\"field-content\"><p>".substr($record['body_value'], 0, 45)."..."."</p></div>
+                            </div>
+                            <div class=\"views-field views-field-view-node\">
+                            <span class=\"field-content\">
+                            <a href=\"reservation-step1\" >BOOK TODAY ></a>
+                            </span>
+                            </div>";
+
+           $content2 .= "<div class=\"m-item\"><div class=\"m-card-light\">".$titulo.$image.$descripcion."</div></div>";                 
+           $bullets .= "<a href=\"#\" data-slide=\"".$contador."\">".$contador."</a>";
+
+      }
+
+        //CONTENIDO DEL SLIDER
+          $content = "<div class=\"m-carousel m-center m-fade-out\">
+                            <div class=\"m-carousel-controls m-carousel-bulleted arriba\">".$bullets."</div>
+                            <div class=\"m-carousel-inner\">".$content2."</div>
+                      </div>";
+
+      $block['subject'] = '';
+
+      
+        
+
+      $block['content'] = $content;
+
+      break;
+	  
+	  
+	  /*Carousel Pool Esp*/
+	  
+	  case 'Carousel Pool Esp':
+
+        //REALIZAR UNA CONSULTA A LA BASE DE DATOS CON LOS NODOS DE TIPO SLIDER Y CATEGORIZADOS COMO PACKAGES  AND RATE
+      $query = db_select('node','n');
+      $query -> fields('n',array('nid', 'title'));
+      $query -> fields('fm',array('filename'));
+      $query -> fields('fdb',array('body_value'));
+      $query -> join('taxonomy_index','ti','ti.nid = n.nid');
+      $query -> join('field_revision_field_slider_image','fdfsi','fdfsi.entity_id =  n.nid');
+      $query -> join('file_managed','fm','fm.fid = fdfsi.field_slider_image_fid');
+      $query -> join('field_revision_body','fdb','fdb.entity_id = n.nid');
+      $query -> condition('n.status',1,'=');
+      $query -> condition('n.type','slider','=');
+      $query -> condition('n.language','es','=');
+      $query -> condition('ti.tid',5,'=');
+      $query -> orderBy('n.created', 'DESC');
+     
+      $query_result = $query -> execute();
+
+
+      //asignamos el resultado en un variable content
+      $content = "";
+      $alias = "";
+      $contador = 0;
+
+      while(
+          $record = $query_result->fetchAssoc()) {
+
+          $contador++;
+
+          $alias = drupal_lookup_path('alias','node/'.$record['nid']);
+
+          //almacenar la imagen
+         $image = "<div class=\"wrapper-imagen-carousel-sidebar\"><a href=\"reservación-paso1\" ><img src=\"" . $base_path . "sites/files/manatus/". $record['filename'] . "\" /></a></div>";
+
+         $titulo = "<div class=\"views-field views-field-title\">
+                        <span class=\"field-content\">
+                        <a href=\"reservación-paso1\" >".$record['title']."</a></span></div>";
+
+          $descripcion ="<div class=\"views-field views-field-body\">
+                            <div class=\"field-content\"><p>".substr($record['body_value'], 0, 45)."..."."</p></div>
+                            </div>
+                            <div class=\"views-field views-field-view-node\">
+                            <span class=\"field-content\">
+                            <a href=\"reservación-paso1\" >RESERVAR ></a>
+                            </span>
+                            </div>";
+
+           $content2 .= "<div class=\"m-item\"><div class=\"m-card-light\">".$titulo.$image.$descripcion."</div></div>";                 
+           $bullets .= "<a href=\"#\" data-slide=\"".$contador."\">".$contador."</a>";
+
+      }
+
+        //CONTENIDO DEL SLIDER
+          $content = "<div class=\"m-carousel m-center m-fade-out\">
+                            <div class=\"m-carousel-controls m-carousel-bulleted arriba\">".$bullets."</div>
+                            <div class=\"m-carousel-inner\">".$content2."</div>
+                      </div>";
+
+      $block['subject'] = '';
+
+      
+        
+
+      $block['content'] = $content;
+
+      break;
+	  
+	  
+	  /* What to do General Eng */
+	  
+	   case 'Carousel What to do ENG':
+
+      $block['subject'] = '';
+
+        
+          // CONTENIDO PRIMER SLIDE
+          $image = "<div class=\"wrapper-imagen-carousel-sidebar\"><a href=\"".$base_path."tours-and-activities"."\" title=\""."ADVENTURE TOURS & ACTIVITIES"."\" ><img src=\"" . $base_path . "sites/files/manatus/hardwired/images_opt/adventure-torus-feb2014-cel.jpg". "\" /></a></div>";
+          
+          $titulo = "<div class=\"views-field views-field-title\">
+                        <span class=\"field-content\">
+                        <a href=\"".$base_path."tours-and-activities"."\" title=\""." ADVENTURE TOURS & ACTIVITIES"."\" >"."ADVENTURE TOURS & ACTIVITIES"."</a></span></div>";
+          $descripcion ="<div class=\"views-field views-field-body\">
+                            <div class=\"field-content\"><p>".substr("Check out our list of activities and tours that you can do when you visit us at Hotel Manatus in Tortuguero, Costa Rica.", 0, 45)."..."."</p></div>
+                            </div>";
+        
+           // CONTENIDO SEGUNDO SLIDE
+          $image2 = "<div class=\"wrapper-imagen-carousel-sidebar\"><a href=\"".$base_path."sportsfishing-tour"."\" title=\""." SPORTFISHING TOURS "."\" ><img src=\"" . $base_path . "sites/files/manatus/hardwired/images_opt/sportfishing-feb2014-cel.jpg". "\" /></a></div>";
+          
+          $titulo2 = "<div class=\"views-field views-field-title\">
+                        <span class=\"field-content\">
+                        <a href=\"".$base_path."sportsfishing-tour"."\" title=\""." SPORTFISHING TOURS"."\" >"."SPORTFISHING TOURS"."</a></span></div>";
+          $descripcion2 ="<div class=\"views-field views-field-body\">
+                            <div class=\"field-content\"><p>".substr("Sport fishing is really big in Limon, especially in the north of the province. Here, you can find the incredible national parks Tortuguero and Barra del Colorado, both offering great angling opportunities.", 0, 45)."..."."</p></div>
+                            </div>";
+
+           // CONTENIDO TERCER SLIDE
+          $image3 = "<div class=\"wrapper-imagen-carousel-sidebar\"><a href=\"".$base_path."amenities\" title=\""." SPA"."\" ><img src=\"" . $base_path . "sites/files/manatus/hardwired/images_opt/what-to-do-spa-cel.jpg". "\" /></a></div>";
+          
+          $titulo3 = "<div class=\"views-field views-field-title\">
+                        <span class=\"field-content\">
+                        <a href=\"".$base_path."amenities"."\" title=\""." SPA"."\" >"."SPA"."</a></span></div>";
+          $descripcion3 ="<div class=\"views-field views-field-body\">
+                            <div class=\"field-content\"><p>".substr("Enjoy a first class vacation experience in Tortuguero. Receive a relaxing massage surrounded by the best views of Tortuguero.", 0, 45)."..."."</p></div>
+                            </div>";
+
+
+                     // CONTENIDO CUARTO SLIDE
+          $image4 = "<div class=\"wrapper-imagen-carousel-sidebar\"><a href=\"amenities\" title=\""."GYM "."\" ><img src=\"" . $base_path . "sites/files/manatus/hardwired/images_opt/gym-feb2014-cel.jpg". "\" /></a></div>";
+          
+          $titulo4 = "<div class=\"views-field views-field-title\">
+                        <span class=\"field-content\">
+                        <a href=\"".$base_path."amenities"."\" title=\""."GYM"."\" >"."GYM "."</a></span></div>";
+          $descripcion4 ="<div class=\"views-field views-field-body\">
+                            <div class=\"field-content\"><p>".substr("For those exercise lovers, we have a fitness room available in our hotel for our guests.", 0, 45)."..."."</p></div>
+                            </div>";
+          
+          $content2 = "<div class=\"m-item\"><div class=\"m-card-light\">".$titulo.$image.$descripcion."</div></div><div class=\"m-item\"><div class=\"m-card-light\">".$titulo2.$image2.$descripcion2."</div></div><div class=\"m-item\"><div class=\"m-card-light\">".$titulo3.$image3.$descripcion3."</div></div><div class=\"m-item\"><div class=\"m-card-light\">".$titulo4.$image4.$descripcion4."</div></div>";          
+          $bullets = "<a href=\"#\" data-slide=\"1\">1</a><a href=\"#\" data-slide=\"2\">2</a><a href=\"#\" data-slide=\"3\">3</a><a href=\"#\" data-slide=\"4\">4</a>";  
+
+            //CONTENIDO DEL BLOQUE
+          $content = "<div class=\"m-carousel m-center m-fade-out\">
+                            <div class=\"m-carousel-controls m-carousel-bulleted arriba\">".$bullets."</div>
+                            <div class=\"m-carousel-inner\">".$content2."</div>
+                      </div>";
+
+      
+        
+      $block['content'] = $content;
+
+      break;
+	  
+	  
+	  /*What to do General ESP*/
+	  
+	   case 'Carousel What to do ESP':
+
+      $block['subject'] = '';
+
+        
+          
+          // CONTENIDO PRIMER SLIDE
+          $image = "<div class=\"wrapper-imagen-carousel-sidebar\"><a href=\"".$base_path."es/tours-actividades"."\" title=\""."TOURS DE AVENTURA Y ACTIVIDADES "."\" ><img src=\"" . $base_path . "sites/files/manatus/hardwired/images_opt/adventure-torus-feb2014-cel.jpg". "\" /></a></div>";
+          
+          $titulo = "<div class=\"views-field views-field-title\">
+                        <span class=\"field-content\">
+                        <a href=\"".$base_path."es/tours-actividades"."\" title=\""." TOURS DE AVENTURA Y ACTIVIDADES"."\" >"."TOURS DE AVENTURA Y ACTIVIDADES"."</a></span></div>";
+          $descripcion ="<div class=\"views-field views-field-body\">
+                            <div class=\"field-content\"><p>".substr("Eche un vistazo a nuestra lista de actividades y excursiones que puede hacer cuando nos visite en el Hotel Manatus en Tortuguero, Costa Rica.", 0, 45)."..."."</p></div>
+                            </div>";
+        
+           // CONTENIDO SEGUNDO SLIDE
+          $image2 = "<div class=\"wrapper-imagen-carousel-sidebar\"><a href=\"".$base_path."es/pesca-deportiva"."\" title=\""." TOURS DE PESCA DEPORTIVA "."\" ><img src=\"" . $base_path . "sites/files/manatus/hardwired/images_opt/sportfishing-feb2014-cel.jpg". "\" /></a></div>";
+          
+          $titulo2 = "<div class=\"views-field views-field-title\">
+                        <span class=\"field-content\">
+                        <a href=\"".$base_path."es/pesca-deportiva"."\" title=\""." TOURS DE PESCA DEPORTIVA"."\" >"."TOURS DE PESCA DEPORTIVA"."</a></span></div>";
+          $descripcion2 ="<div class=\"views-field views-field-body\">
+                            <div class=\"field-content\"><p>".substr("La pesca deportiva es muy grande en Limón, especialmente en el norte de la provincia. Aquí, los increíbles parques nacionales Tortuguero y Barra del Colorado ofrecen grandes oportunidades de pesca con caña.", 0, 45)."..."."</p></div>
+                            </div>";
+
+           // CONTENIDO TERCER SLIDE
+          $image3 = "<div class=\"wrapper-imagen-carousel-sidebar\"><a href=\"".$base_path."es/servicios\" title=\""." SPA"."\" ><img src=\"" . $base_path . "sites/files/manatus/hardwired/images_opt/what-to-do-spa-cel.jpg". "\" /></a></div>";
+          
+          $titulo3 = "<div class=\"views-field views-field-title\">
+                        <span class=\"field-content\">
+                        <a href=\"".$base_path."es/servicios"."\" title=\""." SPA"."\" >"."SPA"."</a></span></div>";
+          $descripcion3 ="<div class=\"views-field views-field-body\">
+                            <div class=\"field-content\"><p>".substr("Disfrute de una experiencia de primera clase mientras vacaciona en Tortuguero. Reciba un masaje relajante rodeado de las mejores vistas de Tortuguero.", 0, 45)."..."."</p></div>
+                            </div>";
+
+
+                     // CONTENIDO CUARTO SLIDE
+          $image4 = "<div class=\"wrapper-imagen-carousel-sidebar\"><a href=\"es/servicios\" title=\""."GYM "."\" ><img src=\"" . $base_path . "sites/files/manatus/hardwired/images_opt/gym-feb2014-cel.jpg". "\" /></a></div>";
+          
+          $titulo4 = "<div class=\"views-field views-field-title\">
+                        <span class=\"field-content\">
+                        <a href=\"".$base_path."es/servicios"."\" title=\""."GYM"."\" >"."GIMNASIO "."</a></span></div>";
+          $descripcion4 ="<div class=\"views-field views-field-body\">
+                            <div class=\"field-content\"><p>".substr("Para los amantes del ejercicio, tenemos una sala de entrenamiento disponible para nuestros huéspedes.", 0, 45)."..."."</p></div>
+                            </div>";
+          
+          $content2 = "<div class=\"m-item\"><div class=\"m-card-light\">".$titulo.$image.$descripcion."</div></div><div class=\"m-item\"><div class=\"m-card-light\">".$titulo2.$image2.$descripcion2."</div></div><div class=\"m-item\"><div class=\"m-card-light\">".$titulo3.$image3.$descripcion3."</div></div><div class=\"m-item\"><div class=\"m-card-light\">".$titulo4.$image4.$descripcion4."</div></div>";          
+          $bullets = "<a href=\"#\" data-slide=\"1\">1</a><a href=\"#\" data-slide=\"2\">2</a><a href=\"#\" data-slide=\"3\">3</a><a href=\"#\" data-slide=\"4\">4</a>";  
+
+            //CONTENIDO DEL BLOQUE
+          $content = "<div class=\"m-carousel m-center m-fade-out\">
+                            <div class=\"m-carousel-controls m-carousel-bulleted arriba\">".$bullets."</div>
+                            <div class=\"m-carousel-inner\">".$content2."</div>
+                      </div>";
+
+      
+        
+      $block['content'] = $content;
+
+      break;
+	  
+	  /* Bloques inferiores Sport Fishing Eng */
+	  
+	   case 'Carousel Sportfis Inf ENG':
+
+      $block['subject'] = '';
+
+        
+          // CONTENIDO PRIMER SLIDE
+          $image = "<div class=\"wrapper-imagen-carousel-sidebar\"><a href=\"".$base_path."rooms"."\" title=\""."COZY ROOMS"."\" ><img src=\"" . $base_path . "sites/files/manatus/hardwired/images_opt/cozy-cel.jpg". "\" /></a></div>";
+          
+          $titulo = "<div class=\"views-field views-field-title\">
+                        <span class=\"field-content\">
+                        <a href=\"".$base_path."rooms"."\" title=\""." COZY ROOMS"."\" >"."COZY ROOMS"."</a></span></div>";
+          $descripcion ="<div class=\"views-field views-field-body\">
+                            <div class=\"field-content\"><p>".substr("A room at Manatus Hotel begins with an extraordinary sense of peace and comfort. Designed to inspire, its beauty connects you with the surrounding environment of a wildlife sanctuary and the water canals.", 0, 45)."..."."</p></div>
+                            </div>";
+        
+           // CONTENIDO SEGUNDO SLIDE
+          $image2 = "<div class=\"wrapper-imagen-carousel-sidebar\"><a href=\"".$base_path."amenities"."\" title=\""." EXCLUSIVE AMENITIES "."\" ><img src=\"" . $base_path . "sites/files/manatus/hardwired/images_opt/what-to-do-spa-cel.jpg". "\" /></a></div>";
+          
+          $titulo2 = "<div class=\"views-field views-field-title\">
+                        <span class=\"field-content\">
+                        <a href=\"".$base_path."amenities"."\" title=\""." EXCLUSIVE AMENITIES"."\" >"."EXCLUSIVE AMENITIES"."</a></span></div>";
+          $descripcion2 ="<div class=\"views-field views-field-body\">
+                            <div class=\"field-content\"><p>".substr("A swimming pool only a few meters from the water canals, fitness room, full internet access, spa services, art gallery and a private reserve, are only a few of our unique amenities in the area of Tortuguero. ", 0, 45)."..."."</p></div>
+                            </div>";
+
+          
+          $content2 = "<div class=\"m-item\"><div class=\"m-card-light\">".$titulo.$image.$descripcion."</div></div><div class=\"m-item\"><div class=\"m-card-light\">".$titulo2.$image2.$descripcion2."</div></div><div class=\"m-item\"><div class=\"m-card-light\">".$titulo3.$image3.$descripcion3."</div></div><div class=\"m-item\"><div class=\"m-card-light\">".$titulo4.$image4.$descripcion4."</div></div>";          
+          $bullets = "<a href=\"#\" data-slide=\"1\">1</a><a href=\"#\" data-slide=\"2\">2</a>";  
+
+            //CONTENIDO DEL BLOQUE
+          $content = "<div class=\"m-carousel m-center m-fade-out\">
+                            <div class=\"m-carousel-controls m-carousel-bulleted arriba\">".$bullets."</div>
+                            <div class=\"m-carousel-inner\">".$content2."</div>
+                      </div>";
+
+      
+        
+      $block['content'] = $content;
+
+      break;
+	  
+	  
+	  /*What to do General ESP*/
+	  
+	   case 'Carousel Sportfis Inf ESP':
+
+      $block['subject'] = '';
+
+        
+          
+          // CONTENIDO PRIMER SLIDE
+          $image = "<div class=\"wrapper-imagen-carousel-sidebar\"><a href=\"".$base_path."es/habitaciones"."\" title=\""."HABITACIONES ACOGEDORAS "."\" ><img src=\"" . $base_path . "sites/files/manatus/hardwired/images_opt/cozy-cel.jpg". "\" /></a></div>";
+          
+          $titulo = "<div class=\"views-field views-field-title\">
+                        <span class=\"field-content\">
+                        <a href=\"".$base_path."es/habitaciones"."\" title=\""." HABITACIONES ACOGEDORAS"."\" >"."HABITACIONES ACOGEDORAS"."</a></span></div>";
+          $descripcion ="<div class=\"views-field views-field-body\">
+                            <div class=\"field-content\"><p>".substr("Una habitación en el Hotel Manatus comienza con un sentimiento extraordinario de paz y comodidad. Diseñados para inspirar, lo conectarán con el ambiente circundante de este santuario de vida silvestre y los canales de agua.", 0, 45)."..."."</p></div>
+                            </div>";
+        
+           // CONTENIDO SEGUNDO SLIDE
+          $image2 = "<div class=\"wrapper-imagen-carousel-sidebar\"><a href=\"".$base_path."es/servicios"."\" title=\""." SERVICIOS EXCLUSIVOS "."\" ><img src=\"" . $base_path . "sites/files/manatus/hardwired/images_opt/what-to-do-spa-cel.jpg". "\" /></a></div>";
+          
+          $titulo2 = "<div class=\"views-field views-field-title\">
+                        <span class=\"field-content\">
+                        <a href=\"".$base_path."es/servicios"."\" title=\""." SERVICIOS EXCLUSIVOS "."\" >"."SERVICIOS EXCLUSIVOS"."</a></span></div>";
+          $descripcion2 ="<div class=\"views-field views-field-body\">
+                            <div class=\"field-content\"><p>".substr("Una piscina a pocos metros de los canales de agua, una sala de entrenamiento, acceso completo a Internet, servicios de spa, galería de arte y una reserva privada, son sólo algunos de nuestros exclusivos servicios en el área de Tortuguero.", 0, 45)."..."."</p></div>
+                            </div>";
+
+          $content2 = "<div class=\"m-item\"><div class=\"m-card-light\">".$titulo.$image.$descripcion."</div></div><div class=\"m-item\"><div class=\"m-card-light\">".$titulo2.$image2.$descripcion2."</div></div><div class=\"m-item\"><div class=\"m-card-light\">".$titulo3.$image3.$descripcion3."</div></div><div class=\"m-item\"><div class=\"m-card-light\">".$titulo4.$image4.$descripcion4."</div></div>";          
+          $bullets = "<a href=\"#\" data-slide=\"1\">1</a><a href=\"#\" data-slide=\"2\">2</a>";  
+
+            //CONTENIDO DEL BLOQUE
+          $content = "<div class=\"m-carousel m-center m-fade-out\">
+                            <div class=\"m-carousel-controls m-carousel-bulleted arriba\">".$bullets."</div>
+                            <div class=\"m-carousel-inner\">".$content2."</div>
+                      </div>";
+
+      
+        
+      $block['content'] = $content;
+
+      break;
+	  
+	  
+	  /*Slider Sportfishing*/
+	  
+	   case 'Carousel Slider Sportfis Eng':
+
+        //REALIZAR UNA CONSULTA A LA BASE DE DATOS CON LOS NODOS DE TIPO SLIDER Y CATEGORIZADOS COMO PACKAGES  AND RATE
+      $query = db_select('node','n');
+      $query -> fields('n',array('nid', 'title'));
+      $query -> fields('fm',array('filename'));
+      $query -> fields('fdb',array('body_value'));
+      $query -> join('taxonomy_index','ti','ti.nid = n.nid');
+      $query -> join('field_revision_field_slider_image','fdfsi','fdfsi.entity_id =  n.nid');
+      $query -> join('file_managed','fm','fm.fid = fdfsi.field_slider_image_fid');
+      $query -> join('field_revision_body','fdb','fdb.entity_id = n.nid');
+      $query -> condition('n.status',1,'=');
+      $query -> condition('n.type','slider','=');
+      $query -> condition('n.language','en','=');
+      $query -> condition('ti.tid',12,'=');
+      $query -> orderBy('n.created', 'DESC');
+     
+      $query_result = $query -> execute();
+
+
+      //asignamos el resultado en un variable content
+      $content = "";
+      $alias = "";
+      $contador = 0;
+
+      while(
+          $record = $query_result->fetchAssoc()) {
+
+          $contador++;
+
+          $alias = drupal_lookup_path('alias','node/'.$record['nid']);
+
+          //almacenar la imagen
+         $image = "<div class=\"wrapper-imagen-carousel-sidebar\"><a href=\"reservation-step1\" ><img src=\"" . $base_path . "sites/files/manatus/". $record['filename'] . "\" /></a></div>";
+
+         $titulo = "<div class=\"views-field views-field-title\">
+                        <span class=\"field-content\">
+                        <a href=\"reservation-step1\" >".$record['title']."</a></span></div>";
+
+          $descripcion ="<div class=\"views-field views-field-body\">
+                            <div class=\"field-content\"><p>".substr($record['body_value'], 0, 45)."..."."</p></div>
+                            </div>
+                            <div class=\"views-field views-field-view-node\">
+                            <span class=\"field-content\">
+                            <a href=\"reservation-step1\" >BOOK TODAY ></a>
+                            </span>
+                            </div>";
+
+           $content2 .= "<div class=\"m-item\"><div class=\"m-card-light\">".$titulo.$image.$descripcion."</div></div>";                 
+           $bullets .= "<a href=\"#\" data-slide=\"".$contador."\">".$contador."</a>";
+
+      }
+
+        //CONTENIDO DEL SLIDER
+          $content = "<div class=\"m-carousel m-center m-fade-out\">
+                            <div class=\"m-carousel-controls m-carousel-bulleted arriba\">".$bullets."</div>
+                            <div class=\"m-carousel-inner\">".$content2."</div>
+                      </div>";
+
+      $block['subject'] = '';
+
+      
+        
+      $block['content'] = $content;
+
+      break;
+	  
+	   case 'Carousel Slider Sportfis Esp':
+
+        //REALIZAR UNA CONSULTA A LA BASE DE DATOS CON LOS NODOS DE TIPO SLIDER Y CATEGORIZADOS COMO PACKAGES  AND RATE
+      $query = db_select('node','n');
+      $query -> fields('n',array('nid', 'title'));
+      $query -> fields('fm',array('filename'));
+      $query -> fields('fdb',array('body_value'));
+      $query -> join('taxonomy_index','ti','ti.nid = n.nid');
+      $query -> join('field_revision_field_slider_image','fdfsi','fdfsi.entity_id =  n.nid');
+      $query -> join('file_managed','fm','fm.fid = fdfsi.field_slider_image_fid');
+      $query -> join('field_revision_body','fdb','fdb.entity_id = n.nid');
+      $query -> condition('n.status',1,'=');
+      $query -> condition('n.type','slider','=');
+      $query -> condition('n.language','es','=');
+      $query -> condition('ti.tid',12,'=');
+      $query -> orderBy('n.created', 'DESC');
+     
+      $query_result = $query -> execute();
+
+
+      //asignamos el resultado en un variable content
+      $content = "";
+      $alias = "";
+      $contador = 0;
+
+      while(
+          $record = $query_result->fetchAssoc()) {
+
+          $contador++;
+
+          $alias = drupal_lookup_path('alias','node/'.$record['nid']);
+
+          //almacenar la imagen
+         $image = "<div class=\"wrapper-imagen-carousel-sidebar\"><a href=\"reservación-paso1\" ><img src=\"" . $base_path . "sites/files/manatus/". $record['filename'] . "\" /></a></div>";
+
+         $titulo = "<div class=\"views-field views-field-title\">
+                        <span class=\"field-content\">
+                        <a href=\"reservación-paso1\" >".$record['title']."</a></span></div>";
+
+          $descripcion ="<div class=\"views-field views-field-body\">
+                            <div class=\"field-content\"><p>".substr($record['body_value'], 0, 45)."..."."</p></div>
+                            </div>
+                            <div class=\"views-field views-field-view-node\">
+                            <span class=\"field-content\">
+                            <a href=\"reservación-paso1\" >RESERVAR ></a>
+                            </span>
+                            </div>";
+
+           $content2 .= "<div class=\"m-item\"><div class=\"m-card-light\">".$titulo.$image.$descripcion."</div></div>";                 
+           $bullets .= "<a href=\"#\" data-slide=\"".$contador."\">".$contador."</a>";
+
+      }
+
+        //CONTENIDO DEL SLIDER
+          $content = "<div class=\"m-carousel m-center m-fade-out\">
+                            <div class=\"m-carousel-controls m-carousel-bulleted arriba\">".$bullets."</div>
+                            <div class=\"m-carousel-inner\">".$content2."</div>
+                      </div>";
+
+      $block['subject'] = '';
+
+      
+        
+
+      $block['content'] = $content;
+
+      break;
+	  
+	  
+	  /*Slider Sportfishing*/
+	  
+	   case 'Carousel Slider Adventure Eng':
+
+        //REALIZAR UNA CONSULTA A LA BASE DE DATOS CON LOS NODOS DE TIPO SLIDER Y CATEGORIZADOS COMO PACKAGES  AND RATE
+      $query = db_select('node','n');
+      $query -> fields('n',array('nid', 'title'));
+      $query -> fields('fm',array('filename'));
+      $query -> fields('fdb',array('body_value'));
+      $query -> join('taxonomy_index','ti','ti.nid = n.nid');
+      $query -> join('field_revision_field_slider_image','fdfsi','fdfsi.entity_id =  n.nid');
+      $query -> join('file_managed','fm','fm.fid = fdfsi.field_slider_image_fid');
+      $query -> join('field_revision_body','fdb','fdb.entity_id = n.nid');
+      $query -> condition('n.status',1,'=');
+      $query -> condition('n.type','slider','=');
+      $query -> condition('n.language','en','=');
+      $query -> condition('ti.tid',11,'=');
+      $query -> orderBy('n.created', 'DESC');
+     
+      $query_result = $query -> execute();
+
+
+      //asignamos el resultado en un variable content
+      $content = "";
+      $alias = "";
+      $contador = 0;
+
+      while(
+          $record = $query_result->fetchAssoc()) {
+
+          $contador++;
+
+          $alias = drupal_lookup_path('alias','node/'.$record['nid']);
+
+          //almacenar la imagen
+         $image = "<div class=\"wrapper-imagen-carousel-sidebar\"><a href=\"reservation-step1\" ><img src=\"" . $base_path . "sites/files/manatus/". $record['filename'] . "\" /></a></div>";
+
+         $titulo = "<div class=\"views-field views-field-title\">
+                        <span class=\"field-content\">
+                        <a href=\"reservation-step1\" >".$record['title']."</a></span></div>";
+
+          $descripcion ="<div class=\"views-field views-field-body\">
+                            <div class=\"field-content\"><p>".substr($record['body_value'], 0, 45)."..."."</p></div>
+                            </div>
+                            <div class=\"views-field views-field-view-node\">
+                            <span class=\"field-content\">
+                            <a href=\"reservation-step1\" >BOOK TODAY ></a>
+                            </span>
+                            </div>";
+
+           $content2 .= "<div class=\"m-item\"><div class=\"m-card-light\">".$titulo.$image.$descripcion."</div></div>";                 
+           $bullets .= "<a href=\"#\" data-slide=\"".$contador."\">".$contador."</a>";
+
+      }
+
+        //CONTENIDO DEL SLIDER
+          $content = "<div class=\"m-carousel m-center m-fade-out\">
+                            <div class=\"m-carousel-controls m-carousel-bulleted arriba\">".$bullets."</div>
+                            <div class=\"m-carousel-inner\">".$content2."</div>
+                      </div>";
+
+      $block['subject'] = '';
+
+      
+        
+
+      $block['content'] = $content;
+
+      break;
+	  
+	   case 'Carousel Slider Adventure Esp':
+
+        //REALIZAR UNA CONSULTA A LA BASE DE DATOS CON LOS NODOS DE TIPO SLIDER Y CATEGORIZADOS COMO PACKAGES  AND RATE
+      $query = db_select('node','n');
+      $query -> fields('n',array('nid', 'title'));
+      $query -> fields('fm',array('filename'));
+      $query -> fields('fdb',array('body_value'));
+      $query -> join('taxonomy_index','ti','ti.nid = n.nid');
+      $query -> join('field_revision_field_slider_image','fdfsi','fdfsi.entity_id =  n.nid');
+      $query -> join('file_managed','fm','fm.fid = fdfsi.field_slider_image_fid');
+      $query -> join('field_revision_body','fdb','fdb.entity_id = n.nid');
+      $query -> condition('n.status',1,'=');
+      $query -> condition('n.type','slider','=');
+      $query -> condition('n.language','es','=');
+      $query -> condition('ti.tid',11,'=');
+      $query -> orderBy('n.created', 'DESC');
+     
+      $query_result = $query -> execute();
+
+
+      //asignamos el resultado en un variable content
+      $content = "";
+      $alias = "";
+      $contador = 0;
+
+      while(
+          $record = $query_result->fetchAssoc()) {
+
+          $contador++;
+
+          $alias = drupal_lookup_path('alias','node/'.$record['nid']);
+
+          //almacenar la imagen
+         $image = "<div class=\"wrapper-imagen-carousel-sidebar\"><a href=\"reservación-paso1\" ><img src=\"" . $base_path . "sites/files/manatus/". $record['filename'] . "\" /></a></div>";
+
+         $titulo = "<div class=\"views-field views-field-title\">
+                        <span class=\"field-content\">
+                        <a href=\"reservación-paso1\" >".$record['title']."</a></span></div>";
+
+          $descripcion ="<div class=\"views-field views-field-body\">
+                            <div class=\"field-content\"><p>".substr($record['body_value'], 0, 45)."..."."</p></div>
+                            </div>
+                            <div class=\"views-field views-field-view-node\">
+                            <span class=\"field-content\">
+                            <a href=\"reservación-paso1\" >RESERVAR ></a>
+                            </span>
+                            </div>";
+
+           $content2 .= "<div class=\"m-item\"><div class=\"m-card-light\">".$titulo.$image.$descripcion."</div></div>";                 
+           $bullets .= "<a href=\"#\" data-slide=\"".$contador."\">".$contador."</a>";
+
+      }
+
+        //CONTENIDO DEL SLIDER
+          $content = "<div class=\"m-carousel m-center m-fade-out\">
+                            <div class=\"m-carousel-controls m-carousel-bulleted arriba\">".$bullets."</div>
+                            <div class=\"m-carousel-inner\">".$content2."</div>
+                      </div>";
+
+      $block['subject'] = '';
+
+      
+        
+
+      $block['content'] = $content;
+
+      break;
+	  
+	  
+	  /* Bloques inferiores Sport Fishing Eng */
+	  
+	   case 'Carousel Advent Inf ENG':
+
+      $block['subject'] = '';
+
+        
+          // CONTENIDO PRIMER SLIDE
+          $image = "<div class=\"wrapper-imagen-carousel-sidebar\"><a href=\"".$base_path."rooms"."\" title=\""."COZY ROOMS"."\" ><img src=\"" . $base_path . "sites/files/manatus/hardwired/images_opt/cozy-cel.jpg". "\" /></a></div>";
+          
+          $titulo = "<div class=\"views-field views-field-title\">
+                        <span class=\"field-content\">
+                        <a href=\"".$base_path."rooms"."\" title=\""." COZY ROOMS"."\" >"."COZY ROOMS"."</a></span></div>";
+          $descripcion ="<div class=\"views-field views-field-body\">
+                            <div class=\"field-content\"><p>".substr("A room at Manatus Hotel begins with an extraordinary sense of peace and comfort. Designed to inspire, its beauty connects you with the surrounding environment of a wildlife sanctuary and the water canals.", 0, 45)."..."."</p></div>
+                            </div>";
+        
+           // CONTENIDO SEGUNDO SLIDE
+          $image2 = "<div class=\"wrapper-imagen-carousel-sidebar\"><a href=\"".$base_path."sportsfishing-tour"."\" title=\""." SPORTFISHING TOURS "."\" ><img src=\"" . $base_path . "sites/files/manatus/hardwired/images_opt/what-to-do-pezca-cel.jpg". "\" /></a></div>";
+          
+          $titulo2 = "<div class=\"views-field views-field-title\">
+                        <span class=\"field-content\">
+                        <a href=\"".$base_path."sportsfishing-tour"."\" title=\""." SPORTFISHING TOURS"."\" >"."SPORTFISHING TOURS"."</a></span></div>";
+          $descripcion2 ="<div class=\"views-field views-field-body\">
+                            <div class=\"field-content\"><p>".substr("Experience the sports fishing lifestyle; it is a great way to spend quality time with yourself or with your family and friends! ", 0, 45)."..."."</p></div>
+                            </div>";
+
+          
+          $content2 = "<div class=\"m-item\"><div class=\"m-card-light\">".$titulo.$image.$descripcion."</div></div><div class=\"m-item\"><div class=\"m-card-light\">".$titulo2.$image2.$descripcion2."</div></div><div class=\"m-item\"><div class=\"m-card-light\">".$titulo3.$image3.$descripcion3."</div></div><div class=\"m-item\"><div class=\"m-card-light\">".$titulo4.$image4.$descripcion4."</div></div>";          
+          $bullets = "<a href=\"#\" data-slide=\"1\">1</a><a href=\"#\" data-slide=\"2\">2</a>";  
+
+            //CONTENIDO DEL BLOQUE
+          $content = "<div class=\"m-carousel m-center m-fade-out\">
+                            <div class=\"m-carousel-controls m-carousel-bulleted arriba\">".$bullets."</div>
+                            <div class=\"m-carousel-inner\">".$content2."</div>
+                      </div>";
+
+      
+        
+      $block['content'] = $content;
+
+      break;
+	  
+	  
+	  /*What to do Adventure ESP*/
+	  
+	   case 'Carousel Advent Inf ESP':
+
+      $block['subject'] = '';
+
+        
+          
+          // CONTENIDO PRIMER SLIDE
+          $image = "<div class=\"wrapper-imagen-carousel-sidebar\"><a href=\"".$base_path."es/habitaciones"."\" title=\""."HABITACIONES ACOGEDORAS "."\" ><img src=\"" . $base_path . "sites/files/manatus/hardwired/images_opt/cozy-cel.jpg". "\" /></a></div>";
+          
+          $titulo = "<div class=\"views-field views-field-title\">
+                        <span class=\"field-content\">
+                        <a href=\"".$base_path."es/habitaciones"."\" title=\""." HABITACIONES ACOGEDORAS"."\" >"."HABITACIONES ACOGEDORAS"."</a></span></div>";
+          $descripcion ="<div class=\"views-field views-field-body\">
+                            <div class=\"field-content\"><p>".substr("Una habitación en el Hotel Manatus comienza con un sentimiento extraordinario de paz y comodidad. Diseñados para inspirar, lo conectarán con el ambiente circundante de este santuario de vida silvestre y los canales de agua.", 0, 45)."..."."</p></div>
+                            </div>";
+        
+           // CONTENIDO SEGUNDO SLIDE
+          $image2 = "<div class=\"wrapper-imagen-carousel-sidebar\"><a href=\"".$base_path."es/pesca-deportiva"."\" title=\""." TOURS DE PESCA DEPORTIVA "."\" ><img src=\"" . $base_path . "sites/files/manatus/hardwired/images_opt/what-to-do-pezca-cel.jpg". "\" /></a></div>";
+          
+          $titulo2 = "<div class=\"views-field views-field-title\">
+                        <span class=\"field-content\">
+                        <a href=\"".$base_path."es/pesca-deportiva"."\" title=\""." TOURS DE PESCA DEPORTIVA "."\" >"."TOURS DE PESCA DEPORTIVA"."</a></span></div>";
+          $descripcion2 ="<div class=\"views-field views-field-body\">
+                            <div class=\"field-content\"><p>".substr("Experimente el estilo de vida de la pesca deportiva, es una gran manera de pasar tiempo de calidad con usted mismo o con su familia y amigos.", 0, 45)."..."."</p></div>
+                            </div>";
+
+          $content2 = "<div class=\"m-item\"><div class=\"m-card-light\">".$titulo.$image.$descripcion."</div></div><div class=\"m-item\"><div class=\"m-card-light\">".$titulo2.$image2.$descripcion2."</div></div><div class=\"m-item\"><div class=\"m-card-light\">".$titulo3.$image3.$descripcion3."</div></div><div class=\"m-item\"><div class=\"m-card-light\">".$titulo4.$image4.$descripcion4."</div></div>";          
+          $bullets = "<a href=\"#\" data-slide=\"1\">1</a><a href=\"#\" data-slide=\"2\">2</a>";  
+
+            //CONTENIDO DEL BLOQUE
+          $content = "<div class=\"m-carousel m-center m-fade-out\">
+                            <div class=\"m-carousel-controls m-carousel-bulleted arriba\">".$bullets."</div>
+                            <div class=\"m-carousel-inner\">".$content2."</div>
+                      </div>";
+
+      
+      $block['content'] = $content;
+
+      break;
+
+
+
+
+
+  }
+
+  return $block;
+}

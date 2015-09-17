@@ -1,0 +1,246 @@
+ $blocks['Carousel Servi-Entre-Person Entrenadores Tibas'] = array(
+    'info' => t('Carousel Servicios'),
+    'cache' => DRUPAL_NO_CACHE,
+  );
+  $blocks['Carousel Servi-Entre-Person Entrenadores Coro'] = array(
+    'info' => t('Carousel Servicios'),
+    'cache' => DRUPAL_NO_CACHE,
+  );
+  $blocks['Carousel Servi-Entre-Person Entrenadores Cipre'] = array(
+    'info' => t('Carousel Servicios'),
+    'cache' => DRUPAL_NO_CACHE,
+  );
+  $blocks['Carousel Servi-Entre-Person Entrenadores Esca'] = array(
+    'info' => t('Carousel Servicios'),
+    'cache' => DRUPAL_NO_CACHE,
+  );
+
+/*Carouseles Entrenadores */
+	  case 'Carousel Servicios':
+      $block['subject'] = 'Servicios integrales de los Centros de Entrenamiento y Salud Multispa';
+
+      //Hacer una consulta en la base de datos dependiendo de la ubiacion de la pagina
+        $query = db_query("SELECT node.nid AS nid, node.title AS node_title, node_revision.vid AS node_revision_vid, fm.filename as node_imagen , frd.field_descripcion_resumen_value as node_resumen
+                            FROM 
+                            node
+                            JOIN field_revision_field_descripcion_resumen frd ON (frd.entity_id = nid)
+                            JOIN field_revision_field_imagen_servicio frfis ON(frfis.entity_id = nid)
+                            JOIN file_managed fm ON(frfis.field_imagen_servicio_fid = fm.fid)
+                            INNER JOIN field_data_field_tipo_de_servicio field_data_field_tipo_de_servicio ON node.nid = field_data_field_tipo_de_servicio.entity_id AND (field_data_field_tipo_de_servicio.entity_type = 'node' AND field_data_field_tipo_de_servicio.deleted = '0')
+                            LEFT JOIN node_revision node_revision ON node.vid = node_revision.vid
+                            WHERE (( (node.status = '1') AND (node.type IN  ('servicios')) AND (field_data_field_tipo_de_servicio.field_tipo_de_servicio_tid IN  ('19', '12', '18', '14', '10', '11', '20', '16', '13', '17', '15')) ))
+                            "
+                            );
+        $contador=0;
+       $bullets="";
+        foreach ($query as $record) {
+          
+          $contador=$contador+1;
+          
+          
+          $image = "<div class=\"wrapper-imagen-carousel-servicios\"><img src=\"" . $base_path . "sites/default/files/" . $record->node_imagen . "\" /></div>";
+          
+          $titulo = "<div class=\"views-field views-field-title\">
+                        <span class=\"field-content\">
+                        ".$record->node_title."</span></div>";
+          $descripcion ="<div class=\"views-field views-field-field-descripcion-resumen\">
+                            <div class=\"field-content\">".
+                            $record->node_resumen."</p>"
+                            ."</div>
+                            </div>
+                            <div class=\"views-field views-field-link-to-revision\">
+                            <span class=\"field-content\">
+                            <a href=\"".drupal_lookup_path('alias',"node/".$record->nid)."\">»Ver Más</a>
+                            </span>
+                            </div>
+                           ";
+          $content2 .= "<div class=\"m-item\"><div class=\"m-card-light\">".$titulo.$image.$descripcion."</div></div>";
+          
+         
+          
+          $bullets .= "<a href=\"#\" data-slide=\"".$contador."\">".$contador."</a>";  
+          
+          }
+          
+      $content = "<p class=\"desc-header-servicios-responsivo\">
+<span>Todos los beneficios que se obtienen al adquirir una membresía en Multispa</span>
+</p><div class=\"m-carousel m-center m-fade-out\">
+                        <div class=\"m-carousel-controls m-carousel-bulleted arriba\">".$bullets."</div>
+                        <div class=\"m-carousel-inner\">".$content2."</div>
+                        
+                  </div>";
+      drupal_add_js(drupal_get_path('module', 'carousel') . '/carousel.js');
+      $block['content'] = $content;
+
+      break;
+	  case 'Carousel Servicios':
+      $block['subject'] = 'Servicios integrales de los Centros de Entrenamiento y Salud Multispa';
+
+      //Hacer una consulta en la base de datos dependiendo de la ubiacion de la pagina
+        $query = db_query("SELECT node.nid AS nid, node.title AS node_title, node_revision.vid AS node_revision_vid, fm.filename as node_imagen , frd.field_descripcion_resumen_value as node_resumen
+                            FROM 
+                            node
+                            JOIN field_revision_field_descripcion_resumen frd ON (frd.entity_id = nid)
+                            JOIN field_revision_field_imagen_servicio frfis ON(frfis.entity_id = nid)
+                            JOIN file_managed fm ON(frfis.field_imagen_servicio_fid = fm.fid)
+                            INNER JOIN field_data_field_tipo_de_servicio field_data_field_tipo_de_servicio ON node.nid = field_data_field_tipo_de_servicio.entity_id AND (field_data_field_tipo_de_servicio.entity_type = 'node' AND field_data_field_tipo_de_servicio.deleted = '0')
+                            LEFT JOIN node_revision node_revision ON node.vid = node_revision.vid
+                            WHERE (( (node.status = '1') AND (node.type IN  ('servicios')) AND (field_data_field_tipo_de_servicio.field_tipo_de_servicio_tid IN  ('19', '12', '18', '14', '10', '11', '20', '16', '13', '17', '15')) ))
+                            "
+                            );
+        $contador=0;
+       $bullets="";
+        foreach ($query as $record) {
+          
+          $contador=$contador+1;
+          
+          
+          $image = "<div class=\"wrapper-imagen-carousel-servicios\"><img src=\"" . $base_path . "sites/default/files/" . $record->node_imagen . "\" /></div>";
+          
+          $titulo = "<div class=\"views-field views-field-title\">
+                        <span class=\"field-content\">
+                        ".$record->node_title."</span></div>";
+          $descripcion ="<div class=\"views-field views-field-field-descripcion-resumen\">
+                            <div class=\"field-content\">".
+                            $record->node_resumen."</p>"
+                            ."</div>
+                            </div>
+                            <div class=\"views-field views-field-link-to-revision\">
+                            <span class=\"field-content\">
+                            <a href=\"".drupal_lookup_path('alias',"node/".$record->nid)."\">»Ver Más</a>
+                            </span>
+                            </div>
+                           ";
+          $content2 .= "<div class=\"m-item\"><div class=\"m-card-light\">".$titulo.$image.$descripcion."</div></div>";
+          
+         
+          
+          $bullets .= "<a href=\"#\" data-slide=\"".$contador."\">".$contador."</a>";  
+          
+          }
+          
+      $content = "<p class=\"desc-header-servicios-responsivo\">
+<span>Todos los beneficios que se obtienen al adquirir una membresía en Multispa</span>
+</p><div class=\"m-carousel m-center m-fade-out\">
+                        <div class=\"m-carousel-controls m-carousel-bulleted arriba\">".$bullets."</div>
+                        <div class=\"m-carousel-inner\">".$content2."</div>
+                        
+                  </div>";
+      drupal_add_js(drupal_get_path('module', 'carousel') . '/carousel.js');
+      $block['content'] = $content;
+
+      break;
+	  case 'Carousel Servicios':
+      $block['subject'] = 'Servicios integrales de los Centros de Entrenamiento y Salud Multispa';
+
+      //Hacer una consulta en la base de datos dependiendo de la ubiacion de la pagina
+        $query = db_query("SELECT node.nid AS nid, node.title AS node_title, node_revision.vid AS node_revision_vid, fm.filename as node_imagen , frd.field_descripcion_resumen_value as node_resumen
+                            FROM 
+                            node
+                            JOIN field_revision_field_descripcion_resumen frd ON (frd.entity_id = nid)
+                            JOIN field_revision_field_imagen_servicio frfis ON(frfis.entity_id = nid)
+                            JOIN file_managed fm ON(frfis.field_imagen_servicio_fid = fm.fid)
+                            INNER JOIN field_data_field_tipo_de_servicio field_data_field_tipo_de_servicio ON node.nid = field_data_field_tipo_de_servicio.entity_id AND (field_data_field_tipo_de_servicio.entity_type = 'node' AND field_data_field_tipo_de_servicio.deleted = '0')
+                            LEFT JOIN node_revision node_revision ON node.vid = node_revision.vid
+                            WHERE (( (node.status = '1') AND (node.type IN  ('servicios')) AND (field_data_field_tipo_de_servicio.field_tipo_de_servicio_tid IN  ('19', '12', '18', '14', '10', '11', '20', '16', '13', '17', '15')) ))
+                            "
+                            );
+        $contador=0;
+       $bullets="";
+        foreach ($query as $record) {
+          
+          $contador=$contador+1;
+          
+          
+          $image = "<div class=\"wrapper-imagen-carousel-servicios\"><img src=\"" . $base_path . "sites/default/files/" . $record->node_imagen . "\" /></div>";
+          
+          $titulo = "<div class=\"views-field views-field-title\">
+                        <span class=\"field-content\">
+                        ".$record->node_title."</span></div>";
+          $descripcion ="<div class=\"views-field views-field-field-descripcion-resumen\">
+                            <div class=\"field-content\">".
+                            $record->node_resumen."</p>"
+                            ."</div>
+                            </div>
+                            <div class=\"views-field views-field-link-to-revision\">
+                            <span class=\"field-content\">
+                            <a href=\"".drupal_lookup_path('alias',"node/".$record->nid)."\">»Ver Más</a>
+                            </span>
+                            </div>
+                           ";
+          $content2 .= "<div class=\"m-item\"><div class=\"m-card-light\">".$titulo.$image.$descripcion."</div></div>";
+          
+         
+          
+          $bullets .= "<a href=\"#\" data-slide=\"".$contador."\">".$contador."</a>";  
+          
+          }
+          
+      $content = "<p class=\"desc-header-servicios-responsivo\">
+<span>Todos los beneficios que se obtienen al adquirir una membresía en Multispa</span>
+</p><div class=\"m-carousel m-center m-fade-out\">
+                        <div class=\"m-carousel-controls m-carousel-bulleted arriba\">".$bullets."</div>
+                        <div class=\"m-carousel-inner\">".$content2."</div>
+                        
+                  </div>";
+      drupal_add_js(drupal_get_path('module', 'carousel') . '/carousel.js');
+      $block['content'] = $content;
+
+      break;
+	  case 'Carousel Servicios':
+      $block['subject'] = 'Servicios integrales de los Centros de Entrenamiento y Salud Multispa';
+
+      //Hacer una consulta en la base de datos dependiendo de la ubiacion de la pagina
+        $query = db_query("SELECT node.nid AS nid, node.title AS node_title, node_revision.vid AS node_revision_vid, fm.filename as node_imagen , frd.field_descripcion_resumen_value as node_resumen
+                            FROM 
+                            node
+                            JOIN field_revision_field_descripcion_resumen frd ON (frd.entity_id = nid)
+                            JOIN field_revision_field_imagen_servicio frfis ON(frfis.entity_id = nid)
+                            JOIN file_managed fm ON(frfis.field_imagen_servicio_fid = fm.fid)
+                            INNER JOIN field_data_field_tipo_de_servicio field_data_field_tipo_de_servicio ON node.nid = field_data_field_tipo_de_servicio.entity_id AND (field_data_field_tipo_de_servicio.entity_type = 'node' AND field_data_field_tipo_de_servicio.deleted = '0')
+                            LEFT JOIN node_revision node_revision ON node.vid = node_revision.vid
+                            WHERE (( (node.status = '1') AND (node.type IN  ('servicios')) AND (field_data_field_tipo_de_servicio.field_tipo_de_servicio_tid IN  ('19', '12', '18', '14', '10', '11', '20', '16', '13', '17', '15')) ))
+                            "
+                            );
+        $contador=0;
+       $bullets="";
+        foreach ($query as $record) {
+          
+          $contador=$contador+1;
+          
+          
+          $image = "<div class=\"wrapper-imagen-carousel-servicios\"><img src=\"" . $base_path . "sites/default/files/" . $record->node_imagen . "\" /></div>";
+          
+          $titulo = "<div class=\"views-field views-field-title\">
+                        <span class=\"field-content\">
+                        ".$record->node_title."</span></div>";
+          $descripcion ="<div class=\"views-field views-field-field-descripcion-resumen\">
+                            <div class=\"field-content\">".
+                            $record->node_resumen."</p>"
+                            ."</div>
+                            </div>
+                            <div class=\"views-field views-field-link-to-revision\">
+                            <span class=\"field-content\">
+                            <a href=\"".drupal_lookup_path('alias',"node/".$record->nid)."\">»Ver Más</a>
+                            </span>
+                            </div>
+                           ";
+          $content2 .= "<div class=\"m-item\"><div class=\"m-card-light\">".$titulo.$image.$descripcion."</div></div>";
+          
+         
+          
+          $bullets .= "<a href=\"#\" data-slide=\"".$contador."\">".$contador."</a>";  
+          
+          }
+          
+      $content = "<p class=\"desc-header-servicios-responsivo\">
+<span>Todos los beneficios que se obtienen al adquirir una membresía en Multispa</span>
+</p><div class=\"m-carousel m-center m-fade-out\">
+                        <div class=\"m-carousel-controls m-carousel-bulleted arriba\">".$bullets."</div>
+                        <div class=\"m-carousel-inner\">".$content2."</div>
+                        
+                  </div>";
+      drupal_add_js(drupal_get_path('module', 'carousel') . '/carousel.js');
+      $block['content'] = $content;
+
+      break;
