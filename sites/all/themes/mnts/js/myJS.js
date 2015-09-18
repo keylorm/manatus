@@ -2,37 +2,42 @@ jQuery(document).ready(function($) {
 
 
     /*Infinite scroll*/
-    var divs = jQuery(".maravillas-tortuguero-home .views-row");
-    divs.css({'display':'none'});
-    
-    var ordenid = 1;
-    var cantv = 3;
-    var total = divs.length;
+
+    if(screen.width <= 690){
+
+        var divs = jQuery(".maravillas-tortuguero-home .views-row");
+        divs.css({'display':'none'});
+        
+        var ordenid = 1;
+        var cantv = 3;
+        var total = divs.length;
 
 
-    jQuery(".boton-cargar-mas-maravillas a").click(function(){
-        var c = ordenid + cantv;
+        jQuery(".boton-cargar-mas-maravillas a").click(function(){
+            var c = ordenid + cantv;
 
-        if(total >= ordenid){ 
+            if(total >= ordenid){ 
 
-            for(i=ordenid;i<=c;i++){
+                for(i=ordenid;i<=c;i++){
 
-                var div = jQuery(".views-row-"+i);
-                div.css({'display':'block'});
+                    var div = jQuery(".views-row-"+i);
+                    div.css({'display':'block'});
 
-                jQuery('.maravillas-tortuguero-home .view-content.masonry-processed').masonry('layout'); 
-                jQuery(".maravillas-tortuguero-home .views-row-"+i).css({'display':'block'}); 
+                    jQuery('.maravillas-tortuguero-home .view-content.masonry-processed').masonry('layout'); 
+                    jQuery(".maravillas-tortuguero-home .views-row-"+i).css({'display':'block'}); 
 
-                ordenid = ordenid + 1;
+                    ordenid = ordenid + 1;
 
-                if(total <= ordenid){ $(this).css({'display':'none'}); }
+                    if(total <= ordenid){ $(this).css({'display':'none'}); }
+                }
+
             }
 
-        }
+        });
 
-    });
+        setTimeout(function(){ jQuery(".boton-cargar-mas-maravillas a").click(); }, 200);
 
-    setTimeout(function(){ jQuery(".boton-cargar-mas-maravillas a").click(); }, 200);
+    }
 
    /* var contadorRowPaquetesHome = 0;
     jQuery(".view-maravillas-tortuguero.view-id-maravillas_tortuguero .views-row").each(function(){
