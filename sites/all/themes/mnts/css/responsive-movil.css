@@ -9,6 +9,18 @@
 
 @media only screen and (max-width : 690px) {
 @charset "UTF-8";
+
+
+.boton-cargar-mas-maravillas a{
+	display: block;
+}
+#block-views-maravillas-tortuguero-block-2 .flexslider ul li .views-field-title a{
+    font-size: 11px;
+    line-height: 12px;
+    height: 68px;       
+}
+
+
 .witges-trip {
 width: 150px;
 margin: 0 auto;

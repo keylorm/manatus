@@ -1,6 +1,239 @@
 #skip {display: none;}
 /* ----- Fonts ----- */
 
+.view-maravillas-tortuguero{
+
+}
+
+.view-maravillas-tortuguero .view-content{
+    margin: 0 auto;
+}
+
+.view-maravillas-tortuguero .view-content .views-row{
+    width: 285px !important;
+    margin-bottom: 30px;
+}
+
+.view-maravillas-tortuguero .view-content .views-row .views-field-title a{
+    display: block;
+    color: #813400;
+    text-transform: uppercase;
+    font-family: "Raleway";
+    font-weight: 400;    
+    font-size: 14px;
+    text-align: center;
+    margin-top: 10px;
+}
+
+.node-type-maravilla-de-manatus #content-area{
+    width: 95%;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.block-system .flexslider,
+#block-views-maravillas-tortuguero-block-2 .flexslider{
+    border: none;
+    border-radius: 0px;
+    box-shadow: none;
+    -webkit-box-shadow: none;
+    margin-bottom: 50px;
+}
+.block-system .flexslider img,
+#block-views-maravillas-tortuguero-block-2 .flexslider img{
+    height: auto;
+}
+.block-system .flexslider .flex-direction-nav,
+#block-views-maravillas-tortuguero-block-2 .flexslider .flex-direction-nav{
+    display: none;
+}
+.block-system .flex-control-nav,
+#block-views-maravillas-tortuguero-block-2 .flex-control-nav{
+    bottom: -40px !important;
+}
+.block-system .flex-control-paging li{
+    zoom: 0;
+    margin: 0px 4px;
+}
+#block-views-maravillas-tortuguero-block-2 .flex-control-paging li{
+    margin: 0px 3px;
+}
+.block-system .flex-control-paging li a,
+#block-views-maravillas-tortuguero-block-2 .flex-control-paging li a{
+    width: 12px;
+    height: 12px;
+    background:  none;
+    background-color: #EAE1DA;
+    box-shadow: none;
+    -webkit-box-shadow: none;
+}
+.block-system .flex-control-paging li a.flex-active,
+#block-views-maravillas-tortuguero-block-2 .flex-control-paging li a.flex-active{
+    background-color: #813400;
+}
+
+.block-system .field-name-title h1{
+    color: #813400;
+    text-transform: uppercase;
+    font-family: "Raleway";
+    font-weight: 400;    
+    font-size: 18px;
+    text-align: center;
+}
+.block-system .field-name-body p{
+    color: #594A42;
+    font-family: "Open Sans";
+    font-weight: 400;
+    font-size: 12px;
+    text-align: left;    
+}
+
+#block-views-maravillas-tortuguero-block-1 .view-maravillas-tortuguero{
+
+}
+
+#block-views-maravillas-tortuguero-block-1 .view-maravillas-tortuguero .views-row{
+    width: 100% !important;
+    margin-top: 20px;
+}
+
+#block-views-maravillas-tortuguero-block-1 .view-maravillas-tortuguero .views-row h3{
+    width: 180px;
+    height: 25px;
+    margin: 0 auto;
+    color: #813400;
+    text-transform: uppercase;
+    font-family: "Raleway";
+    font-weight: 400;    
+    font-size: 11px;
+    text-align: center;  
+    line-height: 25px;  
+    background-color: #EAE1DA;
+}
+
+#block-views-maravillas-tortuguero-block-1 .view-maravillas-tortuguero .views-row .frase-compartir-maravilla-manatus{
+    box-sizing: border-box;
+    padding: 8% 10%;
+    padding-bottom: 5%;
+    display: block;
+    width: 100%;
+    min-height: 133px;
+    border: 1px solid #EAE1DA;
+    border-bottom: 5px solid #EAE1DA;
+
+}
+#block-views-maravillas-tortuguero-block-1 .view-maravillas-tortuguero .views-row .frase-compartir-maravilla-manatus p{
+    color: #813400;
+    text-transform: uppercase;
+    font-family: "Raleway";
+    font-weight: 400;    
+    font-size: 13px;
+    text-align: center;
+}
+#block-views-maravillas-tortuguero-block-1 .view-maravillas-tortuguero .views-row .frase-compartir-maravilla-manatus .hashtag{
+    color: #594A42;
+    font-size: 16px;
+}
+
+
+.redes-maravillas-tortuguero{
+    text-align: center;
+}
+.redes-maravillas-tortuguero a{
+    width: 35px;
+    height: 35px;
+    display: inline-block;
+    margin: 0 5px;
+    
+}
+.redes-maravillas-tortuguero a.fb-maravillas-tor{
+    background-image: url('../img/fbrd.png');
+}
+.redes-maravillas-tortuguero a.pt-maravillas-tor{
+    background-image: url('../img/ptrd.png');
+}
+.redes-maravillas-tortuguero a.in-maravillas-tor{
+    background-image: url('../img/inrd.png');
+}
+
+
+#block-views-maravillas-tortuguero-block-2{
+    clear: both;
+    margin-top: 20px;
+}
+#block-views-maravillas-tortuguero-block-2 .flexslider{
+    margin-bottom: 20px;
+}
+#block-views-maravillas-tortuguero-block-2 .view-maravillas-tortuguero{
+
+}
+#block-views-maravillas-tortuguero-block-2 .view-maravillas-tortuguero .view-header{
+    background-color: #87ADBA;
+    border-top: 5px solid #D2F0FB;
+
+}
+#block-views-maravillas-tortuguero-block-2 .view-maravillas-tortuguero .view-header h3{
+    text-transform: uppercase;
+    font-family: "Raleway";
+    font-weight: 600;    
+    font-size: 14px;
+    text-align: center;
+    color: #FFF;
+    line-height: 40px;
+    margin: 0px;
+}
+#block-views-maravillas-tortuguero-block-2 .flexslider ul{
+    clear: both;
+    margin-top: 15px;
+    background-color: #F3E9E1;
+}
+#block-views-maravillas-tortuguero-block-2 .flexslider ul li{
+
+    
+}
+#block-views-maravillas-tortuguero-block-2 .flexslider ul li .views-field-field-imagenes-senaletica{
+    width: 35%;
+    float: left;
+    box-sizing: border-box;
+}
+#block-views-maravillas-tortuguero-block-2 .flexslider ul li .views-field-title{
+    width: 65%;
+    float: left;
+    box-sizing: border-box;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+#block-views-maravillas-tortuguero-block-2 .flexslider ul li .views-field-title a{
+    color: #594A42;
+    font-family: "Open Sans";
+    font-weight: 400;
+    font-size: 22px;
+    line-height: 30px;
+    height: 130px;  
+    display: table-cell;
+    vertical-align: middle;     
+}
+
+.boton-cargar-mas-maravillas a{
+    display: block;
+    width: 130px;
+    height: 32px;
+    margin: 0 auto;
+    background-color: #813400;
+    text-transform: uppercase;
+    font-family: "Raleway";
+    font-weight: 600;    
+    font-size: 16px;
+    line-height: 32px;
+    text-align: center;
+    color: #FFF !important; 
+    display: none;   
+}
+
+
+
+
+
 
 /* Font styles. */
 body {

@@ -1,6 +1,66 @@
 jQuery(document).ready(function($) {
 
 
+    /*Infinite scroll*/
+    var divs = jQuery(".maravillas-tortuguero-home .views-row");
+    divs.css({'display':'none'});
+    
+    var ordenid = 1;
+    var cantv = 3;
+    var total = divs.length;
+
+
+    jQuery(".boton-cargar-mas-maravillas a").click(function(){
+        var c = ordenid + cantv;
+
+        if(total >= ordenid){ 
+
+            for(i=ordenid;i<=c;i++){
+
+                var div = jQuery(".views-row-"+i);
+                div.css({'display':'block'});
+
+                jQuery('.maravillas-tortuguero-home .view-content.masonry-processed').masonry('layout'); 
+                jQuery(".maravillas-tortuguero-home .views-row-"+i).css({'display':'block'}); 
+
+                ordenid = ordenid + 1;
+
+                if(total <= ordenid){ $(this).css({'display':'none'}); }
+            }
+
+        }
+
+    });
+
+    setTimeout(function(){ jQuery(".boton-cargar-mas-maravillas a").click(); }, 200);
+
+   /* var contadorRowPaquetesHome = 0;
+    jQuery(".view-maravillas-tortuguero.view-id-maravillas_tortuguero .views-row").each(function(){
+        contadorRowPaquetesHome++;
+        if (contadorRowPaquetesHome>2){
+            jQuery(this).addClass('displayNone');
+        }
+
+
+    });
+
+
+    jQuery('.boton-cargar-mas-maravillas a').click(function(){
+
+        jQuery(".maravillas-tortuguero-home .views-row").each(function(){
+            if (jQuery(this).hasClass('displayNone')){
+
+                jQuery(this).removeClass('displayNone');
+                jQuery(this).addClass('displayBlock');
+            }
+        });
+
+        jQuery('.maravillas-tortuguero-home .view-content.masonry-processed').masonry('layout');
+        
+        jQuery('.boton-cargar-mas-maravillas').addClass('displayNone');
+
+    });*/
+
 
 //	if ((window.location.href.split("/")[4] != 'regular-packages-rates') && (window.location.href.split("/")[5] != 'paquetes-regulares-tarifas')  && (window.location.href.split("/")[3] != 'tortuguero-area') && (window.location.href.split("/")[4] != 'gallery') && (window.location.href.split("/")[5] != 'gallery')&& (window.location.href.split("/")[5] != 'area-de-tortuguero')&& (window.location.href.split("/")[5] != 'contacto') && (window.location.href.split("/")[4] !='contact-us') && (window.location.href.split("/")[4] !='reservation-step1') && (window.location.href.split("/")[5] !='reservación-paso1') && (window.location.href.split("/")[4] !='blog') && (window.location.href.split("/")[4] !='etiquetas') && (window.location.href.split("/")[5] !='etiquetas') && (window.location.href.split("/")[5] !='blog-category') && (window.location.href.split("/")[4] !='blog-category') && (window.location.href.split("/")[5] != 'paquetes-regulares-tarifas') && (window.location.href.split("/")[5] !='regular-packages-rates') && (window.location.href.split("/")[5] !='garden')&& (window.location.href.split("/")[6] !='jardines')&& (window.location.href.split("/")[6] !='piscina')&& (window.location.href.split("/")[5] !='pool')&& (window.location.href.split("/")[5] !='deck')&& (window.location.href.split("/")[6] !='deck')&& (window.location.href.split("/")[5] !='rooms')&& (window.location.href.split("/")[6] !='habitaciones')&& (window.location.href.split("/")[5] !='parque-nacional-tortuguero')&& (window.location.href.split("/")[4] !='tortuguero-national-park')) {
 //
