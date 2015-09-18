@@ -236,9 +236,23 @@
     color: #FFF !important; 
     display: none;   
 }
+#footer #block-menu-menu-men-principal-responsivo--2 .menu{
+    display: none;
+}
 
-
-
+    #footer {
+        background: none repeat scroll 0 0 #FFFCF1;
+        border-top: 3px solid #F2E3DA;
+        border-bottom: none;
+        margin: 2em auto 0;
+        min-height: 260px;
+        padding: 1.7em 0;
+        width: 100%;
+    }
+    
+    #page{
+        background: none repeat scroll 0 0 #fff;
+    }
 
 
 
