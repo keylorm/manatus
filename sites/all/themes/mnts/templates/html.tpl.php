@@ -90,6 +90,30 @@ $(window).scroll(function(){
 setTimeout(function(){ga('send', 'event', 'T>30s', 'Tiempo mayor a 30 segundos', urlactual);},30000);
 </script>
 
+
+
+
+<!-- Facebook Pixel Code -->
+<script>(function() {
+var _fbq = window._fbq || (window._fbq = []);
+if (!_fbq.loaded) {
+var fbds = document.createElement('script');
+fbds.async = true;
+fbds.src = '//connect.facebook.net/en_US/fbds.js';
+var s = document.getElementsByTagName('script')[0];
+s.parentNode.insertBefore(fbds, s);
+_fbq.loaded = true;
+}
+_fbq.push(['addPixelId', '425971290931264']);
+})();
+window._fbq = window._fbq || [];
+window._fbq.push(['track', 'PixelInitialized', {}]);
+</script>
+<noscript><img height="1" width="1" alt="" style="display:none" src="https://www.facebook.com/tr?id=425971290931264&amp;ev=PixelInitialized" /></noscript>
+
+<!-- Fin Facebook Pixel Code -->
+
+
 </head>
 <body class="<?php print $classes; ?>" <?php print $attributes; ?>>
   <div id="skip">
