@@ -1,0 +1,4 @@
+name = Manatus Calendar
+description = Custom range calendar for manatus using bootstrap range calnedar
+package = Others
+core = 7.x
