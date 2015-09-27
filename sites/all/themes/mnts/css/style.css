@@ -706,7 +706,8 @@ body:before {
 #block-block-7,
 #block-webform-client-block-48,
 #block-webform-client-block-64,
-#block-block-24 {
+#block-block-24,
+#block-manatus-calendar-custom-range-calendar {
     background: #f8efea url(../img/shadow-bg.jpg) no-repeat top left;
     border-top: 3px solid #f2e3da;
     padding: 1.2em 0 5em 3.5em;
@@ -732,7 +733,8 @@ body:before {
 }
 
 #block-webform-client-block-48 h2,
-#block-webform-client-block-64 h2{
+#block-webform-client-block-64 h2,
+#block-manatus-calendar-custom-range-calendar h2{
     margin: 0 10px 10px 0;
     font-size: 22px;
     text-transform: uppercase;
@@ -794,7 +796,8 @@ body:before {
 }
 
 #block-webform-client-block-48 select,
-#block-webform-client-block-64 select{
+#block-webform-client-block-64 select,
+#block-manatus-calendar-custom-range-calendar select{
     border: medium none;
     height: 30px;
     line-height: 30px;
@@ -826,6 +829,7 @@ body:before {
 #block-webform-client-block-48 input#edit-submitted-fechas-check-out,
 #block-webform-client-block-64 input#edit-submitted-fechas-check-in-esp,
 #block-webform-client-block-64 input#edit-submitted-fechas-check-out-esp,
+#block-manatus-calendar-custom-range-calendar input#checkin-checkout, 
 #block-block-24 input.date {
     background: white url(../img/sprite-header-inputs.jpg) no-repeat top right;
 }
@@ -2391,7 +2395,8 @@ content: none !important;
 .page-node-67 #highlighted #block-webform-client-block-64 input[type="submit"],
 .page-node-70 #highlighted #block-webform-client-block-64 input[type="submit"],
 .page-node-73 #highlighted #block-webform-client-block-64 input[type="submit"],
-.page-node-76 #highlighted #block-webform-client-block-64 input[type="submit"]{
+.page-node-76 #highlighted #block-webform-client-block-64 input[type="submit"],
+#block-manatus-calendar-custom-range-calendar .reservation-form input[type="submit"]{
     background: none repeat scroll 0 0 #BE8462;
     border: medium none;
     color: #FFFFFF;
@@ -4197,7 +4202,8 @@ ul.opensans17 li{
 .node-type-webform ::-moz-placeholder { color:#584942; } /* firefox 19+ */
 .node-type-webform :-ms-input-placeholder { color:#584942; } /* ie */
 .node-type-webform input:-moz-placeholder { color:#584942; }
-.webform-component-select {
+.webform-component-select,
+#block-manatus-calendar-custom-range-calendar .wrapper-select {
     background: url("../img/sprite-header-inputs.jpg") no-repeat scroll 99% bottom #FFFFFF;
     overflow: hidden;
     width: 100%;
@@ -4206,6 +4212,17 @@ ul.opensans17 li{
     width: 110%;
     background: none;
 }
+
+#block-manatus-calendar-custom-range-calendar .wrapper-select{
+    width: 35%;
+    margin-top: 10px;
+    float: left;
+}
+
+#block-manatus-calendar-custom-range-calendar .wrapper-select{
+    margin-right: 10px;
+}
+
 #webform-component-questions,
 #webform-component-preguntas{
     width: 60%;
@@ -5272,3 +5289,10 @@ float:left;
 #CDSSCROLLINGRAVE.narrow {
     width: 358px !important;
 }
+
+
+/* Added by Juan Martinez*/
+/* Adjust the custom range calendar */
+#block-manatus-calendar-custom-range-calendar .form-control {width: 72%;}
+#block-manatus-calendar-custom-range-calendar .wrapper-submit { float: left; margin-top: 10px; }
+/*#widgetCalendar {display: none;}*/
