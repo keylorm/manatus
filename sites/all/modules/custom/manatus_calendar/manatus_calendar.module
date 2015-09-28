@@ -125,10 +125,10 @@ function manatus_calendar_block_view($delta = '') {
                 
                   <div id="widget">
                     <div id="widgetField">
-                      <span>28 July, 2008 &divide; 31 July, 2008</span>
-                      <a href="#">Select date range</a>
+                      <input type="text" id="checkin-checkout" class="form-control" name="checkin-checkout" value='.t('Select range').'>
+                      <a id="aplicar-seleccion" href="javascript:void(0)">Aplicar Selección</a>
                     </div>
-                    <div id="widgetCalendar">
+                    <div id="widgetCalendar" class="">
                     </div>
                   </div>
 
@@ -143,9 +143,31 @@ function manatus_calendar_block_view($delta = '') {
                   </select>
                 </div>
                 <div class="wrapper-submit">
-                  <input type="submit" id="edit-submit" name="op" value="BOOK NOW" class="form-submit">
+                  <input type="submit" id="edit-submit" name="op" value="BOOK NOW" class="form-submit" disabled="disabled">
                 </div>
               </div>
             </div>
           </form>';
  }
+
+ /**
+  * hook_menu() //prueba
+  */
+function manatus_calendar_menu(){
+ $items['json-dates'] = array(
+    'access callback' => TRUE,
+    'page callback' => '_manatus_calendar_get_json_dates',
+    'delivery callback' => 'drupal_json_output'
+  );
+  return $items;
+}
+
+/*custom function*/
+function _manatus_calendar_get_json_dates(){
+  return array(
+    '20-10-2015',
+    '21-10-2015',
+    '22-10-2015',
+    '23-10-2015',
+    );
+}

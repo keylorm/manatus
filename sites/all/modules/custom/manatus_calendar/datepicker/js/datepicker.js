@@ -20,13 +20,17 @@
 					'<td>',
 					'<table cellspacing="0" cellpadding="0">',
 						'<thead>',
-							'<tr>',
+							'<tr class="encabezado-calendario">',
 								'<th class="datepickerGoPrev"><a href="#"><span><%=prev%></span></a></th>',
-								'<th colspan="6" class="datepickerMonth"><a href="#"><span></span></a></th>',
+								'<th colspan="5" class="datepickerMonth"><a href="#"><span></span></a></th>',
 								'<th class="datepickerGoNext"><a href="#"><span><%=next%></span></a></th>',
 							'</tr>',
+							'<tr class="checkin-row">',
+								'<th colspan="7">',
+									'Ingreso: <span class="checkin"></span>',
+								'</th>',
+							'</tr>',
 							'<tr class="datepickerDoW">',
-								'<th><span><%=week%></span></th>',
 								'<th><span><%=day1%></span></th>',
 								'<th><span><%=day2%></span></th>',
 								'<th><span><%=day3%></span></th>',
@@ -42,7 +46,6 @@
 				days: [
 					'<tbody class="datepickerDays">',
 						'<tr>',
-							'<th class="datepickerWeek"><a href="#"><span><%=weeks[0].week%></span></a></th>',
 							'<td class="<%=weeks[0].days[0].classname%>"><a href="#"><span><%=weeks[0].days[0].text%></span></a></td>',
 							'<td class="<%=weeks[0].days[1].classname%>"><a href="#"><span><%=weeks[0].days[1].text%></span></a></td>',
 							'<td class="<%=weeks[0].days[2].classname%>"><a href="#"><span><%=weeks[0].days[2].text%></span></a></td>',
@@ -52,7 +55,6 @@
 							'<td class="<%=weeks[0].days[6].classname%>"><a href="#"><span><%=weeks[0].days[6].text%></span></a></td>',
 						'</tr>',
 						'<tr>',
-							'<th class="datepickerWeek"><a href="#"><span><%=weeks[1].week%></span></a></th>',
 							'<td class="<%=weeks[1].days[0].classname%>"><a href="#"><span><%=weeks[1].days[0].text%></span></a></td>',
 							'<td class="<%=weeks[1].days[1].classname%>"><a href="#"><span><%=weeks[1].days[1].text%></span></a></td>',
 							'<td class="<%=weeks[1].days[2].classname%>"><a href="#"><span><%=weeks[1].days[2].text%></span></a></td>',
@@ -62,7 +64,6 @@
 							'<td class="<%=weeks[1].days[6].classname%>"><a href="#"><span><%=weeks[1].days[6].text%></span></a></td>',
 						'</tr>',
 						'<tr>',
-							'<th class="datepickerWeek"><a href="#"><span><%=weeks[2].week%></span></a></th>',
 							'<td class="<%=weeks[2].days[0].classname%>"><a href="#"><span><%=weeks[2].days[0].text%></span></a></td>',
 							'<td class="<%=weeks[2].days[1].classname%>"><a href="#"><span><%=weeks[2].days[1].text%></span></a></td>',
 							'<td class="<%=weeks[2].days[2].classname%>"><a href="#"><span><%=weeks[2].days[2].text%></span></a></td>',
@@ -72,7 +73,6 @@
 							'<td class="<%=weeks[2].days[6].classname%>"><a href="#"><span><%=weeks[2].days[6].text%></span></a></td>',
 						'</tr>',
 						'<tr>',
-							'<th class="datepickerWeek"><a href="#"><span><%=weeks[3].week%></span></a></th>',
 							'<td class="<%=weeks[3].days[0].classname%>"><a href="#"><span><%=weeks[3].days[0].text%></span></a></td>',
 							'<td class="<%=weeks[3].days[1].classname%>"><a href="#"><span><%=weeks[3].days[1].text%></span></a></td>',
 							'<td class="<%=weeks[3].days[2].classname%>"><a href="#"><span><%=weeks[3].days[2].text%></span></a></td>',
@@ -82,7 +82,6 @@
 							'<td class="<%=weeks[3].days[6].classname%>"><a href="#"><span><%=weeks[3].days[6].text%></span></a></td>',
 						'</tr>',
 						'<tr>',
-							'<th class="datepickerWeek"><a href="#"><span><%=weeks[4].week%></span></a></th>',
 							'<td class="<%=weeks[4].days[0].classname%>"><a href="#"><span><%=weeks[4].days[0].text%></span></a></td>',
 							'<td class="<%=weeks[4].days[1].classname%>"><a href="#"><span><%=weeks[4].days[1].text%></span></a></td>',
 							'<td class="<%=weeks[4].days[2].classname%>"><a href="#"><span><%=weeks[4].days[2].text%></span></a></td>',
@@ -92,7 +91,6 @@
 							'<td class="<%=weeks[4].days[6].classname%>"><a href="#"><span><%=weeks[4].days[6].text%></span></a></td>',
 						'</tr>',
 						'<tr>',
-							'<th class="datepickerWeek"><a href="#"><span><%=weeks[5].week%></span></a></th>',
 							'<td class="<%=weeks[5].days[0].classname%>"><a href="#"><span><%=weeks[5].days[0].text%></span></a></td>',
 							'<td class="<%=weeks[5].days[1].classname%>"><a href="#"><span><%=weeks[5].days[1].text%></span></a></td>',
 							'<td class="<%=weeks[5].days[2].classname%>"><a href="#"><span><%=weeks[5].days[2].text%></span></a></td>',
@@ -100,6 +98,12 @@
 							'<td class="<%=weeks[5].days[4].classname%>"><a href="#"><span><%=weeks[5].days[4].text%></span></a></td>',
 							'<td class="<%=weeks[5].days[5].classname%>"><a href="#"><span><%=weeks[5].days[5].text%></span></a></td>',
 							'<td class="<%=weeks[5].days[6].classname%>"><a href="#"><span><%=weeks[5].days[6].text%></span></a></td>',
+						'</tr>',
+						'<tr>',
+							'<td colspan="7"><span class="disponibles"></span> Disponibles <span class="no-disponibles"></span> No disponibles <span class="seleccionados"></span> Seleccionados</td>',
+						'</tr>',
+						'<tr>',
+							'<td colspan="7" ><span id="aplicar-seleccion-wrapper"></span></td>',
 						'</tr>',
 					'</tbody>'
 				],
@@ -854,6 +858,8 @@
 		DatePickerClear: DatePicker.clear,
 		DatePickerLayout: DatePicker.fixLayout
 	});
+
+
 })(jQuery);
 
 (function(){

@@ -5295,4 +5295,5 @@ float:left;
 /* Adjust the custom range calendar */
 #block-manatus-calendar-custom-range-calendar .form-control {width: 72%;}
 #block-manatus-calendar-custom-range-calendar .wrapper-submit { float: left; margin-top: 10px; }
-/*#widgetCalendar {display: none;}*/
+#checkin-checkout {border: none; padding: 6px; font-size: 13px; opacity: 0.4; background-color: #fff;}
+.hidden {display: none;}
