@@ -3,6 +3,8 @@ jQuery(document).ready(function($) {
 
     /*Infinite scroll*/
 
+    $('#widgetCalendar').addClass('hidden');
+
     if(screen.width <= 690){
 
         var divs = jQuery(".maravillas-tortuguero-home .views-row");

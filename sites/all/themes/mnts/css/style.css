@@ -5297,3 +5297,56 @@ float:left;
 #block-manatus-calendar-custom-range-calendar .wrapper-submit { float: left; margin-top: 10px; }
 #checkin-checkout {border: none; padding: 6px; font-size: 13px; opacity: 0.4; background-color: #fff;}
 .hidden {display: none;}
+#widgetCalendar {
+    position: absolute;
+    height: 478px;
+    width: 346px;
+    background-color: #E0C2AD;
+    z-index: 1;
+}
+
+tr.ayuda {
+    margin-top: 10px;
+}
+
+tr.ayuda td {
+    font-size: 11px;
+    color: #86543C;
+    font-weight: 500;
+    padding: 30px 2px !important;
+}
+
+.disponibles, .no-disponibles, .seleccionados {
+    padding: 5px 10px;
+    margin-right: 3px;
+}
+
+.disponibles {
+    background-color: #fff;
+}
+
+.no-disponibles {
+    background-color: #EBD9CD;
+    margin-left: 10px;
+}
+
+.seleccionados {
+    background-color: #813400;
+    margin-left: 10px;
+}
+
+.datepickerGoNext {
+    background-image: url(../img/flecha-slider-next.png);
+    background-repeat: no-repeat;
+    background-size: 30%;
+    background-position-x: 30px;
+    background-position-y: 8px;
+}
+
+.datepickerGoPrev {
+    background-image: url(../img/flecha-slider-prev.png);
+    background-repeat: no-repeat;
+    background-size: 30%;
+    background-position-x: 0px;
+    background-position-y: 8px;
+}

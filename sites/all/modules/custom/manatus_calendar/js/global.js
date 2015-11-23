@@ -2,6 +2,7 @@
   $(document).ready(function() {
 
     //first date range picker
+    $('#widgetCalendar').addClass('hidden');
     updateConfig();
 
     function updateConfig() {

@@ -177,7 +177,7 @@
 				encontrado = true;
 				break;
 			}
-		};
+		}
 
 		return encontrado;
 	}
@@ -188,7 +188,14 @@
 			if(array[i].getTime() === date.getTime()){
 				return true;
 			}
-		};
+		}
+
+		//retornar true si la fecha es menor que la fecha actual
+		var now = new Date();
+		now.setHours(0,0,0,0);
+		if (date.valueOf() < now.valueOf()){
+			return true;
+		}
 	}
 
 	EYE.register(initLayout, 'init');

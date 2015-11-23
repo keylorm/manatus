@@ -118,27 +118,27 @@ function manatus_calendar_block_view($delta = '') {
   $people = "<option value=\"np\" selected=\"selected\">".t('Number of people')."</option>".$people;
   $rooms = "<option value=\"nr\" selected=\"selected\">".t('Number of rooms')."</option>".$rooms;
 
-  return '<form class="reservation-form" enctype="multipart/form-data" action="" method="get" accept-charset="UTF-8">
+  return '<form class="reservation-form" enctype="multipart/form-data" action="http://localhost:8608/wwwroot/reservacion_en_paso1.aspx" method="get" accept-charset="UTF-8">
             <div class="row">
               <div class="col-md-12 col-md-offset-0 demo">
                 <h2>'.t('Make your reservation').'</h4>
                 
                   <div id="widget">
                     <div id="widgetField">
-                      <input type="text" id="checkin-checkout" class="form-control" name="checkin-checkout" value='.t('Select range').'>
+                      <input type="text" id="checkin-checkout" class="form-control" name="rango_fecha" value='.t('Select range').'>
                       <a id="aplicar-seleccion" href="javascript:void(0)">Aplicar Selección</a>
                     </div>
-                    <div id="widgetCalendar" class="">
+                    <div id="widgetCalendar" class="hidden">
                     </div>
                   </div>
 
                 <div class="wrapper-select np">
-                  <select id="edit-submitted-selects-number-of-people" name="submitted[selects][number_of_people]" class="form-select">
+                  <select id="edit-submitted-selects-number-of-people" name="people" class="form-select">
                    '.$people.'
                   </select>
                 </div>
                 <div class="wrapper-select">
-                  <select id="edit-submitted-selects-number-of-rooms" name="submitted[selects][number_of_rooms]" class="form-select">
+                  <select id="edit-submitted-selects-number-of-rooms" name="rooms" class="form-select">
                    '.$rooms.'
                   </select>
                 </div>
