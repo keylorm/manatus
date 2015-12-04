@@ -75,11 +75,27 @@
 		
 		now.setHours(0,0,0,0); // todas las fechas a evaluar deben de estar establecidas en hora=0, min=0, seg=0, mil=0 para que la evaluacion tenga efecto
 		futureDay.setHours(0,0,0,0); // todas las fechas a evaluar deben de estar establecidas en hora=0, min=0, seg=0, mil=0 para que la evaluacion tenga efecto
+		
+		  /*var posting = $.post("http://localhost:53870/wwwroot/FechasNoDisponibles.asmx/GetDates", { month: "11", year: "2015", lang: "es" });
+ 
+		  // Put the results in a div
+		  posting.done(function( data ) {
+		    console.log(data);
+		  });*/
+
+		var currentTime = new Date()
+		// returns the month (from 0 to 11)
+		var month = currentTime.getMonth() + 1
+		// returns the year (four digits)
+		var year = currentTime.getFullYear()
 
 		var datesDisabled = [];
 		$.ajax({
-		  url: "json-dates",
+		  method: 'GET',
+		  url: "/json-dates/" + month + "/" + year + "/es",
 		}).done(function(data) {
+
+			console.log(data)
 
 			for (var i = 0; i < data.length; i++) {			
 				var split = data[i].split("-");
@@ -87,10 +103,15 @@
 		 		datesDisabled [i] = disabledDate;
 		 	}
 
+		 	var lang = $('form.reservation-form').attr('data-lang');
+		 	var format = 'm/d/Y';
+		 	if(lang == 'es'){
+		 		format = 'd/m/Y';
+		 	}
 
 		 	$('#widgetCalendar').DatePicker({
 				flat: true,
-				format: 'd/m/Y',
+				format: format,
 				date: [],
 				calendars: 1,
 				mode: 'range',
@@ -107,13 +128,16 @@
 					$(".reservation-form input[type='submit'").removeAttr('disabled');				
 					if (validarFechasDisponibles(datesDisabled, dates)){
 						//mostrar mensaje de alerta
-						alert("Within days of his/her selection are 'not available', the values will be reseted");
+						alert("Within days of his/her selection are 'not available'");
 						//deshabilitar boton
 						$(".reservation-form input[type='submit'").attr("disabled","disabled");
 					}
 					//obtener el ingreso (checkin)
 					$("span.checkin").html(formated[0]);
 					$('#widgetField input[id="checkin-checkout"]').val(formated.join(' - '));
+
+					console.log('change');
+
 				}
 			});
 
@@ -189,7 +213,6 @@
 				return true;
 			}
 		}
-
 		//retornar true si la fecha es menor que la fecha actual
 		var now = new Date();
 		now.setHours(0,0,0,0);

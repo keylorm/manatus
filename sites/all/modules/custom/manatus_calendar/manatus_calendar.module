@@ -108,6 +108,7 @@ function manatus_calendar_block_view($delta = '') {
  function _manatus_calendar_show_calendar(){
   
   $options = "";
+  global $language;
   for ($i=0; $i < 10; $i++) { 
     $options .= "<option value=\"".$i."\">".$i."</option>";
   }
@@ -117,8 +118,12 @@ function manatus_calendar_block_view($delta = '') {
 
   $people = "<option value=\"np\" selected=\"selected\">".t('Number of people')."</option>".$people;
   $rooms = "<option value=\"nr\" selected=\"selected\">".t('Number of rooms')."</option>".$rooms;
+  $selection = 'Apply selection';
+  if($language->language == 'es'){
+    $selection = 'Aplicar selección';
+  }
 
-  return '<form class="reservation-form" enctype="multipart/form-data" action="http://localhost:8608/wwwroot/reservacion_en_paso1.aspx" method="get" accept-charset="UTF-8">
+  return '<form class="reservation-form" enctype="multipart/form-data" data-lang="' . $language->language . '" action="http://localhost:53870/wwwroot/reservacion_'. $language->language .'_paso1.aspx" method="get" accept-charset="UTF-8">
             <div class="row">
               <div class="col-md-12 col-md-offset-0 demo">
                 <h2>'.t('Make your reservation').'</h4>
@@ -126,7 +131,7 @@ function manatus_calendar_block_view($delta = '') {
                   <div id="widget">
                     <div id="widgetField">
                       <input type="text" id="checkin-checkout" class="form-control" name="rango_fecha" value='.t('Select range').'>
-                      <a id="aplicar-seleccion" href="javascript:void(0)">Aplicar Selección</a>
+                      <a id="aplicar-seleccion" href="javascript:void(0)">' . $selection . '</a>
                     </div>
                     <div id="widgetCalendar" class="hidden">
                     </div>
@@ -143,7 +148,7 @@ function manatus_calendar_block_view($delta = '') {
                   </select>
                 </div>
                 <div class="wrapper-submit">
-                  <input type="submit" id="edit-submit" name="op" value="BOOK NOW" class="form-submit" disabled="disabled">
+                  <input type="submit" id="edit-submit" name="op" value="' . t('BOOK NOW') . '" class="form-submit lang" disabled="disabled">
                 </div>
               </div>
             </div>
@@ -154,20 +159,49 @@ function manatus_calendar_block_view($delta = '') {
   * hook_menu() //prueba
   */
 function manatus_calendar_menu(){
- $items['json-dates'] = array(
+ $items['json-dates/%/%/%'] = array(
     'access callback' => TRUE,
     'page callback' => '_manatus_calendar_get_json_dates',
+    'page arguments' => array(1,2,3),
     'delivery callback' => 'drupal_json_output'
   );
   return $items;
 }
 
 /*custom function*/
-function _manatus_calendar_get_json_dates(){
+function _manatus_calendar_get_json_dates($month, $year, $lang){
+
+  //consultar 
+  $postData = array('month' => $month, 'year' => $year, 'lang' => $lang);
+  $fechas = consultarURL("http://localhost:53870/wwwroot/FechasNoDisponibles.asmx/GetDates", $postData);
+  $JsonObject = json_decode((String)$fechas);
+  /*var_dump($JsonObject->fechas);
+  exit();
   return array(
     '20-10-2015',
     '21-10-2015',
     '22-10-2015',
     '23-10-2015',
-    );
+    );*/
+  return $JsonObject->fechas;
+}
+
+function consultarURL($url, $postData = array()){
+  $header = array('Content-Type: application/x-www-form-urlencoded');
+  // set up the request
+  $curl = curl_init($url);
+  curl_setopt($curl, CURLOPT_RETURNTRANSFER, true);  // have curl_exec return a string
+  //curl_setopt($curl, CURLOPT_HTTPHEADER, array('Accept: application/json', 'X-CSRF-Token: ' .$csrf_token)); // Accept JSON response
+  curl_setopt($curl, CURLOPT_HTTPHEADER, $header); // Accept JSON response
+  curl_setopt($curl, CURLOPT_POST, 1); // Do a regular HTTP POST
+  curl_setopt($curl, CURLOPT_HEADER, FALSE);  // Ask to not return Header
+  curl_setopt($curl, CURLOPT_POSTFIELDS, "month=" . $postData['month'] . "&year=" . $postData['year'] . "&lang=" . $postData['lang']); // POST this data
+  curl_setopt($curl, CURLOPT_SSL_VERIFYPEER, FALSE);
+  curl_setopt($curl, CURLOPT_SSL_VERIFYHOST, FALSE);
+  // make the request
+  curl_setopt($curl, CURLOPT_VERBOSE, true); // output to command line
+  $response = curl_exec($curl);
+  curl_close($curl);
+  $xml = new SimpleXMLElement($response);
+  return $xml;
 }
