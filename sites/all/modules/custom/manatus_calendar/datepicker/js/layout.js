@@ -128,7 +128,12 @@
 					$(".reservation-form input[type='submit'").removeAttr('disabled');				
 					if (validarFechasDisponibles(datesDisabled, dates)){
 						//mostrar mensaje de alerta
-						alert("Within days of his/her selection are 'not available'");
+						if(lang == 'es'){
+							alert("Su selección contiene dias 'no disponibles', por favor seleccione un rango diferente");
+						else{
+							alert("Within days of his/her selection are 'not available', please select different range");
+						}
+
 						//deshabilitar boton
 						$(".reservation-form input[type='submit'").attr("disabled","disabled");
 					}
