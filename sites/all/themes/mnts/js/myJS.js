@@ -404,6 +404,8 @@ jQuery(function($){
              /*var url_video_original = this.attr('src');
                var url_video_nuevo = url_video_original+"&version=3&enablejsapi=1";*/
                $(this).attr('src', $(this).attr('src')+"&version=3&enablejsapi=1");
+                $(this).attr("allowfullscreen", "true");
+
        });
       
 
@@ -451,19 +453,19 @@ jQuery(function($){
                             $('.flexslider').flexslider("pause");
                             $('.flexslider .flex-caption').css("display", "none");
                             console.log(state.target.f.id);
-                            var iframe = $("#"+state.target.f.id);
+                            var iframe = document.getElementById(state.target.f.id);
                             console.log(iframe);
-                           if (iframe.requestFullscreen) {
-                              iframe.requestFullscreen();
+                           if (iframe.requestFullScreen) {
+                              iframe.requestFullScreen();
                               console.log("entro1");
-                            } else if (iframe.msRequestFullscreen) {
-                              iframe.msRequestFullscreen();
+                            } else if (iframe.msRequestFullScreen) {
+                              iframe.msRequestFullScreen();
                               console.log("entro2");
-                            } else if (iframe.find("video").mozRequestFullScreen) {
-                              iframe.find("video").mozRequestFullScreen();
-                              console.log("entro3");
-                            } else if (iframe.webkitRequestFullscreen) {
-                              iframe.webkitRequestFullscreen();
+                            } else if (iframe.mozRequestFullScreen) {
+                              iframe.mozRequestFullScreen();
+                              console.log(iframe.mozRequestFullScreen);
+                            } else if (iframe.webkitRequestFullScreen) {
+                              iframe.webkitRequestFullScreen();
                               console.log("entro4");
                             }
                             break;
