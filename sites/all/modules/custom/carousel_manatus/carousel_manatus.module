@@ -219,7 +219,7 @@ function carousel_manatus_block_view($delta = '') {
                             </div>";
         
            // CONTENIDO SEGUNDO SLIDE
-          $image2 = "<div class=\"wrapper-imagen-carousel-sidebar\"><a href=\"".$base_path."amenities"."\" title=\""." EXCLUSIVE AMENITIES"."\" ><img alt='Exclusive Amenities Manatus' src=\"" . $base_path . "sites/files/manatus/hardwired/images_opt/AMENITIES-HOME-FEB2014-cel.jpg". "\" /></a></div>";
+          $image2 = "<div class=\"wrapper-imagen-carousel-sidebar\"><a href=\"".$base_path."amenities"."\" title=\""." EXCLUSIVE AMENITIES"."\" ><img alt='Exclusive Amenities Manatus' src=\"" . $base_path . "sites/files/manatus/hardwired/images_opt/_DSC4404-cel.jpg". "\" /></a></div>";
           
           $titulo2 = "<div class=\"views-field views-field-title\">
                         <span class=\"field-content\">
@@ -234,7 +234,7 @@ function carousel_manatus_block_view($delta = '') {
                             </div>";
 
            // CONTENIDO TERCER SLIDE
-          $image3 = "<div class=\"wrapper-imagen-carousel-sidebar\"><a href=\"".$base_path."restaurant"."\" title=\""." CARIBBEAN FOOD RESTAURANT"."\" ><img alt='Caribbean Food Manatus' src=\"" . $base_path . "sites/files/manatus/hardwired/images_opt/FOOD-HOME-FEB2014-cel.jpg". "\" /></a></div>";
+          $image3 = "<div class=\"wrapper-imagen-carousel-sidebar\"><a href=\"".$base_path."restaurant"."\" title=\""." CARIBBEAN FOOD RESTAURANT"."\" ><img alt='Caribbean Food Manatus' src=\"" . $base_path . "sites/files/manatus/hardwired/images_opt/_DSC5187-cel.jpg". "\" /></a></div>";
           
           $titulo3 = "<div class=\"views-field views-field-title\">
                         <span class=\"field-content\">
@@ -305,7 +305,7 @@ function carousel_manatus_block_view($delta = '') {
                             </div>";
 
            // CONTENIDO TERCER SLIDE
-          $image3 = "<div class=\"wrapper-imagen-carousel-sidebar\"><a href=\"".$base_path."restaurant"."\" title=\""." CARIBBEAN FOOD RESTAURANT"."\" ><img src=\"" . $base_path . "sites/files/manatus/hardwired/images_opt/RESTAURANT-feb2014-cel.jpg". "\" /></a></div>";
+          $image3 = "<div class=\"wrapper-imagen-carousel-sidebar\"><a href=\"".$base_path."restaurant"."\" title=\""." CARIBBEAN FOOD RESTAURANT"."\" ><img src=\"" . $base_path . "sites/files/manatus/hardwired/images_opt/_DSC4357-cel.jpg". "\" /></a></div>";
           
           $titulo3 = "<div class=\"views-field views-field-title\">
                         <span class=\"field-content\">
@@ -316,7 +316,7 @@ function carousel_manatus_block_view($delta = '') {
 
 
                      // CONTENIDO CUARTO SLIDE
-          $image4 = "<div class=\"wrapper-imagen-carousel-sidebar\"><a href=\"pool\" title=\""."RIVER FRONT POOL AREA"."\" ><img src=\"" . $base_path . "sites/files/manatus/hardwired/images_opt/POOL-feb2014-cel.jpg". "\" /></a></div>";
+          $image4 = "<div class=\"wrapper-imagen-carousel-sidebar\"><a href=\"pool\" title=\""."RIVER FRONT POOL AREA"."\" ><img src=\"" . $base_path . "sites/files/manatus/hardwired/images_opt/_DSC4400-cel.jpg". "\" /></a></div>";
           
           $titulo4 = "<div class=\"views-field views-field-title\">
                         <span class=\"field-content\">
@@ -366,7 +366,7 @@ function carousel_manatus_block_view($delta = '') {
                             </div>";
 
            // CONTENIDO TERCER SLIDE
-          $image3 = "<div class=\"wrapper-imagen-carousel-sidebar\"><a href=\"".$base_path."es/restaurante\" title=\""." RESTAURANTE DE COMIDA CARIBEÑA"."\" ><img src=\"" . $base_path . "sites/files/manatus/hardwired/images_opt/RESTAURANT-feb2014-cel.jpg". "\" /></a></div>";
+          $image3 = "<div class=\"wrapper-imagen-carousel-sidebar\"><a href=\"".$base_path."es/restaurante\" title=\""." RESTAURANTE DE COMIDA CARIBEÑA"."\" ><img src=\"" . $base_path . "sites/files/manatus/hardwired/images_opt/_DSC4357-cel.jpg". "\" /></a></div>";
           
           $titulo3 = "<div class=\"views-field views-field-title\">
                         <span class=\"field-content\">
@@ -377,7 +377,7 @@ function carousel_manatus_block_view($delta = '') {
 
 
                      // CONTENIDO CUARTO SLIDE
-          $image4 = "<div class=\"wrapper-imagen-carousel-sidebar\"><a href=\"es/piscina\" title=\""."ÁREA DE LA PISCINA "."\" ><img src=\"" . $base_path . "sites/files/manatus/hardwired/images_opt/POOL-feb2014-cel.jpg". "\" /></a></div>";
+          $image4 = "<div class=\"wrapper-imagen-carousel-sidebar\"><a href=\"".$base_path."es/piscina\" title=\""."ÁREA DE LA PISCINA "."\" ><img src=\"" . $base_path . "sites/files/manatus/hardwired/images_opt/_DSC4400-cel.jpg". "\" /></a></div>";
           
           $titulo4 = "<div class=\"views-field views-field-title\">
                         <span class=\"field-content\">
@@ -422,7 +422,7 @@ function carousel_manatus_block_view($delta = '') {
                             </div>";
         
            // CONTENIDO SEGUNDO SLIDE
-          $image2 = "<div class=\"wrapper-imagen-carousel-sidebar\"><a href=\"".$base_path."es/servicios"."\" title=\""." SERVICIOS EXCLUSIVOS"."\" ><img alt='Servicios Exclusivos Manatus' src=\"" . $base_path . "sites/files/manatus/hardwired/images_opt/AMENITIES-HOME-FEB2014-cel.jpg". "\" /></a></div>";
+          $image2 = "<div class=\"wrapper-imagen-carousel-sidebar\"><a href=\"".$base_path."es/servicios"."\" title=\""." SERVICIOS EXCLUSIVOS"."\" ><img alt='Servicios Exclusivos Manatus' src=\"" . $base_path . "sites/files/manatus/hardwired/images_opt/_DSC4404-cel.jpg". "\" /></a></div>";
           
           $titulo2 = "<div class=\"views-field views-field-title\">
                         <span class=\"field-content\">
@@ -437,7 +437,7 @@ function carousel_manatus_block_view($delta = '') {
                             </div>";
 
            // CONTENIDO TERCER SLIDE
-          $image3 = "<div class=\"wrapper-imagen-carousel-sidebar\"><a href=\"es/restaurante\" title=\""."RESTAURANTE DE COMIDA CARIBEÑA"."\" ><img alt='Restaurante de Comida Caribeña Manatus' src=\"" . $base_path . "sites/files/manatus/hardwired/images_opt/FOOD-HOME-FEB2014-cel.jpg". "\" /></a></div>";
+          $image3 = "<div class=\"wrapper-imagen-carousel-sidebar\"><a href=\"es/restaurante\" title=\""."RESTAURANTE DE COMIDA CARIBEÑA"."\" ><img alt='Restaurante de Comida Caribeña Manatus' src=\"" . $base_path . "sites/files/manatus/hardwired/images_opt/_DSC5187-cel.jpg". "\" /></a></div>";
           
           $titulo3 = "<div class=\"views-field views-field-title\">
                         <span class=\"field-content\">
@@ -1733,7 +1733,7 @@ function carousel_manatus_block_view($delta = '') {
 
         
           // CONTENIDO PRIMER SLIDE
-          $image = "<div class=\"wrapper-imagen-carousel-sidebar\"><a href=\"".$base_path."rooms"."\" title=\""."COZY ROOMS"."\" ><img src=\"" . $base_path . "sites/files/manatus/hardwired/images_opt/cozy-cel.jpg". "\" /></a></div>";
+          $image = "<div class=\"wrapper-imagen-carousel-sidebar\"><a href=\"".$base_path."rooms"."\" title=\""."COZY ROOMS"."\" ><img src=\"" . $base_path . "sites/files/manatus/hardwired/images_opt/_DSC5313-cel.jpg". "\" /></a></div>";
           
           $titulo = "<div class=\"views-field views-field-title\">
                         <span class=\"field-content\">
@@ -1778,7 +1778,7 @@ function carousel_manatus_block_view($delta = '') {
         
           
           // CONTENIDO PRIMER SLIDE
-          $image = "<div class=\"wrapper-imagen-carousel-sidebar\"><a href=\"".$base_path."es/habitaciones"."\" title=\""."HABITACIONES ACOGEDORAS "."\" ><img src=\"" . $base_path . "sites/files/manatus/hardwired/images_opt/cozy-cel.jpg". "\" /></a></div>";
+          $image = "<div class=\"wrapper-imagen-carousel-sidebar\"><a href=\"".$base_path."es/habitaciones"."\" title=\""."HABITACIONES ACOGEDORAS "."\" ><img src=\"" . $base_path . "sites/files/manatus/hardwired/images_opt/_DSC5313-cel.jpg". "\" /></a></div>";
           
           $titulo = "<div class=\"views-field views-field-title\">
                         <span class=\"field-content\">
@@ -2098,7 +2098,7 @@ function carousel_manatus_block_view($delta = '') {
 
         
           // CONTENIDO PRIMER SLIDE
-          $image = "<div class=\"wrapper-imagen-carousel-sidebar\"><a href=\"".$base_path."rooms"."\" title=\""."COZY ROOMS"."\" ><img src=\"" . $base_path . "sites/files/manatus/hardwired/images_opt/cozy-cel.jpg". "\" /></a></div>";
+          $image = "<div class=\"wrapper-imagen-carousel-sidebar\"><a href=\"".$base_path."rooms"."\" title=\""."COZY ROOMS"."\" ><img src=\"" . $base_path . "sites/files/manatus/hardwired/images_opt/_DSC5313-cel.jpg". "\" /></a></div>";
           
           $titulo = "<div class=\"views-field views-field-title\">
                         <span class=\"field-content\">
@@ -2108,7 +2108,7 @@ function carousel_manatus_block_view($delta = '') {
                             </div>";
         
            // CONTENIDO SEGUNDO SLIDE
-          $image2 = "<div class=\"wrapper-imagen-carousel-sidebar\"><a href=\"".$base_path."sportsfishing-tour"."\" title=\""." SPORTFISHING TOURS "."\" ><img src=\"" . $base_path . "sites/files/manatus/hardwired/images_opt/what-to-do-pezca-cel.jpg". "\" /></a></div>";
+          $image2 = "<div class=\"wrapper-imagen-carousel-sidebar\"><a href=\"".$base_path."sportsfishing-tour"."\" title=\""." SPORTFISHING TOURS "."\" ><img src=\"" . $base_path . "sites/files/manatus/hardwired/images_opt/_DSC4180-cel.jpg". "\" /></a></div>";
           
           $titulo2 = "<div class=\"views-field views-field-title\">
                         <span class=\"field-content\">
@@ -2143,7 +2143,7 @@ function carousel_manatus_block_view($delta = '') {
         
           
           // CONTENIDO PRIMER SLIDE
-          $image = "<div class=\"wrapper-imagen-carousel-sidebar\"><a href=\"".$base_path."es/habitaciones"."\" title=\""."HABITACIONES ACOGEDORAS "."\" ><img src=\"" . $base_path . "sites/files/manatus/hardwired/images_opt/cozy-cel.jpg". "\" /></a></div>";
+          $image = "<div class=\"wrapper-imagen-carousel-sidebar\"><a href=\"".$base_path."es/habitaciones"."\" title=\""."HABITACIONES ACOGEDORAS "."\" ><img src=\"" . $base_path . "sites/files/manatus/hardwired/images_opt/_DSC5313-cel.jpg". "\" /></a></div>";
           
           $titulo = "<div class=\"views-field views-field-title\">
                         <span class=\"field-content\">
@@ -2153,7 +2153,7 @@ function carousel_manatus_block_view($delta = '') {
                             </div>";
         
            // CONTENIDO SEGUNDO SLIDE
-          $image2 = "<div class=\"wrapper-imagen-carousel-sidebar\"><a href=\"".$base_path."es/pesca-deportiva"."\" title=\""." TOURS DE PESCA DEPORTIVA "."\" ><img src=\"" . $base_path . "sites/files/manatus/hardwired/images_opt/what-to-do-pezca-cel.jpg". "\" /></a></div>";
+          $image2 = "<div class=\"wrapper-imagen-carousel-sidebar\"><a href=\"".$base_path."es/pesca-deportiva"."\" title=\""." TOURS DE PESCA DEPORTIVA "."\" ><img src=\"" . $base_path . "sites/files/manatus/hardwired/images_opt/_DSC4180-cel.jpg". "\" /></a></div>";
           
           $titulo2 = "<div class=\"views-field views-field-title\">
                         <span class=\"field-content\">

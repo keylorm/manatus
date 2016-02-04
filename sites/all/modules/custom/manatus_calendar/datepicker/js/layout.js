@@ -88,20 +88,29 @@
 		var month = currentTime.getMonth() + 1
 		// returns the year (four digits)
 		var year = currentTime.getFullYear()
-
 		var datesDisabled = [];
+		$("a#aplicar-seleccion").css("display","none");
+
 		$.ajax({
 		  method: 'GET',
 		  url: "/json-dates/" + month + "/" + year + "/es",
 		}).done(function(data) {
 
 			console.log(data)
-
+			$("a#aplicar-seleccion").css("display","block");
 			for (var i = 0; i < data.length; i++) {			
 				var split = data[i].split("-");
 				var disabledDate = new Date(split[2], split[1]-1, split[0], 0, 0, 0, 0)
 		 		datesDisabled [i] = disabledDate;
 		 	}
+
+		 	/*Estilo*/
+            var styles_caledar = {
+                'background-color': '#E0C2AD',
+                opacity: '1',
+                'background-image' : 'none',
+            }
+            $('#widgetCalendar').css(styles_caledar);
 
 		 	var lang = $('form.reservation-form').attr('data-lang');
 		 	var format = 'm/d/Y';
@@ -128,18 +137,14 @@
 					$(".reservation-form input[type='submit'").removeAttr('disabled');				
 					if (validarFechasDisponibles(datesDisabled, dates)){
 						//mostrar mensaje de alerta
-						if(lang == 'es'){
-							alert("Su selección contiene dias 'no disponibles', por favor seleccione un rango diferente");
-						else{
-							alert("Within days of his/her selection are 'not available', please select different range");
-						}
-
+						alert("Within days of his/her selection are 'not available'");
 						//deshabilitar boton
 						$(".reservation-form input[type='submit'").attr("disabled","disabled");
 					}
 					//obtener el ingreso (checkin)
 					$("span.checkin").html(formated[0]);
 					$('#widgetField input[id="checkin-checkout"]').val(formated.join(' - '));
+					$('#widgetField div[id="checkin-checkout-selector"]').text(formated.join(' - '));
 
 					console.log('change');
 
@@ -162,7 +167,7 @@
 		});
 	
 		var state = false;
-		$('#widgetField>input[id="checkin-checkout"]').bind('click', function(){
+		$('#widgetField>div[id="checkin-checkout-selector"]').bind('click', function(){
 			/*$('#widgetCalendar').stop().animate({height: state ? 0 : $('#widgetCalendar div.datepicker').get(0).offsetHeight}, 500);
 			state = !state;
 			return false;*/

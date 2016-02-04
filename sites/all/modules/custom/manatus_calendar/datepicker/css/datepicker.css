@@ -87,7 +87,7 @@ div.datepicker table {
 	border-collapse:collapse;
 }
 div.datepicker a {
-	color: #eee;
+	color: #fff;
 	text-decoration: none;
 	cursor: default;
 	outline: none;
@@ -217,18 +217,53 @@ table.datepickerViewYears tr.datepickerDoW {
 	display: none;
 }
 
-td.datepickerDisabled.datepickerNotInMonth a{
-	color: #333;
-}
+
 
 td.datepickerDisabled a,
-td.datepickerDisabled a:hover,
-div.datepicker td.datepickerNotInMonth a {
-	color: #EBD9CD;
+td.datepickerDisabled a:hover{
+	color: #777;
 }
+
+td.datepickerDisabled a{
+	color: #777 !important;		
+}
+
+div.datepicker td.datepickerNotInMonth a {
+	color: #ebd9cd
+}
+div.datepicker td.datepickerDisabled.datepickerNotInMonth a{
+	color: #777;
+}
+
 td.datepickerSpecial a {
 	background: #700;
 }
 td.datepickerSpecial.datepickerSelected a {
 	background: #a00;
 }
+#loader-calendar{
+    position: absolute;
+    top: 48%;
+    left: 48%;
+}
+
+#widgetCalendar {
+    position: absolute;
+    height: 478px;
+    width: 346px;
+    background-color: #000;
+    z-index: 1;
+    opacity: 0.80;
+    background-image: url(../../images/ajax-loader.gif);
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+
+/*#widgetCalendar
+{
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 9999;
+}*/

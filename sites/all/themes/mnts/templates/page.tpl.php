@@ -51,7 +51,14 @@
 
                   <?php if ($title): ?>
                     <?php if(!drupal_is_front_page()){ ?>
-                      <h1 class="title" title="<?php print_r($field_title_attr_items[0]['value']) ?>">Manatus Experience</h1>
+                      <?php if(($node->nid ==49) || ($node->nid ==30) || ($node->nid ==58) || ($node->nid ==55)){ ?>
+                          <h1 class="title"><?php print $title; ?></h1>
+                      <?php }else{ ?>
+                        <h1 class="title" title="<?php print_r($field_title_attr_items[0]['value']) ?>">Manatus Experience</h1>
+                      <?php }?>
+
+
+                      
                     <?php } ?>          
                   <?php endif; 
                 } else if($field_seccion_items[0]['tid']==254){?>

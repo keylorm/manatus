@@ -200,8 +200,8 @@
 	
 	/*Index*/
 	
-	#block-views-main-slider-block .view .views-slideshow-cycle-main-frame-row-item .views-field-title {
-		bottom: 5px;
+	#block-views-main-slider-block .view .views-slideshow-cycle-main-frame-row-item .views-field-title,
+	.flex-caption {
 		font-size: 24px;
 		padding: 12px 0;
 		position: absolute;
@@ -210,23 +210,46 @@
 		width: 100%;
 	}
 	
-	#block-views-main-slider-block .views-slideshow-controls-bottom #views_slideshow_controls_text_previous_main_slider-block {
+	#block-views-main-slider-block .views-slideshow-controls-bottom #views_slideshow_controls_text_previous_main_slider-block,
+	#flexslider-home .flex-direction-nav .flex-prev {
 		height: 34px;
 		left: 12px;
 		position: absolute;
-		top: 270px;
+		top: 94%;
 		width: 26px;
 	}
 	
 	
-	#block-views-main-slider-block .views-slideshow-controls-bottom #views_slideshow_controls_text_next_main_slider-block {
+	#block-views-main-slider-block .views-slideshow-controls-bottom #views_slideshow_controls_text_next_main_slider-block,
+	#flexslider-home .flex-direction-nav .flex-next {
 		height: 34px;
 		position: absolute;
 		right: 12px;
-		top: 270px;
+		top: 94%;
 		width: 26px;
 	}
+
+	.flexslider .slides img,
+	.flexslider{
+		height: auto;
+	}
 	
+	#flexslider-tortuguero{
+	    width:100%;
+	    margin: 0 auto 80px;
+	}
+
+	.flex-control-nav{
+		display: block;
+	}
+
+	.flex-control-paging li a.flex-active, .flex-control-paging li a:hover {
+		background: none repeat scroll 0 0 #813400;
+	}
+	.flex-control-paging li a { 
+		background: none repeat scroll 0 0 #F5ECE5;
+	}
+
 		/*Keylor*/
 	#block-block-6, #block-block-30{
 		float: left;
@@ -236,7 +259,7 @@
 		max-height: 500px;
 		height: 280px;
 	}
-	
+
 	#block-block-7, #block-webform-client-block-48, #block-webform-client-block-64, #block-block-24{
 		background-image: none;
 		clear: none;
@@ -303,6 +326,74 @@
 	#block-block-72{
 		display: block;
 	}
+
+	#widgetCalendar{
+		width: 290px;
+	}
+
+	#block-manatus-calendar-custom-range-calendar{
+		background-color: #f8efea;
+		background-image: none;
+	    padding: 10px 10px 110px 25px;
+	    max-height: none;
+	}
+
+	#block-manatus-calendar-custom-range-calendar .form-control,
+	#block-manatus-calendar-custom-range-calendar .wrapper-select{
+		width: 45%;
+	}
+
+	.datepickerDays a {
+		width: 33px;
+	}
+
+	.datepickerGoNext {
+	    background-position-x: 25px;
+	}
+
+	.reservation-form #checkin-checkout,
+	#block-manatus-calendar-custom-range-calendar #checkin-checkout-selector {
+		width: 92%;
+	}
+
+
+	#highlighted .view-slider-interno-bloque{
+		height: auto;
+	    overflow: visible;
+	    max-height: none;
+	}
+
+	#flexslider-half .info-slide-content{
+		display: none;
+	}
+
+	#flexslider-half .media-slide-content{
+		width: 490px;
+		margin: 0 auto;
+		height: auto;
+		display: block;
+	}
+
+	#flexslider-half.flexslider{
+		margin: 0 auto 55px;
+    	width: 100%;
+    	height: auto;
+    	box-shadow: none;
+	}
+	#flexslider-half .flex-direction-nav {
+		display: none;
+	}
+
+
+	#block-views-blog-block .view .views-row .views-field-title, #block-views-blog-block-2 .view .views-row .views-field-title,
+	#block-views-blog-block .view .views-row .views-field-created, #block-views-blog-block-2 .view .views-row .views-field-created{
+		width: 368px;
+	}
+
+	#block-views-blog-block .view .views-row .views-field-body, #block-views-blog-block-2 .view .views-row .views-field-body{
+		width: 336px;
+	}
+
 	
 }
 

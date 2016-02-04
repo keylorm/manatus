@@ -400,11 +400,118 @@ jQuery(function($){
 
 		});
 
+       $('.flexslider iframe').each(function(){
+             /*var url_video_original = this.attr('src');
+               var url_video_nuevo = url_video_original+"&version=3&enablejsapi=1";*/
+               $(this).attr('src', $(this).attr('src')+"&version=3&enablejsapi=1");
+       });
+      
 
+       var slider, // Global slider value to force playing and pausing by direct access of the slider control
+        canSlide = true; // Global switch to monitor video state
+     
+        // Load the YouTube API. For some reason it's required to load it like this
+        var tag = document.createElement('script');
+        tag.src = "//www.youtube.com/iframe_api";
+        var firstScriptTag = document.getElementsByTagName('script')[0];
+        firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+     
+        // Setup a callback for the YouTube api to attach video event handlers
+        window.onYouTubeIframeAPIReady = function(){
+            // Iterate through all videos
+            $('.flexslider iframe').each(function(){
+                // Create a new player pointer; "this" is a DOMElement of the player's iframe
+                var id = $(this).attr("id");
+                var player = new YT.Player(this, {
+                    playerVars: {
+                        autoplay: 0
+                    }
+                });
+
+                // Watch for changes on the player
+                /*player.addEventListener("onReady", function(event){
+                    console.log(event.target.f.id);
+                    var iframe = $(id);
+                      var requestFullScreen = iframe.requestFullScreen || iframe.mozRequestFullScreen || iframe.webkitRequestFullScreen;
+                      if (requestFullScreen) {
+                        console.log("Gika");
+                        requestFullScreen.bind(this)();
+                      }
+                    
+                });*/
+     
+                // Watch for changes on the player
+                player.addEventListener("onStateChange", function(state){
+                    //console.log("Gika");
+                    switch(state.data)
+                    {
+                        // If the user is playing a video, stop the slider
+                        case YT.PlayerState.PLAYING:
+                            
+                            $('.flexslider').flexslider("pause");
+                            $('.flexslider .flex-caption').css("display", "none");
+                            console.log(state.target.f.id);
+                            var iframe = $("#"+state.target.f.id);
+                            console.log(iframe);
+                           if (iframe.requestFullscreen) {
+                              iframe.requestFullscreen();
+                              console.log("entro1");
+                            } else if (iframe.msRequestFullscreen) {
+                              iframe.msRequestFullscreen();
+                              console.log("entro2");
+                            } else if (iframe.find("video").mozRequestFullScreen) {
+                              iframe.find("video").mozRequestFullScreen();
+                              console.log("entro3");
+                            } else if (iframe.webkitRequestFullscreen) {
+                              iframe.webkitRequestFullscreen();
+                              console.log("entro4");
+                            }
+                            break;
+                        // The video is no longer player, give the go-ahead to start the slider back up
+                        case YT.PlayerState.ENDED:
+                        case YT.PlayerState.PAUSED:
+                            $('.flexslider').flexslider("play");
+                            $('.flexslider .flex-caption').css("display", "block");
+                            break;
+                    }
+                });
+
+
+
+
+                $(this).data('player', player);
+            });
+        }
+
+
+        
+        
+            //console.log("resize");
+       var slide_height = $('.flexslider').height();
+        $('.player').height(slide_height);
+        //console.log($('.flexslider').height());
+        
 
 
 });
 
+function onPlayerReady(event) {
+  var player = event.target;
+  
+  iframe = jQuery('#player');
+  playFullscreen(); 
+}
+
+
+
+function playFullscreen (){
+  player.playVideo();//won't work on mobile
+  console.log("Gika");
+  var requestFullScreen = iframe.requestFullScreen || iframe.mozRequestFullScreen || iframe.webkitRequestFullScreen;
+  if (requestFullScreen) {
+    requestFullScreen.bind(iframe)();
+  }
+}
 
 
 function mostrar_paquete_2_1(){

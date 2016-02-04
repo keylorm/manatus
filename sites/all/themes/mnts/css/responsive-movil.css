@@ -30,8 +30,14 @@ float:left;
 margin-right: 0px;
 margin-bottom: 15px;
 }
-#TA_certificateOfExcellence600{
+#TA_certificateOfExcellence690{
 float:left;
+margin-right: 0px;
+margin-bottom: 15px;
+}
+
+#TA_tchotel599{
+	float:left;
 margin-right: 0px;
 margin-bottom: 15px;
 }
@@ -221,8 +227,8 @@ margin-bottom: 15px;
 	
 	/*Index*/
 	
-	#block-views-main-slider-block .view .views-slideshow-cycle-main-frame-row-item .views-field-title {
-		bottom: 5px;
+	#block-views-main-slider-block .view .views-slideshow-cycle-main-frame-row-item .views-field-title,
+	.flex-caption {
 		font-size: 16px;
 		padding: 6px 0;
 		position: absolute;
@@ -231,20 +237,22 @@ margin-bottom: 15px;
 		width: 100%;
 	}
 	
-	#block-views-main-slider-block .views-slideshow-controls-bottom #views_slideshow_controls_text_previous_main_slider-block {
+	#block-views-main-slider-block .views-slideshow-controls-bottom #views_slideshow_controls_text_previous_main_slider-block,
+	#flexslider-home .flex-direction-nav .flex-prev {
 		height: 25px;
 		left: 8px;
 		position: absolute;
-		top: 110px;
+		top: 96%;
 		width: 23px;
 	}
 	
 	
-	#block-views-main-slider-block .views-slideshow-controls-bottom #views_slideshow_controls_text_next_main_slider-block {
+	#block-views-main-slider-block .views-slideshow-controls-bottom #views_slideshow_controls_text_next_main_slider-block,
+	#flexslider-home .flex-direction-nav .flex-next {
 		height: 25px;
 		position: absolute;
 		right: 8px;
-		top: 110px;
+		top: 96%;
 		width: 23px;
 	}
 	
@@ -332,7 +340,15 @@ margin-bottom: 15px;
 	.view-articulos-relacionados-blog .views-row {float: none !important; margin: 5% auto !important;}
  	.node-type-blog #block-views-dc196aef6a44f7ad51f2c746684916c7 h2, .node-type-blog #block-views-23030c3a60c05df90602904e4f49bfba h2 {text-align: center;}
 
- 	 #block-views-slider-block {display: none;}
+ 	 /*#block-views-slider-block {
+ 	 	display: none;
+ 	 }*/
+
+ 	 #flexslider-tortuguero{
+	    width:100%;
+	    height: auto;
+	    margin: 0 auto 80px;
+	}
 
  	 .page-node-33 #block-system-main h2, .page-node-47 #block-system-main h2, .page-node-90 #block-system-main h2, .page-node-91 #block-system-main h2, #node-44 h2, #node-191 h2 {font-size: 18px; padding: 0 0.2em; }
  	 #node-44 h2, #node-191 h2 {padding: 0 0.2em 1em;}
@@ -345,10 +361,22 @@ margin-bottom: 15px;
  	 .page-node-46 input[type="text"], .page-node-46 input[type="email"], .page-node-139 input[type="text"], .page-node-139 input[type="email"] {font-size: 14px;}
  	 /* Flexslider tortuguero */
 
-	.flexslider .slides img, .flexslider {height: auto;}
-	.flexslider .flex-direction-nav, #block-system-main .view-gallery-page{display: none;}
+	.flexslider .slides img, .flexslider {
+		height: auto; 
+		min-height: 155px;
+	}
+
+	#flexslider-maravillas-otras.flexslider .slides img, #flexslider-maravillas-otras.flexslider{
+		min-height: initial;
+	}
+
+	.not-front .flexslider .flex-direction-nav, #block-system-main .view-gallery-page{display: none;}
 	.flex-control-paging li a.flex-active, .flex-control-paging li a:hover {background: none repeat scroll 0 0 #813400;}
 	.flex-control-paging li a { background: none repeat scroll 0 0 #F5ECE5;}
+
+	.flex-control-nav{
+		display: block;
+	}
 
 	/* formulario book now */
 	#node-44 input[type="text"], #node-44 input[type="email"], #node-44 select, #node-191 input[type="text"], #node-191 input[type="email"], #node-191 select,  #node-44 #webform-component-number-of-people label, #node-191 #webform-component-numero-de-personas label{font-size: 13px !important;}
@@ -380,7 +408,21 @@ margin-bottom: 15px;
 	.page-node-31 #node-31 .field-name-body h2, .page-node-83 #node-83 .field-name-body h2 { border-bottom: 2px solid #813400; padding-bottom: 5px;}
 
 	/* Ocultar bloques */
-	#block-block-2, #block-block-3, #block-block-4, #block-block-5, #block-block-29, #block-block-36, #block-block-37, #block-block-38, #block-views-slider-block-11, #block-views-slider-block-12, .page-node-83 #block-block-39, .page-node-83 #block-block-35, .page-node-106 #block-block-9, .page-node-106 #block-block-18, .page-node-107 #block-block-39, .page-node-107 #block-block-35, .page-node-31 #block-block-9, .page-node-31 #block-block-18, #block-views-slider-block-14, #block-views-slider-block-13, .page-node-100 #block-block-9, .page-node-100 #block-block-18, .page-node-101 #block-block-39, .page-node-101 #block-block-35, #block-block-44, .page-node-94 #node-94 .body-pack-col2, #block-views-paquetes-regulares-block, #block-block-46, #block-block-45, #block-block-47, #block-block-48, #block-block-49, #block-views-paquetes-regulares-block-1, #normal, .page-node-25 #block-views-blog-block-1, .page-node-143 #block-views-blog-block-3, .page-node-146 #block-views-blog-block-3, .page-node-21 #block-views-blog-block-1, .page-node-23 #block-views-blog-block-1, .page-node-145 #block-views-blog-block-3, .page-node-144 #block-views-blog-block-3, .page-node-24 #block-views-blog-block-1, #block-views-slider-block-23{ display: none; }
+	#block-block-2, #block-block-3, #block-block-4, 
+	#block-block-5, #block-block-29, #block-block-36, 
+	#block-block-37, #block-block-38, .page-node-83 #block-block-39, .page-node-83 #block-block-35, 
+	.page-node-106 #block-block-9, .page-node-106 #block-block-18, .page-node-107 #block-block-39, 
+	.page-node-107 #block-block-35, .page-node-31 #block-block-9, .page-node-31 #block-block-18, .page-node-100 #block-block-9, 
+	.page-node-100 #block-block-18, .page-node-101 #block-block-39, .page-node-101 #block-block-35, 
+	#block-block-44, .page-node-94 #node-94 .body-pack-col2, #block-views-paquetes-regulares-block, 
+	#block-block-46, #block-block-45, #block-block-47, #block-block-48, #block-block-49, 
+	#block-views-paquetes-regulares-block-1, #normal, .page-node-25 #block-views-blog-block-1, 
+	.page-node-143 #block-views-blog-block-3, .page-node-146 #block-views-blog-block-3, 
+	.page-node-21 #block-views-blog-block-1, .page-node-23 #block-views-blog-block-1, 
+	.page-node-145 #block-views-blog-block-3, .page-node-144 #block-views-blog-block-3, 
+	.page-node-24 #block-views-blog-block-1{ 
+		display: none; 
+	}
 	
 	#block-views-paquetes-regulares-block-2 {float: left;}
 
@@ -395,11 +437,11 @@ margin-bottom: 15px;
 		/*Keylor*/
 	#block-block-6, #block-block-30{
 		float: none;
-		width: 294px;
-		clear: both;
-		margin: 0 auto;
-		max-height: 500px;
-		height: 240px;
+    width: 294px;
+    clear: both;
+    margin: 20px auto 0;
+    max-height: 500px;
+    height: 325px;
 	}
 	
 	#block-block-7, #block-webform-client-block-48, #block-webform-client-block-64, #block-block-24{
@@ -453,6 +495,7 @@ margin-bottom: 15px;
 		width: 294px;
 		margin: 0 auto 30px;
 		float: none;
+		clear: both;
 	}
 
 
@@ -696,7 +739,6 @@ margin-bottom: 15px;
 		margin-top: 0;
 	}
 	
-	.view-slider-interno-bloque,
 	#block-views-blog-block-1,
 	#block-views-blog-block-3,
 	#block-block-19,
@@ -959,6 +1001,76 @@ margin-bottom: 15px;
 	.page-node-357 #footer,
 	.page-node-358 #footer{
 		min-height: 200px;
+	}
+
+	#widgetCalendar{
+		width: 290px;
+	}
+
+	#block-manatus-calendar-custom-range-calendar{
+		background-color: #f8efea;
+		background-image: none;
+	    padding: 10px;
+	    width: 100%;
+	    max-height: none;
+	}
+
+	#block-manatus-calendar-custom-range-calendar .form-control,
+	#block-manatus-calendar-custom-range-calendar .wrapper-select{
+		width: 100%;
+	}
+
+	.datepickerDays a {
+		width: 33px;
+	}
+
+	.datepickerGoNext {
+	    background-position-x: 25px;
+	}
+
+	.not-front #block-manatus-calendar-custom-range-calendar {
+		width: 100%;
+		padding: 1em 1.5em 1.5em 3em;
+	}
+
+
+	#highlighted .view-slider-interno-bloque{
+		height: auto;
+	    overflow: visible;
+
+	    max-height: none;
+	}
+
+	#flexslider-half .info-slide-content{
+		display: none;
+	}
+
+	#flexslider-half .media-slide-content{
+		width: 100%;
+		height: auto;
+	}
+
+	#flexslider-half.flexslider{
+		margin: 0 auto 55px;
+    	width: 100%;
+    	height: auto;
+    	box-shadow: none;
+	}
+
+	#flexslider-half .flex-direction-nav {
+		display: none;
+	}
+
+	#flexslider-half .flex-control-nav{
+		bottom: -45px !important;
+	}
+
+	#flexslider-galeria .flex-control-nav{
+		bottom: -90px !important;
+	}
+
+	#flexslider-galeria.flexslider{
+		margin: 0 0 90px;
 	}
 
 }

@@ -109,31 +109,31 @@ function manatus_calendar_block_view($delta = '') {
   
   $options = "";
   global $language;
-  for ($i=0; $i < 10; $i++) { 
+  for ($i=1; $i <= 10; $i++) { 
     $options .= "<option value=\"".$i."\">".$i."</option>";
   }
   
   $people = $options;
   $rooms = $options;
 
-  $people = "<option value=\"np\" selected=\"selected\">".t('Number of people')."</option>".$people;
-  $rooms = "<option value=\"nr\" selected=\"selected\">".t('Number of rooms')."</option>".$rooms;
+  $people = "<option value=\"0\" selected=\"selected\">".t('Number of people')."</option>".$people;
+  $rooms = "<option value=\"0\" selected=\"selected\">".t('Number of rooms')."</option>".$rooms;
   $selection = 'Apply selection';
   if($language->language == 'es'){
     $selection = 'Aplicar selección';
   }
 
-  return '<form class="reservation-form" enctype="multipart/form-data" data-lang="' . $language->language . '" action="http://localhost:53870/wwwroot/reservacion_'. $language->language .'_paso1.aspx" method="get" accept-charset="UTF-8">
+  return '<form class="reservation-form" enctype="multipart/form-data" data-lang="' . $language->language . '" action="http://booking.manatuscostarica.com/reservacion_'. $language->language .'_paso1.aspx" method="get" accept-charset="UTF-8">
             <div class="row">
               <div class="col-md-12 col-md-offset-0 demo">
                 <h2>'.t('Make your reservation').'</h4>
                 
                   <div id="widget">
                     <div id="widgetField">
-                      <input type="text" id="checkin-checkout" class="form-control" name="rango_fecha" value='.t('Select range').'>
-                      <a id="aplicar-seleccion" href="javascript:void(0)">' . $selection . '</a>
+                      <input type="text" id="checkin-checkout" class="form-control hidden" name="rango_fecha" value="">
+                      <div id="checkin-checkout-selector" class="form-control">'.t('Select range').'</div>
                     </div>
-                    <div id="widgetCalendar" class="hidden">
+                    <div id="widgetCalendar" class="hidden"><div id="loader-calendar"></div><a id="aplicar-seleccion" href="javascript:void(0)">' . $selection . '</a>
                     </div>
                   </div>
 
@@ -148,7 +148,7 @@ function manatus_calendar_block_view($delta = '') {
                   </select>
                 </div>
                 <div class="wrapper-submit">
-                  <input type="submit" id="edit-submit" name="op" value="' . t('BOOK NOW') . '" class="form-submit lang" disabled="disabled">
+                  <input type="submit" id="edit-submit" name="op" value="' . t('BOOK NOW') . '" class="form-submit lang">
                 </div>
               </div>
             </div>
@@ -173,7 +173,7 @@ function _manatus_calendar_get_json_dates($month, $year, $lang){
 
   //consultar 
   $postData = array('month' => $month, 'year' => $year, 'lang' => $lang);
-  $fechas = consultarURL("http://localhost:53870/wwwroot/FechasNoDisponibles.asmx/GetDates", $postData);
+  $fechas = consultarURL("http://booking.manatuscostarica.com/FechasNoDisponibles.asmx/GetDates", $postData);
   $JsonObject = json_decode((String)$fechas);
   /*var_dump($JsonObject->fechas);
   exit();
