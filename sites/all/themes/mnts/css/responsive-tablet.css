@@ -394,7 +394,10 @@
 		width: 336px;
 	}
 
-	
+	#colorbox iframe{
+	    width: 640px !important;
+	    height: 360px !important;
+	}
 }
 
 

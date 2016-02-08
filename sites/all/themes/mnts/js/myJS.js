@@ -1,3 +1,5 @@
+var player, iframe;
+
 jQuery(document).ready(function($) {
 
 
@@ -423,8 +425,8 @@ jQuery(function($){
             // Iterate through all videos
             $('.flexslider iframe').each(function(){
                 // Create a new player pointer; "this" is a DOMElement of the player's iframe
-                var id = $(this).attr("id");
-                var player = new YT.Player(this, {
+                
+                player = new YT.Player(this, {
                     playerVars: {
                         autoplay: 0
                     }
@@ -432,13 +434,9 @@ jQuery(function($){
 
                 // Watch for changes on the player
                 /*player.addEventListener("onReady", function(event){
-                    console.log(event.target.f.id);
-                    var iframe = $(id);
-                      var requestFullScreen = iframe.requestFullScreen || iframe.mozRequestFullScreen || iframe.webkitRequestFullScreen;
-                      if (requestFullScreen) {
-                        console.log("Gika");
-                        requestFullScreen.bind(this)();
-                      }
+                    player = event.target;
+                      iframe = document.getElementById(event.target.f.id);
+                      setupListener(); 
                     
                 });*/
      
@@ -452,22 +450,7 @@ jQuery(function($){
                             
                             $('.flexslider').flexslider("pause");
                             $('.flexslider .flex-caption').css("display", "none");
-                            console.log(state.target.f.id);
-                            var iframe = document.getElementById(state.target.f.id);
-                            console.log(iframe);
-                           if (iframe.requestFullScreen) {
-                              iframe.requestFullScreen();
-                              console.log("entro1");
-                            } else if (iframe.msRequestFullScreen) {
-                              iframe.msRequestFullScreen();
-                              console.log("entro2");
-                            } else if (iframe.mozRequestFullScreen) {
-                              iframe.mozRequestFullScreen();
-                              console.log(iframe.mozRequestFullScreen);
-                            } else if (iframe.webkitRequestFullScreen) {
-                              iframe.webkitRequestFullScreen();
-                              console.log("entro4");
-                            }
+                            
                             break;
                         // The video is no longer player, give the go-ahead to start the slider back up
                         case YT.PlayerState.ENDED:
@@ -493,27 +476,36 @@ jQuery(function($){
         $('.player').height(slide_height);
         //console.log($('.flexslider').height());
         
-
+        $('.colorbox').append('<div class="logo-play-youtube"></div>');
 
 });
 
-function onPlayerReady(event) {
-  var player = event.target;
-  
-  iframe = jQuery('#player');
-  playFullscreen(); 
+/*
+
+function setupListener (){
+    jQuery('.overlay-video-act').on('click', playFullscreen);
+
 }
 
-
+document.addEventListener('fullscreenchange', function(event){
+        console.log("si");
+        if(iframe.fullscreenEnabled){
+            
+        }
+    });
 
 function playFullscreen (){
   player.playVideo();//won't work on mobile
-  console.log("Gika");
+
   var requestFullScreen = iframe.requestFullScreen || iframe.mozRequestFullScreen || iframe.webkitRequestFullScreen;
   if (requestFullScreen) {
     requestFullScreen.bind(iframe)();
   }
+
 }
+*/
+
+
 
 
 function mostrar_paquete_2_1(){

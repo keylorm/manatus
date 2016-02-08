@@ -180,7 +180,11 @@
 		width: 980px !important;
 		
 	}
-	#book-today-link, .block-carousel-manatus, #block-views-paquetes-regulares-block-2, #block-views-paquetes-regulares-block-3, #block-views-slider-block-21, #block-views-gallery-page-block-1, #movil, #block-views-slider-block-22 {display: none;}
+	#book-today-link, 
+	.block-carousel-manatus, 
+	#block-views-paquetes-regulares-block-2, 
+	#block-views-paquetes-regulares-block-3, 
+	 #block-views-gallery-page-block-1, #movil{display: none;}
 	
 	.front #footer #block-menu-menu-men-principal-responsivo--2{
 		display: none;

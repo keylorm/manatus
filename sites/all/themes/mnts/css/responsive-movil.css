@@ -1073,4 +1073,13 @@ margin-bottom: 15px;
 		margin: 0 0 90px;
 	}
 
+	#colorbox iframe{
+	    width: 300px !important;
+	    height: 170px !important;
+	}
+	.logo-play-youtube{
+	    top: 36%;
+
+	}
 }
+

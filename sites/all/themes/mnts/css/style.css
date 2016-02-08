@@ -5611,3 +5611,39 @@ content: none !important;
 #highlighted .view-slider-interno-bloque{
     max-height: 270px;
 }
+
+
+
+.overlay-video-act {
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    cursor: pointer;
+}
+
+.logo-play-youtube{
+    position: absolute;
+    margin-left: auto;
+    left: 0;
+    margin-right: auto;
+    right: 0;
+    top: 45%;
+    width: 68px;
+    height: 48px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: transparent;
+    background-image: url(../img/play-youtube.png);
+
+}
+
+#flexslider-half .logo-play-youtube{
+    top: 40%;
+}
+
+.colorbox{
+    position: relative;
+    display: block;
+}
